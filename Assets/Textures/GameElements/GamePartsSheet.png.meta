@@ -1,0 +1,910 @@
+fileFormatVersion: 2
+guid: 82c05d3c93b26ae4492b717ad4a78b58
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1964298626885980842
+    second: GamePartsSheet_0
+  - first:
+      213: -8562660814372972642
+    second: GamePartsSheet_1
+  - first:
+      213: -5450407904509301577
+    second: GamePartsSheet_2
+  - first:
+      213: -4152841783606333076
+    second: GamePartsSheet_3
+  - first:
+      213: -8557790087923665058
+    second: GamePartsSheet_4
+  - first:
+      213: -4674774464337569814
+    second: GamePartsSheet_5
+  - first:
+      213: -2083416938991522594
+    second: GamePartsSheet_6
+  - first:
+      213: -5802759269916634095
+    second: GamePartsSheet_7
+  - first:
+      213: 3881169168031875680
+    second: GamePartsSheet_8
+  - first:
+      213: 3503566031539500980
+    second: GamePartsSheet_9
+  - first:
+      213: 3838624362639656039
+    second: GamePartsSheet_10
+  - first:
+      213: 4789060621618092201
+    second: GamePartsSheet_11
+  - first:
+      213: -3800751502853793353
+    second: GamePartsSheet_12
+  - first:
+      213: 6377659944136236203
+    second: GamePartsSheet_13
+  - first:
+      213: 8659378272625275873
+    second: GamePartsSheet_14
+  - first:
+      213: -199767442018932424
+    second: GamePartsSheet_15
+  - first:
+      213: -8690971713731509730
+    second: GamePartsSheet_16
+  - first:
+      213: 7127704873348185448
+    second: GamePartsSheet_17
+  - first:
+      213: 3408610723401390186
+    second: GamePartsSheet_18
+  - first:
+      213: 2188094785142275345
+    second: GamePartsSheet_19
+  - first:
+      213: -479758351318079665
+    second: GamePartsSheet_20
+  - first:
+      213: -5488958723622745739
+    second: GamePartsSheet_21
+  - first:
+      213: -6719344430625276837
+    second: GamePartsSheet_22
+  - first:
+      213: 1602572013478502246
+    second: GamePartsSheet_23
+  - first:
+      213: -1667178916907169373
+    second: GamePartsSheet_24
+  - first:
+      213: -1439370339057058255
+    second: GamePartsSheet_25
+  - first:
+      213: -5134717353113842785
+    second: GamePartsSheet_26
+  - first:
+      213: 385246117995388383
+    second: GamePartsSheet_27
+  - first:
+      213: 5743460431548559253
+    second: GamePartsSheet_28
+  - first:
+      213: 1473165148956291293
+    second: GamePartsSheet_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GamePartsSheet_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 335
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa29350a137924b10800000000000000
+      internalID: 1964298626885980842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 351
+        width: 36
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9754233b515b2980800000000000000
+      internalID: -8562660814372972642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_2
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 356
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bcedba63e24c54b0800000000000000
+      internalID: -5450407904509301577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_3
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 351
+        width: 50
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c61beb786642e56c0800000000000000
+      internalID: -4152841783606333076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_4
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 303
+        width: 50
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5773f2914f9c3980800000000000000
+      internalID: -8557790087923665058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_5
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 319
+        width: 36
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae79718846ddf1fb0800000000000000
+      internalID: -4674774464337569814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_6
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 319
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edce06815573613e0800000000000000
+      internalID: -2083416938991522594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_7
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 305
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11493873035787fa0800000000000000
+      internalID: -5802759269916634095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_8
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 319
+        width: 50
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0620db58bceacd530800000000000000
+      internalID: 3881169168031875680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_9
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 303
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b779053eba2f9030800000000000000
+      internalID: 3503566031539500980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_10
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 287
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7640c491588854530800000000000000
+      internalID: 3838624362639656039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_11
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 287
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a89b570349267240800000000000000
+      internalID: 4789060621618092201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_12
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 271
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b91ed835a4014bc0800000000000000
+      internalID: -3800751502853793353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_13
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 287
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bac5a7ccdeff18850800000000000000
+      internalID: 6377659944136236203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_14
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 271
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e3b09bd8aa4c2870800000000000000
+      internalID: 8659378272625275873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_15
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 287
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 839e5c4e1984a3df0800000000000000
+      internalID: -199767442018932424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_16
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 271
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e12c01ae547736780800000000000000
+      internalID: -8690971713731509730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_17
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 287
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86d3dbf61d1bae260800000000000000
+      internalID: 7127704873348185448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_18
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 255
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a685de1b461dd4f20800000000000000
+      internalID: 3408610723401390186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_19
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 255
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11d3a433d9cad5e10800000000000000
+      internalID: 2188094785142275345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_20
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 271
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f47a8a3425e8759f0800000000000000
+      internalID: -479758351318079665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_21
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 207
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5794fa36f1d43d3b0800000000000000
+      internalID: -5488958723622745739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_22
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 255
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5cb41947d710c2a0800000000000000
+      internalID: -6719344430625276837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_23
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 239
+        width: 58
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66f5e5661ca7d3610800000000000000
+      internalID: 1602572013478502246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_24
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 239
+        width: 58
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a94ab0bb9dfcd8e0800000000000000
+      internalID: -1667178916907169373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_25
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 239
+        width: 58
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13e35408d44560ce0800000000000000
+      internalID: -1439370339057058255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_26
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 207
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9b8d91b5c1ddb8b0800000000000000
+      internalID: -5134717353113842785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_27
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 239
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdd963e9d4ba85500800000000000000
+      internalID: 385246117995388383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_28
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 239
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59fa6f315ded4bf40800000000000000
+      internalID: 5743460431548559253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_29
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 209
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd07607d5ebb17410800000000000000
+      internalID: 1473165148956291293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 186051752820992499cbfc5970719b70
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      GamePartsSheet_0: 1964298626885980842
+      GamePartsSheet_1: -8562660814372972642
+      GamePartsSheet_10: 3838624362639656039
+      GamePartsSheet_11: 4789060621618092201
+      GamePartsSheet_12: -3800751502853793353
+      GamePartsSheet_13: 6377659944136236203
+      GamePartsSheet_14: 8659378272625275873
+      GamePartsSheet_15: -199767442018932424
+      GamePartsSheet_16: -8690971713731509730
+      GamePartsSheet_17: 7127704873348185448
+      GamePartsSheet_18: 3408610723401390186
+      GamePartsSheet_19: 2188094785142275345
+      GamePartsSheet_2: -5450407904509301577
+      GamePartsSheet_20: -479758351318079665
+      GamePartsSheet_21: -5488958723622745739
+      GamePartsSheet_22: -6719344430625276837
+      GamePartsSheet_23: 1602572013478502246
+      GamePartsSheet_24: -1667178916907169373
+      GamePartsSheet_25: -1439370339057058255
+      GamePartsSheet_26: -5134717353113842785
+      GamePartsSheet_27: 385246117995388383
+      GamePartsSheet_28: 5743460431548559253
+      GamePartsSheet_29: 1473165148956291293
+      GamePartsSheet_3: -4152841783606333076
+      GamePartsSheet_4: -8557790087923665058
+      GamePartsSheet_5: -4674774464337569814
+      GamePartsSheet_6: -2083416938991522594
+      GamePartsSheet_7: -5802759269916634095
+      GamePartsSheet_8: 3881169168031875680
+      GamePartsSheet_9: 3503566031539500980
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

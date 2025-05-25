@@ -1,0 +1,923 @@
+fileFormatVersion: 2
+guid: 3f89670fbbac52f4585057a2f7461e94
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6028317412955646000
+    second: TaskSheetNew_0
+  - first:
+      213: -2671410948289502303
+    second: TaskSheetNew_1
+  - first:
+      213: 6713609944819588340
+    second: TaskSheetNew_2
+  - first:
+      213: 7283590509798640468
+    second: TaskSheetNew_3
+  - first:
+      213: 5200187104553917352
+    second: TaskSheetNew_4
+  - first:
+      213: 4241359791164468939
+    second: TaskSheetNew_5
+  - first:
+      213: 6724279805150791488
+    second: TaskSheetNew_6
+  - first:
+      213: 8173298425036579545
+    second: TaskSheetNew_7
+  - first:
+      213: -682131654852438658
+    second: TaskSheetNew_8
+  - first:
+      213: -673855624438659976
+    second: TaskSheetNew_9
+  - first:
+      213: -4987164771714165312
+    second: TaskSheetNew_10
+  - first:
+      213: 6232007553242389878
+    second: TaskSheetNew_11
+  - first:
+      213: -6581354726965050116
+    second: TaskSheetNew_12
+  - first:
+      213: 5656335638169113319
+    second: TaskSheetNew_13
+  - first:
+      213: 5109035337830182654
+    second: TaskSheetNew_14
+  - first:
+      213: 5548046971875007631
+    second: TaskSheetNew_15
+  - first:
+      213: -6420741663025127236
+    second: TaskSheetNew_16
+  - first:
+      213: -3761140250215347149
+    second: TaskSheetNew_17
+  - first:
+      213: -6649366244936269843
+    second: TaskSheetNew_18
+  - first:
+      213: 2951967077313349007
+    second: TaskSheetNew_19
+  - first:
+      213: -5408571974516250264
+    second: TaskSheetNew_20
+  - first:
+      213: -6175878921037917484
+    second: TaskSheetNew_21
+  - first:
+      213: 5232217024252206179
+    second: TaskSheetNew_22
+  - first:
+      213: -5966545829616891877
+    second: TaskSheetNew_23
+  - first:
+      213: -1581422160580929466
+    second: TaskSheetNew_24
+  - first:
+      213: 400771921604557000
+    second: TaskSheetNew_25
+  - first:
+      213: -6461755059258407853
+    second: TaskSheetNew_26
+  - first:
+      213: -7542927179614750893
+    second: TaskSheetNew_27
+  - first:
+      213: -2176113575266525482
+    second: TaskSheetNew_28
+  - first:
+      213: -7166454719316448626
+    second: TaskSheetNew_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TaskSheetNew_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 288
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 069fcdb2909180e4697ea534d5d93d8e
+      internalID: -1583916742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaskSheetNew_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 288
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23778e0cd091a2e4fb191a9ff77f9130
+      internalID: -1290021909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaskSheetNew_2
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 288
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed6b67499bd525747a15beeb127bb65b
+      internalID: 597287141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaskSheetNew_3
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 288
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca7e382118041864b878c62146bb3872
+      internalID: 702900366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaskSheetNew_4
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 288
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 087581ecddba82748b4a7c63ee668f7b
+      internalID: 839463139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaskSheetNew_5
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 240
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21b9487d393ff4f4187185b73d561765
+      internalID: 81385223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaskSheetNew_6
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 240
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e78efecc912e149a523b6ee3d5cf60
+      internalID: 936797701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaskSheetNew_7
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 240
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14c4a0e5e733cb44a884dbb90c904fb4
+      internalID: 1358825785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaskSheetNew_8
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 240
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e9fc0925cd948499055a3e33de75ab
+      internalID: 1894454123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaskSheetNew_9
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 240
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2e49c8880413944d9abcd0e7d27f0dc
+      internalID: -1724118072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaskSheetNew_10
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 176
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0c0281f4d43a3947911be4793ecb247
+      internalID: -590763595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaskSheetNew_11
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 176
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f991ea7bc0f03334a9355eea3d2ac821
+      internalID: -1309876186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaskSheetNew_12
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 176
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 141fb2dae5a92c04b89d33d137635ff8
+      internalID: -1677260481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaskSheetNew_13
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 176
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15a25cac71e3287458ba0ac59c538ea1
+      internalID: 704179346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaskSheetNew_14
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 176
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc9ef585696940468292b73ab174df6
+      internalID: -1102352100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaskSheetNew_15
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 128
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb587472802a66f42af1d6bc7d7b8e07
+      internalID: -240308114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaskSheetNew_16
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 128
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 902ae0df71df54845a2f4511df953ca1
+      internalID: 1703954990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaskSheetNew_17
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 128
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 347bb6fa292db7d4fa29673124135de0
+      internalID: 1305575940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaskSheetNew_18
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 128
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 493ce0d01be6a5f45bf35da3f822dec4
+      internalID: -746208965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaskSheetNew_19
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 128
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e1a1b6a4decedf4f9e5d0f68322f564
+      internalID: -845539664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaskSheetNew_20
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 64
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ec9a731a53a574ab054bc0edb541ae
+      internalID: -377230035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaskSheetNew_21
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 64
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3b8a7080bdf81542b2148bb55db9933
+      internalID: 819086632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaskSheetNew_22
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 64
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e823d100442d175459dc2e854a5680a6
+      internalID: 595213815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaskSheetNew_23
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 64
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e3b533901061534e928b0744e9685ba
+      internalID: -205797419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaskSheetNew_24
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 64
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec3a4e0129cbb464d92a22fe93d1942c
+      internalID: 489314252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaskSheetNew_25
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 16
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2890aa52ab7eed64a9ad8538fcb15288
+      internalID: -576500163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaskSheetNew_26
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 16
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 991c56ad7e5804243a1f2c6ad3f38437
+      internalID: -2023555208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaskSheetNew_27
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 16
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a9a2aaafb4970b43a440d64dbc38b66
+      internalID: -821796895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaskSheetNew_28
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 16
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa2b2728063272d4d99bfb7f43478325
+      internalID: -1121663697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaskSheetNew_29
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 16
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a8308599ef094d45b0392f7e255dbcc
+      internalID: 1175081272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9b3cfc2e8aea00946ad1a1621958f8e3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TaskSheetNew_0: -1583916742
+      TaskSheetNew_1: -1290021909
+      TaskSheetNew_10: -590763595
+      TaskSheetNew_11: -1309876186
+      TaskSheetNew_12: -1677260481
+      TaskSheetNew_13: 704179346
+      TaskSheetNew_14: -1102352100
+      TaskSheetNew_15: -240308114
+      TaskSheetNew_16: 1703954990
+      TaskSheetNew_17: 1305575940
+      TaskSheetNew_18: -746208965
+      TaskSheetNew_19: -845539664
+      TaskSheetNew_2: 597287141
+      TaskSheetNew_20: -377230035
+      TaskSheetNew_21: 819086632
+      TaskSheetNew_22: 595213815
+      TaskSheetNew_23: -205797419
+      TaskSheetNew_24: 489314252
+      TaskSheetNew_25: -576500163
+      TaskSheetNew_26: -2023555208
+      TaskSheetNew_27: -821796895
+      TaskSheetNew_28: -1121663697
+      TaskSheetNew_29: 1175081272
+      TaskSheetNew_3: 702900366
+      TaskSheetNew_4: 839463139
+      TaskSheetNew_5: 81385223
+      TaskSheetNew_6: 936797701
+      TaskSheetNew_7: 1358825785
+      TaskSheetNew_8: 1894454123
+      TaskSheetNew_9: -1724118072
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
