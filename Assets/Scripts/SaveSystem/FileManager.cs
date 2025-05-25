@@ -27,6 +27,5 @@ public class FileManager : MonoBehaviour
 
     private void LoadSaveFiles()
     {
-        CameraData.test();
     }
 }

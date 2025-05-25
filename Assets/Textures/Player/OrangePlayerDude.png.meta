@@ -1,0 +1,693 @@
+fileFormatVersion: 2
+guid: 8a4d9c308b11bf24fb4789254ac77106
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3946712305313306090
+    second: OrangePlayerDude_0
+  - first:
+      213: 6236814932917502615
+    second: OrangePlayerDude_1
+  - first:
+      213: 5211913319504650838
+    second: OrangePlayerDude_2
+  - first:
+      213: 2537058060365930451
+    second: OrangePlayerDude_3
+  - first:
+      213: 8945433530398446035
+    second: OrangePlayerDude_4
+  - first:
+      213: 8953548202566081764
+    second: OrangePlayerDude_5
+  - first:
+      213: 3624175493239109369
+    second: OrangePlayerDude_6
+  - first:
+      213: 6438242518469351579
+    second: OrangePlayerDude_7
+  - first:
+      213: -4318583562686280564
+    second: OrangePlayerDude_8
+  - first:
+      213: 2956327898273194784
+    second: OrangePlayerDude_9
+  - first:
+      213: 7845948741492040575
+    second: OrangePlayerDude_10
+  - first:
+      213: -2106916012673454419
+    second: OrangePlayerDude_11
+  - first:
+      213: -3088190172507336089
+    second: OrangePlayerDude_12
+  - first:
+      213: 871744869696302953
+    second: OrangePlayerDude_13
+  - first:
+      213: -8467707217104507291
+    second: OrangePlayerDude_14
+  - first:
+      213: -3646596835879406036
+    second: OrangePlayerDude_15
+  - first:
+      213: -107381630176130797
+    second: OrangePlayerDude_16
+  - first:
+      213: 440872032739863771
+    second: OrangePlayerDude_17
+  - first:
+      213: -8368974960480057132
+    second: OrangePlayerDude_18
+  - first:
+      213: -5789847697319164881
+    second: OrangePlayerDude_19
+  - first:
+      213: 4768954208481337470
+    second: OrangePlayerDude_20
+  - first:
+      213: -5306671482282252730
+    second: OrangePlayerDude_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: OrangePlayerDude_0
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 4316
+        width: 524
+        height: 535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61a2323a1167a39c0800000000000000
+      internalID: -3946712305313306090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangePlayerDude_1
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 4316
+        width: 524
+        height: 535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 792466e232e9d8650800000000000000
+      internalID: 6236814932917502615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangePlayerDude_2
+      rect:
+        serializedVersion: 2
+        x: 2319
+        y: 4316
+        width: 524
+        height: 535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 652a339dc8f645840800000000000000
+      internalID: 5211913319504650838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangePlayerDude_3
+      rect:
+        serializedVersion: 2
+        x: 3359
+        y: 4316
+        width: 516
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3df17ae2dd0753320800000000000000
+      internalID: 2537058060365930451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangePlayerDude_4
+      rect:
+        serializedVersion: 2
+        x: 4383
+        y: 4316
+        width: 516
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d19445a660942c70800000000000000
+      internalID: 8945433530398446035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangePlayerDude_5
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 3290
+        width: 524
+        height: 537
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ecd94df6a4614c70800000000000000
+      internalID: 8953548202566081764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangePlayerDude_6
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 3290
+        width: 524
+        height: 537
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f6713ec868ab4230800000000000000
+      internalID: 3624175493239109369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangePlayerDude_7
+      rect:
+        serializedVersion: 2
+        x: 2319
+        y: 3290
+        width: 524
+        height: 537
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b989e23957b395950800000000000000
+      internalID: 6438242518469351579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangePlayerDude_8
+      rect:
+        serializedVersion: 2
+        x: 3343
+        y: 3289
+        width: 524
+        height: 538
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8c4e3d612f4114c0800000000000000
+      internalID: -4318583562686280564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangePlayerDude_9
+      rect:
+        serializedVersion: 2
+        x: 4367
+        y: 3289
+        width: 524
+        height: 538
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 023a6286f8cf60920800000000000000
+      internalID: 2956327898273194784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangePlayerDude_10
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 2265
+        width: 524
+        height: 538
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f736e8e8fc862ec60800000000000000
+      internalID: 7845948741492040575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangePlayerDude_11
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 2268
+        width: 524
+        height: 535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dae2405ac0bb2c2e0800000000000000
+      internalID: -2106916012673454419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangePlayerDude_12
+      rect:
+        serializedVersion: 2
+        x: 2338
+        y: 2268
+        width: 503
+        height: 542
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76219d8666b8425d0800000000000000
+      internalID: -3088190172507336089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangePlayerDude_13
+      rect:
+        serializedVersion: 2
+        x: 3363
+        y: 2268
+        width: 501
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96f640d175f091c00800000000000000
+      internalID: 871744869696302953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangePlayerDude_14
+      rect:
+        serializedVersion: 2
+        x: 4397
+        y: 2268
+        width: 487
+        height: 563
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56e697e5629ac7a80800000000000000
+      internalID: -8467707217104507291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangePlayerDude_15
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 1244
+        width: 502
+        height: 542
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c26385e8f7fa46dc0800000000000000
+      internalID: -3646596835879406036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangePlayerDude_16
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 1244
+        width: 529
+        height: 535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31903fde9f0828ef0800000000000000
+      internalID: -107381630176130797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangePlayerDude_17
+      rect:
+        serializedVersion: 2
+        x: 2319
+        y: 1244
+        width: 529
+        height: 535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdc2dd627ca4e1600800000000000000
+      internalID: 440872032739863771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangePlayerDude_18
+      rect:
+        serializedVersion: 2
+        x: 3343
+        y: 1244
+        width: 529
+        height: 535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d8827a3d9d6bdb80800000000000000
+      internalID: -8368974960480057132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangePlayerDude_19
+      rect:
+        serializedVersion: 2
+        x: 4381
+        y: 1199
+        width: 510
+        height: 580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f248da9f13456afa0800000000000000
+      internalID: -5789847697319164881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangePlayerDude_20
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 157
+        width: 492
+        height: 598
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7062aae59abe2240800000000000000
+      internalID: 4768954208481337470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangePlayerDude_21
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 144
+        width: 492
+        height: 611
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 646eede176aea56b0800000000000000
+      internalID: -5306671482282252730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

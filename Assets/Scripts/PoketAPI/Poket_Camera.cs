@@ -11,9 +11,5 @@ namespace PoketAPI.Camera {
         {
             return UnityEngine.Camera.main.orthographicSize * 2;
         }
-        public static void test()
-        {
-            Debug.Log("d");
-        }
     }
 }

@@ -11,14 +11,17 @@
             "id": "6842ce4057c38fe2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Unbenannt.md",
-                "mode": "source",
-                "source": false
+                "file": "Klassengraph.canvas",
+                "viewState": {
+                  "x": -47.5,
+                  "y": -23,
+                  "zoom": 0
+                }
               },
-              "icon": "lucide-file",
-              "title": "Unbenannt"
+              "icon": "lucide-layout-dashboard",
+              "title": "Klassengraph"
             }
           }
         ]
@@ -167,7 +170,14 @@
   },
   "active": "6842ce4057c38fe2",
   "lastOpenFiles": [
-    "Unbenannt.md",
-    "Willkommen.md"
+    "System Interactions Graph.canvas",
+    "Benennung' s Konventionen.md",
+    "Klassengraph.canvas",
+    "Player/Movement.md",
+    "Player",
+    "Kajia/Kajia Base.md",
+    "Kajia/Unbenannt.canvas",
+    "Willkommen.md",
+    "Kajia"
   ]
 }

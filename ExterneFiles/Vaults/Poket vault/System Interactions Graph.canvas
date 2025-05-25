@@ -1,0 +1,11 @@
+{
+	"nodes":[
+		{"id":"ea19761204ca7e65","type":"text","text":"Settings Manager","x":-680,"y":-230,"width":250,"height":60},
+		{"id":"0b83a4ffa872f489","type":"text","text":"Game Manager","x":-275,"y":-110,"width":250,"height":60},
+		{"id":"9a13f18bd71ae674","type":"text","text":"Kajia System","x":-340,"y":-280,"width":250,"height":50},
+		{"id":"f8c7026cf2d6ed47","type":"text","text":"Player","x":-620,"y":-100,"width":130,"height":50}
+	],
+	"edges":[
+		{"id":"9f1249f013097925","fromNode":"f8c7026cf2d6ed47","fromSide":"top","toNode":"ea19761204ca7e65","toSide":"bottom"}
+	]
+}
