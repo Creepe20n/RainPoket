@@ -11,10 +11,14 @@
             "id": "6842ce4057c38fe2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Unbenannt.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Neuer Tab"
+              "title": "Unbenannt"
             }
           }
         ]
@@ -163,6 +167,7 @@
   },
   "active": "6842ce4057c38fe2",
   "lastOpenFiles": [
+    "Unbenannt.md",
     "Willkommen.md"
   ]
 }
