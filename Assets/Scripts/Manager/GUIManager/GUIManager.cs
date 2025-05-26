@@ -7,6 +7,7 @@ public class GUIManager : MonoBehaviour,I_Manager
     [SerializeField] private Sprite pauseGameIcon;
     [SerializeField] private Sprite unPauseGameIcon;
     [SerializeField] private GameManager gameManager;
+    [SerializeField] private Animator[] fadeAni;
     public void OpenMenu()
     {
         gameManager.CanStartGame = false;
@@ -18,7 +19,10 @@ public class GUIManager : MonoBehaviour,I_Manager
 
     public void GameStart()
     {
-
+        for (int i = 0; i < fadeAni.Length; i++)
+        {
+            fadeAni[i].Play("FadeOut");
+        }
     }
 
     public void PauseGame()
