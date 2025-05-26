@@ -1,11 +1,17 @@
 {
 	"nodes":[
-		{"id":"ea19761204ca7e65","type":"text","text":"Settings Manager","x":-680,"y":-230,"width":250,"height":60},
-		{"id":"0b83a4ffa872f489","type":"text","text":"Game Manager","x":-275,"y":-110,"width":250,"height":60},
-		{"id":"9a13f18bd71ae674","type":"text","text":"Kajia System","x":-340,"y":-280,"width":250,"height":50},
-		{"id":"f8c7026cf2d6ed47","type":"text","text":"Player","x":-620,"y":-100,"width":130,"height":50}
+		{"id":"9a13f18bd71ae674","type":"text","text":"Kajia System","x":-300,"y":-320,"width":250,"height":50},
+		{"id":"0b83a4ffa872f489","type":"text","text":"Game Manager","x":-300,"y":-110,"width":250,"height":60},
+		{"id":"ef372b626056bc1b","type":"text","text":"IKajiaControlls","x":-300,"y":-480,"width":250,"height":60},
+		{"id":"f8c7026cf2d6ed47","type":"text","text":"Player","x":-650,"y":-100,"width":130,"height":50},
+		{"id":"ea19761204ca7e65","type":"text","text":"Settings Manager","x":-680,"y":-240,"width":190,"height":60},
+		{"id":"ae0dd2798524a046","type":"text","text":"GameTime","x":-710,"y":-480,"width":250,"height":60},
+		{"id":"cda035d6eec24e62","x":-710,"y":-700,"width":250,"height":60,"type":"text","text":"EV_ChangePlayerData"}
 	],
 	"edges":[
-		{"id":"9f1249f013097925","fromNode":"f8c7026cf2d6ed47","fromSide":"top","toNode":"ea19761204ca7e65","toSide":"bottom"}
+		{"id":"9f1249f013097925","fromNode":"f8c7026cf2d6ed47","fromSide":"top","toNode":"ea19761204ca7e65","toSide":"bottom"},
+		{"id":"c092fa99fda842e6","fromNode":"9a13f18bd71ae674","fromSide":"bottom","toNode":"0b83a4ffa872f489","toSide":"top"},
+		{"id":"2753573772e99f53","fromNode":"9a13f18bd71ae674","fromSide":"top","toNode":"ef372b626056bc1b","toSide":"bottom"},
+		{"id":"e9fedb70ec60c618","fromNode":"cda035d6eec24e62","fromSide":"bottom","toNode":"ae0dd2798524a046","toSide":"top"}
 	]
 }

@@ -1,11 +1,14 @@
 {
 	"nodes":[
-		{"id":"33ac9ce6bb3dc47f","x":-327,"y":-190,"width":250,"height":60,"type":"text","text":"B_Entities"},
-		{"id":"b368e13bc5621be8","x":-327,"y":0,"width":250,"height":60,"type":"text","text":"B_Player"},
-		{"id":"c45b846c43836e0c","x":20,"y":-185,"width":140,"height":50,"type":"text","text":"I_HitObj"}
+		{"id":"33ac9ce6bb3dc47f","type":"text","text":"B_Entities","x":-327,"y":-190,"width":250,"height":60},
+		{"id":"b368e13bc5621be8","type":"text","text":"B_Player","x":-327,"y":0,"width":250,"height":60},
+		{"id":"c45b846c43836e0c","type":"text","text":"I_HitObj","x":20,"y":-185,"width":140,"height":50},
+		{"id":"50c216bc21a08e87","x":240,"y":-195,"width":250,"height":60,"type":"text","text":"EV_ChangePlayerData"},
+		{"id":"155c044626e3245c","x":600,"y":-195,"width":250,"height":60,"type":"text","text":"IKajiaControlls"}
 	],
 	"edges":[
 		{"id":"6012b786b7b1df08","fromNode":"33ac9ce6bb3dc47f","fromSide":"bottom","toNode":"b368e13bc5621be8","toSide":"top"},
-		{"id":"e5f8019de8ef37ef","fromNode":"c45b846c43836e0c","fromSide":"left","toNode":"33ac9ce6bb3dc47f","toSide":"right"}
+		{"id":"e5f8019de8ef37ef","fromNode":"c45b846c43836e0c","fromSide":"left","toNode":"33ac9ce6bb3dc47f","toSide":"right"},
+		{"id":"951939476ea66754","fromNode":"155c044626e3245c","fromSide":"left","toNode":"50c216bc21a08e87","toSide":"right"}
 	]
 }

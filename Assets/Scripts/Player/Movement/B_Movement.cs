@@ -19,6 +19,15 @@ public class B_Movement : MonoBehaviour
             animator.Play("idle");
             return;
         }
+        if (GameTime.Instance.GameDeltaTime == 0)
+        {
+            animator.speed = 0;
+            return;
+        }
+        else
+        {
+            animator.speed = 1;
+        }
 
         touchPositon = GetTouch.Position();
         Vector2 movementVec = Vector2.zero;
@@ -46,7 +55,7 @@ public class B_Movement : MonoBehaviour
             animator.Play("idle");
         }
 
-        transform.Translate(b_Player.playerMovementSpeed * Time.deltaTime * movementVec);
+        transform.Translate(b_Player.playerMovementSpeed * GameTime.Instance.GameRunTime * Time.deltaTime * movementVec);
     }
     //Move to touch point
     private Vector2 ToPointMovement()
