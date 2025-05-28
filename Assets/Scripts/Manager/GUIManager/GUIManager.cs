@@ -35,7 +35,10 @@ public class GUIManager : MonoBehaviour,I_Manager
     }
     public void GameEnd()
     {
-
+        for (int i = 0; i < fadeAni.Length; i++)
+        {
+            fadeAni[i].Play("FadeIn");
+        }
     }
 
 

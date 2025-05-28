@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a12d20ec6b33b9f4eafc30c4f2e5a6fd, type: 3}
-  m_Name: RainDrop
+  m_Name: PK_SpeedPlayerUp
   m_EditorClassIdentifier: 
-  eventObject: {fileID: 491312160264015410, guid: 39be364b14603cf468fa2f051d0805c7, type: 3}
-  eventName: RainDrop
-  chance: 0
-  icon: {fileID: 6377659944136236203, guid: 82c05d3c93b26ae4492b717ad4a78b58, type: 3}
+  eventObject: {fileID: 159671094008932544, guid: 5f79fa0002ac66d45b8d9682220d97c0, type: 3}
+  eventName: SpeedPlayer
+  chance: 100
+  icon: {fileID: 287647127, guid: 09d42c850af693840bb477de957bd2e4, type: 3}

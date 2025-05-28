@@ -1,14 +1,22 @@
 {
 	"nodes":[
 		{"id":"33ac9ce6bb3dc47f","type":"text","text":"B_Entities","x":-327,"y":-190,"width":250,"height":60},
-		{"id":"b368e13bc5621be8","type":"text","text":"B_Player","x":-327,"y":0,"width":250,"height":60},
+		{"id":"b368e13bc5621be8","type":"text","text":"Entities","x":-327,"y":0,"width":250,"height":60},
 		{"id":"c45b846c43836e0c","type":"text","text":"I_HitObj","x":20,"y":-185,"width":140,"height":50},
-		{"id":"50c216bc21a08e87","x":240,"y":-195,"width":250,"height":60,"type":"text","text":"EV_ChangePlayerData"},
-		{"id":"155c044626e3245c","x":600,"y":-195,"width":250,"height":60,"type":"text","text":"IKajiaControlls"}
+		{"id":"155c044626e3245c","type":"text","text":"IKajiaControlls","x":600,"y":-195,"width":250,"height":60},
+		{"id":"50c216bc21a08e87","type":"text","text":"Events","x":350,"y":0,"width":250,"height":60},
+		{"id":"5b7f7a234d8ee391","type":"text","text":"Perks","x":600,"y":0,"width":250,"height":60},
+		{"id":"a2d1958805e13086","type":"text","text":"Items","x":850,"y":0,"width":250,"height":60},
+		{"id":"c39e45c25c824603","type":"text","text":"Enemies","x":1100,"y":0,"width":250,"height":60},
+		{"id":"dac673c6623a42bc","x":600,"y":-420,"width":250,"height":60,"type":"text","text":"Kajia"}
 	],
 	"edges":[
 		{"id":"6012b786b7b1df08","fromNode":"33ac9ce6bb3dc47f","fromSide":"bottom","toNode":"b368e13bc5621be8","toSide":"top"},
 		{"id":"e5f8019de8ef37ef","fromNode":"c45b846c43836e0c","fromSide":"left","toNode":"33ac9ce6bb3dc47f","toSide":"right"},
-		{"id":"951939476ea66754","fromNode":"155c044626e3245c","fromSide":"left","toNode":"50c216bc21a08e87","toSide":"right"}
+		{"id":"dd18a5e96a628c73","fromNode":"155c044626e3245c","fromSide":"left","toNode":"50c216bc21a08e87","toSide":"top"},
+		{"id":"06f994a67408eda4","fromNode":"155c044626e3245c","fromSide":"bottom","toNode":"5b7f7a234d8ee391","toSide":"top"},
+		{"id":"8700af3523b32fbf","fromNode":"155c044626e3245c","fromSide":"right","toNode":"a2d1958805e13086","toSide":"top"},
+		{"id":"572752edbe61de82","fromNode":"155c044626e3245c","fromSide":"right","toNode":"c39e45c25c824603","toSide":"top"},
+		{"id":"4c9048dea820772d","fromNode":"dac673c6623a42bc","fromSide":"bottom","toNode":"155c044626e3245c","toSide":"top"}
 	]
 }

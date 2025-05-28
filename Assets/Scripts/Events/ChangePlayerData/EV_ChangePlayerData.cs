@@ -51,14 +51,14 @@ public class EV_ChangePlayerData : MonoBehaviour, I_KajiaControlls
 
     private void ChangePlayerDataGround()
     {
-        player.movemendFreezeState = changeFreezeStateOnGround;
-        player.playerMovementSpeed += changePlayerSpeedOnGround;
+        player.MovemendFreezeState = changeFreezeStateOnGround;
+        player.PlayerMovementSpeed += changePlayerSpeedOnGround;
         player.health += changeHealthOnGround;
     }
     private void ChangePlayerDataPlayer()
     {
-        player.movemendFreezeState = changeFreezeStateOnPlayer;
-        player.playerMovementSpeed += changePlayerSpeedOnPlayer;
+        player.MovemendFreezeState = changeFreezeStateOnPlayer;
+        player.PlayerMovementSpeed += changePlayerSpeedOnPlayer;
         player.health += changeHealthOnPlayer;
     }
 }

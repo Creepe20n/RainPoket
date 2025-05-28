@@ -1106,7 +1106,7 @@ RectTransform:
   m_GameObject: {fileID: 493772637}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1980169253}
@@ -3210,9 +3210,12 @@ GameObject:
   - component: {fileID: 1917754092}
   - component: {fileID: 1917754097}
   - component: {fileID: 1917754098}
+  - component: {fileID: 1917754099}
   - component: {fileID: 1917754094}
   - component: {fileID: 1917754096}
   - component: {fileID: 1917754095}
+  - component: {fileID: 1917754100}
+  - component: {fileID: 1917754101}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3260,6 +3263,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1917754099}
+        m_TargetAssemblyTypeName: SelectionMenu, Assembly-CSharp
+        m_MethodName: GameStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   gamePauseEvents:
     m_PersistentCalls:
       m_Calls:
@@ -3277,6 +3292,18 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1917754098}
         m_TargetAssemblyTypeName: GUIManager, Assembly-CSharp
+        m_MethodName: PauseGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1917754099}
+        m_TargetAssemblyTypeName: SelectionMenu, Assembly-CSharp
         m_MethodName: PauseGame
         m_Mode: 1
         m_Arguments:
@@ -3314,6 +3341,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1917754099}
+        m_TargetAssemblyTypeName: SelectionMenu, Assembly-CSharp
+        m_MethodName: UnPauseGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   gameEndEvents:
     m_PersistentCalls:
       m_Calls:
@@ -3331,6 +3370,18 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1917754098}
         m_TargetAssemblyTypeName: GUIManager, Assembly-CSharp
+        m_MethodName: GameEnd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1917754099}
+        m_TargetAssemblyTypeName: SelectionMenu, Assembly-CSharp
         m_MethodName: GameEnd
         m_Mode: 1
         m_Arguments:
@@ -3411,6 +3462,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1917754092}
+  choosenItems: []
+  allowSpawnStart: 0
 --- !u!114 &1917754098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3431,6 +3484,54 @@ MonoBehaviour:
   - {fileID: 493772639}
   - {fileID: 1172445602}
   - {fileID: 789189272}
+--- !u!114 &1917754099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917754091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 600ab92443c7b914291adcac0549b9b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectionUIManager: {fileID: 1917754100}
+  kajiaSystem: {fileID: 1917754097}
+  autoPerkCount: 3
+  items: []
+  perks:
+  - {fileID: 11400000, guid: 0a5fc4a72cb537e4fb1a42ef32dbfbcc, type: 2}
+  activeItems: []
+  activePerks: []
+--- !u!114 &1917754100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917754091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c37a9521a601464f9c8102289889f27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectionMenu: {fileID: 1917754099}
+  perkAni: {fileID: 7917794217730880662, guid: 36c1ee9acd788aa4ca2161c56ec1bf42, type: 3}
+  gameCanvas: {fileID: 2023912703}
+  canvasRect: {fileID: 2023912704}
+--- !u!114 &1917754101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917754091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51d6ef470b607d44da3799461225d1aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1945713916
 GameObject:
   m_ObjectHideFlags: 0

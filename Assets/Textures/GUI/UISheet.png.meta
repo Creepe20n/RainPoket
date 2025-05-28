@@ -1919,7 +1919,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UISheet_71
+      name: PinkPerkIcon
       rect:
         serializedVersion: 2
         x: 256
@@ -2182,6 +2182,50 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: DarkPerkIcon
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0573814ad4f483e4f86c455d0451f427
+      internalID: -1292315266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempSpeedPerk
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad7f408f22975a340adf2a1170c69805
+      internalID: 287647127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -2197,6 +2241,7 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       BlueSettingsButton: -2061385227
+      DarkPerkIcon: -1292315266
       DebugGUIOff: 1531456761649573930
       DebugGUIOn: -3374845498920641771
       EditIcon: 1670199171276766311
@@ -2206,6 +2251,7 @@ TextureImporter:
       Old_PlayIcon: 2286855326212898726
       Old_PlayerSelecIcon: -3671742638147237762
       PauseGameButton: -135245259
+      PinkPerkIcon: -1989389517508320215
       PinkShield: -2605160
       Poket64: 7888202119972057348
       ProfilesIcon: 6744513296223012266
@@ -2215,6 +2261,7 @@ TextureImporter:
       TabHandClose: 3765853880425637702
       TabHandOpen: 8777824922998612401
       TaskBarTrans: 2130752070
+      TempSpeedPerk: 287647127
       UISheet_10: 6362277212160839285
       UISheet_11: -4215314136768902380
       UISheet_12: 2879998365708759840
@@ -2272,7 +2319,6 @@ TextureImporter:
       UISheet_69: 6016986828423789213
       UISheet_7: -6560312497393280637
       UISheet_70: 5983333891863017313
-      UISheet_71: -1989389517508320215
       UISheet_72: -4026677861065551586
       UISheet_75: 7151537012844067133
       UISheet_76: -2985976038364459070

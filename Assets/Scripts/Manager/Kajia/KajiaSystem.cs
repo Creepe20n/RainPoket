@@ -1,23 +1,36 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class KajiaSystem : MonoBehaviour,I_Manager
 {
     public GameManager gameManager;
-    List<SCR_Events> enemyEvents = new();
-    List<SCR_Events> itemEvents = new();
-    List<SCR_Events> eventEvents = new();
+    private List<SCR_Events> enemyEvents = new();
+    private List<SCR_Events> itemEvents = new();
+    private List<SCR_Events> eventEvents = new();
+    [HideInInspector] public SCR_Events[] choosenItems;
+    private List<SCR_Events> allActiveItems = new();
+    [HideInInspector] public bool allowSpawnStart = false;
     public void GameStart()
     {
-        Debug.Log("Kajia Started");
+        allActiveItems.AddRange(choosenItems);
+        allActiveItems.AddRange(itemEvents);
+    }
+
+    void Update()
+    {
+        if (!allowSpawnStart)
+            return;
+
+        
     }
     public void PauseGame()
     {
-        GameTime.Instance.EventTime = 0;
     }
     public void GameEnd()
     {
-        Debug.Log("Kajia Ended");
+        allActiveItems.Clear();
+        allowSpawnStart = false;
     }
 
     public void UnPauseGame()

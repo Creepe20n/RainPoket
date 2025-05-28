@@ -15,9 +15,9 @@
               "state": {
                 "file": "System Interactions Graph.canvas",
                 "viewState": {
-                  "x": 69.67636863567665,
-                  "y": -296.8558157350296,
-                  "zoom": -0.4277681351913826
+                  "x": -471.21476011130005,
+                  "y": -407.2847028767963,
+                  "zoom": -0.7138967457459209
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -171,10 +171,10 @@
   "active": "6842ce4057c38fe2",
   "lastOpenFiles": [
     "Klassengraph.canvas",
+    "System Interactions Graph.canvas",
     "Kajia/Kajia Base.md",
     "Player/Movement.md",
     "Benennung' s Konventionen.md",
-    "System Interactions Graph.canvas",
     "Player",
     "Kajia/Unbenannt.canvas",
     "Willkommen.md",
