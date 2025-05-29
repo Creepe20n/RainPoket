@@ -4,6 +4,7 @@ using UnityEngine.Events;
 public class GameManager : MonoBehaviour,I_Manager
 {
     [HideInInspector] public GameObject player;
+    [HideInInspector] public int score;
     [SerializeField] private UnityEvent gameStartEvents;
     [SerializeField] private UnityEvent gamePauseEvents;
     [SerializeField] private UnityEvent gameUnPauseEvents;

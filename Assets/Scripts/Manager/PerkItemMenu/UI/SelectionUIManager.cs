@@ -18,10 +18,10 @@ public class SelectionUIManager : MonoBehaviour
 
         float hight = canvasRect.rect.height;
 
-        float startX = 0 - width / 2;
+        float startX = -width / 2;
         float plusX = width / 2;//Why 2? TF I know now haha 
 
-        float startY = 0 + hight * 0.2f;
+        float startY = hight * 0.2f;
         float plusY = width * 0.4f;
 
         if (field == 0)

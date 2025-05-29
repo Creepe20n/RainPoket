@@ -3236,6 +3236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  score: 0
   gameStartEvents:
     m_PersistentCalls:
       m_Calls:
@@ -3401,7 +3402,7 @@ Transform:
   m_GameObject: {fileID: 1917754091}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.1316628, y: -0.17730737, z: 0.029579436}
+  m_LocalPosition: {x: -2.025, y: 0, z: 0.029579436}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3462,6 +3463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1917754092}
+  activeSettings: {fileID: 11400000, guid: e37d5ba1174daea4485159e17f3e4843, type: 2}
   choosenItems: []
   allowSpawnStart: 0
 --- !u!114 &1917754098
