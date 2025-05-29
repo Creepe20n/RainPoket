@@ -1,25 +1,24 @@
 {
 	"nodes":[
-		{"id":"9a13f18bd71ae674","type":"text","text":"Kajia System","x":-300,"y":-320,"width":250,"height":50},
 		{"id":"0b83a4ffa872f489","type":"text","text":"Game Manager","x":-300,"y":-110,"width":250,"height":60},
 		{"id":"ef372b626056bc1b","type":"text","text":"IKajiaControlls","x":-300,"y":-480,"width":250,"height":60},
-		{"id":"813e51acce263655","x":-300,"y":-630,"width":250,"height":60,"type":"text","text":"Selection Menu"},
-		{"id":"ff5df77b73afd769","type":"text","text":"I Manager","x":100,"y":-486,"width":250,"height":67},
-		{"id":"ae4668542186a606","type":"text","text":"GUI Manager\n","x":560,"y":-482,"width":250,"height":60},
-		{"id":"8c8b1d371aa6dea9","x":-300,"y":-800,"width":250,"height":60,"type":"text","text":"Selection Menu GUI"},
-		{"id":"cda035d6eec24e62","type":"text","text":"Events/Perks/Items","x":-710,"y":-600,"width":250,"height":60},
+		{"id":"813e51acce263655","type":"text","text":"Selection Menu","x":-300,"y":-630,"width":250,"height":60},
+		{"id":"8c8b1d371aa6dea9","type":"text","text":"Selection Menu GUI","x":-300,"y":-800,"width":250,"height":60},
 		{"id":"f8c7026cf2d6ed47","type":"text","text":"Player","x":-715,"y":-110,"width":130,"height":50},
 		{"id":"b51f57f4807fbdbc","type":"text","text":"PlayerManager","x":-775,"y":60,"width":250,"height":50},
-		{"id":"2ddae140dd15b8be","x":-1331,"y":-600,"width":250,"height":60,"type":"text","text":"Static"},
-		{"id":"ae0dd2798524a046","type":"text","text":"GameTime","x":-1331,"y":-458,"width":250,"height":58},
-		{"id":"ea19761204ca7e65","type":"text","text":"Settings Manager","x":-1540,"y":-458,"width":190,"height":60},
-		{"id":"86d2a5ab47299d0f","x":-1060,"y":-458,"width":250,"height":60,"type":"text","text":"Spawner"}
+		{"id":"9a13f18bd71ae674","type":"text","text":"Kajia System","x":-300,"y":-300,"width":250,"height":50},
+		{"id":"ff5df77b73afd769","type":"text","text":"I Manager","x":120,"y":-480,"width":250,"height":67},
+		{"id":"ae4668542186a606","type":"text","text":"GUI Manager\n","x":560,"y":-480,"width":250,"height":60},
+		{"id":"cda035d6eec24e62","type":"text","text":"Events/Perks/Items","x":-710,"y":-480,"width":250,"height":60},
+		{"id":"ae0dd2798524a046","type":"text","text":"GameTime","x":-1296,"y":-480,"width":250,"height":58},
+		{"id":"ea19761204ca7e65","type":"text","text":"Settings Manager","x":-1505,"y":-480,"width":190,"height":60},
+		{"id":"86d2a5ab47299d0f","type":"text","text":"Spawner","x":-1025,"y":-480,"width":250,"height":60},
+		{"id":"2ddae140dd15b8be","type":"text","text":"Static","x":-1296,"y":-630,"width":250,"height":60}
 	],
 	"edges":[
 		{"id":"c092fa99fda842e6","fromNode":"9a13f18bd71ae674","fromSide":"bottom","toNode":"0b83a4ffa872f489","toSide":"top"},
 		{"id":"2753573772e99f53","fromNode":"9a13f18bd71ae674","fromSide":"top","toNode":"ef372b626056bc1b","toSide":"bottom"},
 		{"id":"4f96795d58b84b09","fromNode":"0b83a4ffa872f489","fromSide":"right","toNode":"ff5df77b73afd769","toSide":"bottom"},
-		{"id":"4d407101e74dc391","fromNode":"9a13f18bd71ae674","fromSide":"right","toNode":"ff5df77b73afd769","toSide":"bottom"},
 		{"id":"3de82eb3040b6e23","fromNode":"cda035d6eec24e62","fromSide":"right","toNode":"ef372b626056bc1b","toSide":"left"},
 		{"id":"6ced485d5b7c6bb5","fromNode":"ae4668542186a606","fromSide":"left","toNode":"ff5df77b73afd769","toSide":"right"},
 		{"id":"3032f88361636a34","fromNode":"b51f57f4807fbdbc","fromSide":"right","toNode":"0b83a4ffa872f489","toSide":"bottom"},
@@ -31,6 +30,7 @@
 		{"id":"24429bbcf07e2cd6","fromNode":"2ddae140dd15b8be","fromSide":"bottom","toNode":"ae0dd2798524a046","toSide":"top"},
 		{"id":"4e64991a4698de05","fromNode":"2ddae140dd15b8be","fromSide":"bottom","toNode":"ea19761204ca7e65","toSide":"top"},
 		{"id":"1d24d0394390a946","fromNode":"b51f57f4807fbdbc","fromSide":"top","toNode":"f8c7026cf2d6ed47","toSide":"bottom"},
-		{"id":"dbd50245d2c000cb","fromNode":"2ddae140dd15b8be","fromSide":"bottom","toNode":"86d2a5ab47299d0f","toSide":"top"}
+		{"id":"dbd50245d2c000cb","fromNode":"2ddae140dd15b8be","fromSide":"bottom","toNode":"86d2a5ab47299d0f","toSide":"top"},
+		{"id":"5e3268285555b68c","fromNode":"9a13f18bd71ae674","fromSide":"bottom","toNode":"ff5df77b73afd769","toSide":"bottom"}
 	]
 }
