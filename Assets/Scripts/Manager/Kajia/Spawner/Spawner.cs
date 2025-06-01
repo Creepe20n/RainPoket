@@ -3,18 +3,20 @@ using UnityEngine;
 
 public class Spawner : Singleton<Spawner>
 {
-    public GameObject Spawn(GameObject spawnObj, List<GameObject> objectPool)
+    public GameObject Spawn(GameObject spawnObj, List<GameObject> objectPool, Vector2 pos = new Vector2())
     {
         GameObject tempObj = ObjectPool(spawnObj, objectPool);
 
         if (tempObj == null)
         {
-            tempObj = Instantiate(spawnObj, transform.position, Quaternion.identity);
+            tempObj = Instantiate(spawnObj, pos, Quaternion.identity);
             objectPool.Add(tempObj);
         }
-
+        tempObj.transform.position = pos;
+        tempObj.SetActive(true);
         return tempObj;
     }
+
     public SCR_Events ChooseByPercentage(List<SCR_Events> list, int serchValue)
     {
         SCR_Events tempEvent = list[0];
@@ -30,8 +32,8 @@ public class Spawner : Singleton<Spawner>
         {
             tempEvent = possibleList[Random.Range(0, possibleList.Count)];
         }
-        
-        return tempEvent;        
+
+        return tempEvent;
     }
 
     public GameObject ObjectPool(GameObject spawnObj, List<GameObject> objectPool)

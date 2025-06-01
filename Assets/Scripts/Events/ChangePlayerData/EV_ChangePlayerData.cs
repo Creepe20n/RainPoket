@@ -6,12 +6,16 @@ public class EV_ChangePlayerData : MonoBehaviour, I_KajiaControlls
     [SerializeField] private int changeHealthOnGround;
     [SerializeField] private float changePlayerSpeedOnGround;
     [SerializeField] private E_FreezeState changeFreezeStateOnGround;
+    [SerializeField] private int changeOnGroundScore;
+
     [Header("Hit Player")]
     [SerializeField] private int changeHealthOnPlayer;
     [SerializeField] private float changePlayerSpeedOnPlayer;
     [SerializeField] private E_FreezeState changeFreezeStateOnPlayer;
+    [SerializeField] private int changeOnPlayerScore;
 
     private B_player player;
+    private GameManager gameManager;
 
     public void KillObj()
     {
@@ -25,40 +29,41 @@ public class EV_ChangePlayerData : MonoBehaviour, I_KajiaControlls
 
     public void SetKajiaValues(KajiaSystem kajia)
     {
-        player = kajia.gameManager.player.GetComponent<B_player>();
+        gameManager = kajia.gameManager;
+        player = gameManager.player.GetComponent<B_player>();
     }
 
     public void FullfillAction()
     {
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        try
+        if (collision.gameObject.CompareTag("Player"))
         {
-            if (collision.gameObject.CompareTag("Player"))
-            {
-                ChangePlayerDataPlayer();
-            }
-            if (collision.collider.CompareTag("Ground"))
-            {
-                ChangePlayerDataGround();
-            }
+            ChangePlayerDataPlayer(collision.gameObject.GetComponent<I_HitObj>());
+            EndObjAction();
         }
-        catch { }
-        EndObjAction();
+        
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            ChangePlayerDataGround();
+            EndObjAction();
+        }
     }
 
     private void ChangePlayerDataGround()
     {
         player.MovemendFreezeState = changeFreezeStateOnGround;
         player.PlayerMovementSpeed += changePlayerSpeedOnGround;
-        player.health += changeHealthOnGround;
+        player.Hit(changeHealthOnGround);
+        gameManager.Score += changeOnGroundScore;
     }
-    private void ChangePlayerDataPlayer()
+    private void ChangePlayerDataPlayer(I_HitObj i_HitObj)
     {
         player.MovemendFreezeState = changeFreezeStateOnPlayer;
         player.PlayerMovementSpeed += changePlayerSpeedOnPlayer;
-        player.health += changeHealthOnPlayer;
+        i_HitObj.Hit(changeHealthOnPlayer);
+        gameManager.Score += changeOnPlayerScore;
     }
 }

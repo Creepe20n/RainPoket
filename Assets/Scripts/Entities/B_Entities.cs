@@ -1,10 +1,17 @@
 using UnityEngine;
 
-public class B_Entities : MonoBehaviour,I_HitObj
+public class B_Entities : MonoBehaviour, I_HitObj
 {
-    public int health = 10;
+    protected int _health = 10;
     public virtual void Hit(int damage = 0)
     {
-        health -= damage;
+        _health += damage;
+
+        if (_health <= 0)
+            Die();
+    }
+    public virtual void Die()
+    {
+        gameObject.SetActive(false);
     }
 }

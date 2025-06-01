@@ -2226,6 +2226,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Skull
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 69
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2863cfc4cc7957a4abd6f526aa79a258
+      internalID: -836522434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -2258,6 +2280,7 @@ TextureImporter:
       SettingsIcon: -7527278747769256953
       ShopIcon: 778701708435451446
       SideBar: 7264763027446037974
+      Skull: -836522434
       TabHandClose: 3765853880425637702
       TabHandOpen: 8777824922998612401
       TaskBarTrans: 2130752070

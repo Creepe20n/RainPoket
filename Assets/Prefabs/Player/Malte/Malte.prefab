@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 606709674582030833}
   m_Layer: 0
   m_Name: Malte
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,8 +104,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0e522debe1538840999e64c6f5f6951, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movemendFreezeState: 2
-  playerMovement: 3
+  startHealth: 3
+  _playerMovementSpeed: 1
 --- !u!114 &9137414259528955861
 MonoBehaviour:
   m_ObjectHideFlags: 0
