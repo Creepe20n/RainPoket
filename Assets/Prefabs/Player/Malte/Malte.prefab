@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 249190013806973613}
   - component: {fileID: 8683192536928694638}
   - component: {fileID: 9137414259528955861}
+  - component: {fileID: -3179535126828118705}
   - component: {fileID: 2241783721807861414}
   - component: {fileID: 7761442736218578167}
   - component: {fileID: 606709674582030833}
@@ -105,7 +106,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHealth: 3
-  _playerMovementSpeed: 1
+  standartFreezeState: 2
+  freezeble: {fileID: -3179535126828118705}
+  playerMovementStartSpeed: 1
 --- !u!114 &9137414259528955861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,6 +127,21 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   rayLength: 0.4
+  spriteRenderer: {fileID: 249190013806973613}
+--- !u!114 &-3179535126828118705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406612788686912576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32abbf3ad990072429f5e4fb84c7059d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toFreezeEntity: {fileID: 8683192536928694638}
+  freezeState: 3
   spriteRenderer: {fileID: 249190013806973613}
 --- !u!61 &2241783721807861414
 BoxCollider2D:

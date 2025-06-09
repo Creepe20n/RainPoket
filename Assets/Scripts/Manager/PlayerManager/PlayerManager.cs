@@ -4,7 +4,9 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     [SerializeField] private int activePlayerNum = 0;
+    [SerializeField] private int activeGravestoneNum = 0;
     [SerializeField] private List<GameObject> players = new();
+    [SerializeField] private List<GameObject> graveStones = new();
     [SerializeField] private GameObject groundObject;
     [SerializeField] private GameManager gameManager;
     private GameObject activePlayerObj;
@@ -25,6 +27,8 @@ public class PlayerManager : MonoBehaviour
             Destroy(activePlayerObj);
 
         activePlayerObj = Instantiate(players[plyrNummber], plyrSpawnPos, Quaternion.identity);
+        activePlayerObj.GetComponent<B_player>().GraveStone = graveStones[activeGravestoneNum];
+
         gameManager.player = activePlayerObj;
     }
 

@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour, I_Manager
         set
         {
             if (allowScore)
-                _score += value;
+                _score = value;
         }
     }
     [SerializeField] private UnityEvent gameStartEvents;

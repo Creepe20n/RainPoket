@@ -2,12 +2,22 @@ using UnityEngine;
 
 public class B_Entities : MonoBehaviour, I_HitObj
 {
-    protected int _health = 10;
+    protected int health = 10;
+    protected E_FreezeState _freezeState = E_FreezeState.FreezeY;
+    public E_FreezeState E_FreezeState
+    {
+        set
+        {
+            if (value != E_FreezeState.None)
+                _freezeState = value;
+        }
+        get => _freezeState;
+    }
     public virtual void Hit(int damage = 0)
     {
-        _health += damage;
+        health += damage;
 
-        if (_health <= 0)
+        if (health <= 0)
             Die();
     }
     public virtual void Die()

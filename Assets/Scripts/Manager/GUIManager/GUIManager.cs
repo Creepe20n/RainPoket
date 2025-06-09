@@ -61,7 +61,7 @@ public class GUIManager : MonoBehaviour, I_Manager
 
     void Update()
     {
-        scoreText.text = gameManager.Score.ToString("0000");
+        scoreText.text = gameManager.Score.ToString();
 
         if (gameManager.PlayerDied && !blockPlayerDead)
             PlayerIsDead();

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a12d20ec6b33b9f4eafc30c4f2e5a6fd, type: 3}
-  m_Name: IT_Umbrella
+  m_Name: IT_Scr_Sandclock
   m_EditorClassIdentifier: 
-  eventObject: {fileID: 2064879288733535779, guid: 9e83e295287577e42a9e97324dab0c0b, type: 3}
+  eventObject: {fileID: 2741521300734139422, guid: 75ecc98e394aead4e9c99f60da722f4c, type: 3}
   eventName: 
-  chance: 80
+  chance: 1
   icon: {fileID: 0}

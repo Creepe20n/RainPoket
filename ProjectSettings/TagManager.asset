@@ -7,6 +7,12 @@ TagManager:
   - Ground
   - RainDrop
   - Umbrella
+  - EY_planet
+  - EY_Icespike
+  - EY_Snowflake
+  - IT_Ufo
+  - IT_Sandclock
+  - IT_Heart
   layers:
   - Default
   - TransparentFX

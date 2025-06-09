@@ -3,25 +3,31 @@ using UnityEngine;
 
 public class B_player : B_Entities
 {
-    private E_FreezeState _movementFreezeState = E_FreezeState.FreezeY;
     [SerializeField] private int startHealth = 3;
+    [SerializeField] private E_FreezeState standartFreezeState = E_FreezeState.FreezeY;
+    [SerializeField] private Freezeble freezeble;
+    private GameObject _graveStone;
+    private GameObject activeGraveStone;
+    public GameObject GraveStone
+    {
+        get => _graveStone;
+        set
+        {
+            _graveStone = value;
+
+            if (activeGraveStone != null)
+            {
+                Destroy(activeGraveStone);
+                activeGraveStone = null;
+            }
+        }
+    }
 
     void Start()
     {
         ResetPlayer();
     }
 
-    public E_FreezeState MovemendFreezeState
-    {
-        set
-        {
-            if (value != E_FreezeState.None)
-            {
-                _movementFreezeState = value;
-            }
-        }
-        get => _movementFreezeState;
-    }
     [SerializeField] private float playerMovementStartSpeed = 1;
     private float _playerMovementSpeed = 1;
 
@@ -35,14 +41,31 @@ public class B_player : B_Entities
     }
     public int PlayerHealth
     {
-        get => _health;
+        get => health;
         private set { }
     }
 
+    public override void Die()
+    {
+        if (activeGraveStone == null)
+        {
+            activeGraveStone = Instantiate(_graveStone, transform.position, Quaternion.identity);
+        }
+        activeGraveStone.transform.position = transform.position;
+        activeGraveStone.SetActive(true);
+    
+        base.Die();
+    }
     public void ResetPlayer()
     {
-        _health = startHealth;
-        _movementFreezeState = E_FreezeState.FreezeY;
+        if (activeGraveStone != null)
+            activeGraveStone.SetActive(false);
+
+        if (freezeble != null)
+            freezeble.UnFreeze();
+        
+        health = startHealth;
+        E_FreezeState = standartFreezeState;
         PlayerMovementSpeed = playerMovementStartSpeed;
         gameObject.SetActive(true);
     }

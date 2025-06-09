@@ -31,7 +31,7 @@ public class KajiaSystem : MonoBehaviour, I_Manager
 
         if (timeSinceLastSpawn < nextSpawnTime)
         {
-            timeSinceLastSpawn += Time.deltaTime * GameTime.Instance.GameRunTime;
+            timeSinceLastSpawn += Time.deltaTime * GameTime.Instance.EventTime;
             return;
         }
         nextSpawnTime = 1;
@@ -65,7 +65,8 @@ public class KajiaSystem : MonoBehaviour, I_Manager
         //Check item spawn
         if (CheckItemRarity(activeCSettings.itemRarity))
         {
-            tempSCR = Spawner.Instance.ChooseByPercentage(allActiveItems, Random.Range(0, 100));
+            tempSCR = Spawner.Instance.ChooseByPercentage(allActiveItems, Random.Range(0, 101));
+            print(tempSCR.eventObject.name);
             Spawner.Instance.Spawn(tempSCR.eventObject, objectPool, GetSpawnPos()).GetComponent<I_KajiaControlls>().SetKajiaValues(this);
             return;
         }

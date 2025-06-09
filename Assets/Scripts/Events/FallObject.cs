@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class FallObject : MonoBehaviour
 {
-    [SerializeField] private float fallSpeed = 1;
+    [SerializeField] private float fallSpeed = 2;
     [SerializeField] private ParticleSystem disableParticlePrefab;
     private ParticleSystem disableParticle = null;
 
     void Update()
     {
-        transform.Translate(Vector2.down * fallSpeed * Time.deltaTime * GameTime.Instance.GameRunTime);
+        transform.Translate(fallSpeed * GameTime.Instance.EventTime * Time.deltaTime * Vector2.down);
     }
 
     void OnDisable()

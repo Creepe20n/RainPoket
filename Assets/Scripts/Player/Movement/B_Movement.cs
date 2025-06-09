@@ -14,7 +14,7 @@ public class B_Movement : MonoBehaviour
 
     void Update()
     {
-        if (b_Player.MovemendFreezeState == E_FreezeState.FreezeXY || !GetTouch.IsTouching())
+        if (b_Player.E_FreezeState == E_FreezeState.FreezeXY || !GetTouch.IsTouching())
         {
             animator.Play("idle");
             return;
@@ -62,13 +62,13 @@ public class B_Movement : MonoBehaviour
     {
         Vector2 tempVec = Vector2.zero;
         //x 
-        if (b_Player.MovemendFreezeState != E_FreezeState.FreezeX)
+        if (b_Player.E_FreezeState != E_FreezeState.FreezeX)
         {
             tempVec.x = ConvertPosition.X_Distance(transform.position.x, touchPositon.x) > 0.1f ? 1 : 0;
             tempVec.x = touchPositon.x < transform.position.x ? tempVec.x * -1 : tempVec.x;
         }
         //y
-        if (b_Player.MovemendFreezeState != E_FreezeState.FreezeY)
+        if (b_Player.E_FreezeState != E_FreezeState.FreezeY)
         {
             tempVec.y = ConvertPosition.Y_Distance(transform.position.y, touchPositon.y) > 0.1f ? 1 : 0;
             tempVec.y = touchPositon.y < transform.position.y ? tempVec.y * -1 : tempVec.y;
@@ -82,13 +82,13 @@ public class B_Movement : MonoBehaviour
         Vector2 tempVec = Vector2.zero;
 
         //x
-        if (b_Player.MovemendFreezeState != E_FreezeState.FreezeX)
+        if (b_Player.E_FreezeState != E_FreezeState.FreezeX)
         {
             tempVec.x = touchPositon.x > 0 ? 1 : -1;
             tempVec.x = touchPositon.x == 0 ? 0 : tempVec.x;
         }
         //y
-        if (b_Player.MovemendFreezeState != E_FreezeState.FreezeY)
+        if (b_Player.E_FreezeState != E_FreezeState.FreezeY)
         {
             tempVec.y = touchPositon.y > 0 ? 1 : -1;
             tempVec.y = touchPositon.y == 0 ? 0 : tempVec.y;

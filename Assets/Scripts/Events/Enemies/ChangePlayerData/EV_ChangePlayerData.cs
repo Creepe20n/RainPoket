@@ -54,14 +54,14 @@ public class EV_ChangePlayerData : MonoBehaviour, I_KajiaControlls
 
     private void ChangePlayerDataGround()
     {
-        player.MovemendFreezeState = changeFreezeStateOnGround;
+        player.E_FreezeState = changeFreezeStateOnGround;
         player.PlayerMovementSpeed += changePlayerSpeedOnGround;
         player.Hit(changeHealthOnGround);
         gameManager.Score += changeOnGroundScore;
     }
     private void ChangePlayerDataPlayer(I_HitObj i_HitObj)
     {
-        player.MovemendFreezeState = changeFreezeStateOnPlayer;
+        player.E_FreezeState = changeFreezeStateOnPlayer;
         player.PlayerMovementSpeed += changePlayerSpeedOnPlayer;
         i_HitObj.Hit(changeHealthOnPlayer);
         gameManager.Score += changeOnPlayerScore;
