@@ -2719,6 +2719,7 @@ MonoBehaviour:
   visibilityButtonImage: {fileID: 189016926}
   visibleIcon: {fileID: -3374845498920641771, guid: 09d42c850af693840bb477de957bd2e4, type: 3}
   unVisibleIcon: {fileID: 1531456761649573930, guid: 09d42c850af693840bb477de957bd2e4, type: 3}
+  gameManager: {fileID: 1917754092}
 --- !u!4 &1216915364
 Transform:
   m_ObjectHideFlags: 0
@@ -3923,15 +3924,13 @@ MonoBehaviour:
   gameManager: {fileID: 1917754092}
   activeSettings: {fileID: 11400000, guid: e37d5ba1174daea4485159e17f3e4843, type: 2}
   enemyEvents:
-  - {fileID: 11400000, guid: 704565d9e2d95604eb522f16c318914c, type: 2}
-  - {fileID: 11400000, guid: 17fc71e297edd3c488f974a6a8e7caa8, type: 2}
   - {fileID: 11400000, guid: c738f0e20f9baf34ca26b193edbe8688, type: 2}
-  - {fileID: 11400000, guid: 2ddb1e0002f503047bcb7964f137c8fd, type: 2}
   itemEvents:
   - {fileID: 11400000, guid: 0892ab0c199302145998ce91b8ce4664, type: 2}
   - {fileID: 11400000, guid: ad7295f462dec0f4fbdb9da0304984ef, type: 2}
   - {fileID: 11400000, guid: e6db6ba7d142ad24192a1e91439b2838, type: 2}
   - {fileID: 11400000, guid: 0b571746e0792e24881780db333bfee0, type: 2}
+  - {fileID: 11400000, guid: d1c551a22ad79e040bb83e58f2f41f3b, type: 2}
   eventEvents: []
   choosenItems: []
   allowSpawnStart: 0

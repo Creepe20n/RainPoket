@@ -5,7 +5,7 @@ public class B_player : B_Entities
 {
     [SerializeField] private int startHealth = 3;
     [SerializeField] private E_FreezeState standartFreezeState = E_FreezeState.FreezeY;
-    [SerializeField] private Freezeble freezeble;
+    public Freezeble freezeble;
     private GameObject _graveStone;
     private GameObject activeGraveStone;
     public GameObject GraveStone
@@ -27,18 +27,7 @@ public class B_player : B_Entities
     {
         ResetPlayer();
     }
-
-    [SerializeField] private float playerMovementStartSpeed = 1;
-    private float _playerMovementSpeed = 1;
-
-    public float PlayerMovementSpeed
-    {
-        get => _playerMovementSpeed;
-        set
-        {
-            _playerMovementSpeed = Mathf.Clamp(value, 0, 5);
-        }
-    }
+   
     public int PlayerHealth
     {
         get => health;
@@ -66,7 +55,7 @@ public class B_player : B_Entities
         
         health = startHealth;
         E_FreezeState = standartFreezeState;
-        PlayerMovementSpeed = playerMovementStartSpeed;
+        MovementSpeed = movementStartSpeed;
         gameObject.SetActive(true);
     }
 }

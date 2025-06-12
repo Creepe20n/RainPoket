@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8683192536928694638}
   - component: {fileID: 9137414259528955861}
   - component: {fileID: -3179535126828118705}
+  - component: {fileID: 4197771309608713845}
   - component: {fileID: 2241783721807861414}
   - component: {fileID: 7761442736218578167}
   - component: {fileID: 606709674582030833}
@@ -105,10 +106,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0e522debe1538840999e64c6f5f6951, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxMovementSpeed: 5
+  movementStartSpeed: 1
   startHealth: 3
   standartFreezeState: 2
   freezeble: {fileID: -3179535126828118705}
-  playerMovementStartSpeed: 1
 --- !u!114 &9137414259528955861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,6 +145,19 @@ MonoBehaviour:
   toFreezeEntity: {fileID: 8683192536928694638}
   freezeState: 3
   spriteRenderer: {fileID: 249190013806973613}
+--- !u!114 &4197771309608713845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406612788686912576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff1e6e5e5557a054cb6ec81b2c3c1ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  b_Entities: {fileID: 8683192536928694638}
 --- !u!61 &2241783721807861414
 BoxCollider2D:
   m_ObjectHideFlags: 0

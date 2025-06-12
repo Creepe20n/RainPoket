@@ -13,7 +13,18 @@ public class GameManager : MonoBehaviour, I_Manager
         set
         {
             if (allowScore)
-                _score = value;
+            {
+                _score += (value - _score) * ScoreMultiplier;
+            }
+        }
+    }
+    private int _scoreMultiplier = 1;
+    public int ScoreMultiplier
+    {
+        get => _scoreMultiplier;
+        set
+        {
+            _scoreMultiplier = Mathf.Clamp(value, 1, 10);
         }
     }
     [SerializeField] private UnityEvent gameStartEvents;
@@ -99,8 +110,13 @@ public class GameManager : MonoBehaviour, I_Manager
     public void GameEnd()
     {
         GameTime.Instance.GameDeltaTime = 1;
+        ScoreMultiplier = 1;
+        _score = 0;
+
         _playerDied = false;
+
         StartCoroutine(WaitForAllowGameRestart());
+
         gameEndEvents.Invoke();
         b_Player.ResetPlayer();
     }

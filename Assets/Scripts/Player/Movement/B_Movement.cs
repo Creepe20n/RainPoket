@@ -55,7 +55,7 @@ public class B_Movement : MonoBehaviour
             animator.Play("idle");
         }
 
-        transform.Translate(b_Player.PlayerMovementSpeed * GameTime.Instance.GameRunTime * Time.deltaTime * movementVec);
+        transform.Translate(b_Player.MovementSpeed * GameTime.Instance.GameRunTime * Time.deltaTime * movementVec);
     }
     //Move to touch point
     private Vector2 ToPointMovement()
@@ -98,6 +98,10 @@ public class B_Movement : MonoBehaviour
 
     private bool WallControll(Vector2 movementVec)
     {
+        if (b_Player.MovementSpeed < 0)
+        {
+            movementVec *= -1;
+        }
         RaycastHit2D raycastHit2D = Physics2D.Raycast(transform.position, movementVec, rayLength, blockLayer);
         return raycastHit2D;
     }

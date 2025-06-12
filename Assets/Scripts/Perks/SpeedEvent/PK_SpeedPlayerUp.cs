@@ -11,7 +11,7 @@ public class PK_SpeedPlayerUp : MonoBehaviour, I_KajiaControlls
 
     public void FullfillAction()
     {
-        b_Player.PlayerMovementSpeed += changePlayerSpeed; 
+        b_Player.MovementSpeed += changePlayerSpeed; 
     }
 
     public void KillObj()

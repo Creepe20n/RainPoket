@@ -894,6 +894,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: GamePartsSheet_31
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 176
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbcb7626d69318e4f8f0873a2de8a9b3
+      internalID: 75302440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -933,6 +955,7 @@ TextureImporter:
       GamePartsSheet_29: 1473165148956291293
       GamePartsSheet_3: -4152841783606333076
       GamePartsSheet_30: 154336281
+      GamePartsSheet_31: 75302440
       GamePartsSheet_4: -8557790087923665058
       GamePartsSheet_5: -4674774464337569814
       GamePartsSheet_6: -2083416938991522594

@@ -7,14 +7,17 @@ public class DebugGUI : MonoBehaviour
     [SerializeField] private Image visibilityButtonImage;
     [SerializeField] private Sprite visibleIcon;
     [SerializeField] private Sprite unVisibleIcon;
+    [SerializeField] private GameManager gameManager;
 
     private D_text gameVersionTxT;
     private D_text fpsTxt;
+    private D_text scoreMultiplierTxT;
     private int fps;
     void Start()
     {
         gameVersionTxT = new(1, 1, debugCanvas, name: "VersionTxt", allowedRows: 20, fontSize: 80);
         fpsTxt = new(2, 1, debugCanvas, name: "fpsTxt", allowedRows: 20, fontSize: 80);
+        scoreMultiplierTxT = new(3, 1, debugCanvas, name: "scoreMultiplier", allowedRows: 20, fontSize: 80);
 
         gameVersionTxT.SetText("Game Version: " + Application.version);
 
@@ -24,6 +27,7 @@ public class DebugGUI : MonoBehaviour
     void Update()
     {
         fps = (int)(1 / Time.deltaTime);
+        scoreMultiplierTxT.SetText("Score Multiplier: "+gameManager.ScoreMultiplier.ToString());
     }
     void FixedUpdate()
     {

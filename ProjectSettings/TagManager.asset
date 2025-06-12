@@ -13,6 +13,7 @@ TagManager:
   - IT_Ufo
   - IT_Sandclock
   - IT_Heart
+  - IT_Reverse
   layers:
   - Default
   - TransparentFX
