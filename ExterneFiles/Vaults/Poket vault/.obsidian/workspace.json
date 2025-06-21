@@ -11,17 +11,14 @@
             "id": "6842ce4057c38fe2",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Klassengraph.canvas",
-                "viewState": {
-                  "x": 511.5,
-                  "y": -180,
-                  "zoom": -1.4397795611765796
-                }
+                "file": "Benennung' s Konventionen.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Klassengraph"
+              "icon": "lucide-file",
+              "title": "Benennung' s Konventionen"
             }
           }
         ]
@@ -170,9 +167,9 @@
   },
   "active": "6842ce4057c38fe2",
   "lastOpenFiles": [
+    "Klassengraph.canvas",
     "System Interactions Graph.canvas",
     "Benennung' s Konventionen.md",
-    "Klassengraph.canvas",
     "Kajia/Kajia Base.md",
     "Player/Movement.md",
     "Player",
