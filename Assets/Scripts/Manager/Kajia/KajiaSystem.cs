@@ -66,7 +66,6 @@ public class KajiaSystem : MonoBehaviour, I_Manager
         if (CheckItemRarity(activeCSettings.itemRarity))
         {
             tempSCR = Spawner.Instance.ChooseByPercentage(allActiveItems, Random.Range(0, 101));
-            print(tempSCR.eventObject.name);
             Spawner.Instance.Spawn(tempSCR.eventObject, objectPool, GetSpawnPos()).GetComponent<I_KajiaControlls>().SetKajiaValues(this);
             return;
         }

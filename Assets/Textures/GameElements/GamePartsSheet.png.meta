@@ -903,7 +903,7 @@ TextureImporter:
         width: 12
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -912,6 +912,28 @@ TextureImporter:
       bones: []
       spriteID: cbcb7626d69318e4f8f0873a2de8a9b3
       internalID: 75302440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IBOEimer
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 208
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99e8ca4ee4fb0c248895af6bcd7cd14f
+      internalID: -259595641
       vertices: []
       indices: 
       edges: []
@@ -962,6 +984,7 @@ TextureImporter:
       GamePartsSheet_7: -5802759269916634095
       GamePartsSheet_8: 3881169168031875680
       GamePartsSheet_9: 3503566031539500980
+      IBOEimer: -259595641
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
