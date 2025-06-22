@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3071434122186802444}
   - component: {fileID: 1605362505600144405}
-  - component: {fileID: 3397255426550109186}
   - component: {fileID: 3712665417993618527}
   - component: {fileID: 8434380899511374746}
   - component: {fileID: 2665837219970174447}
+  - component: {fileID: 8068344840034945636}
   m_Layer: 0
   m_Name: RainDrop
   m_TagString: RainDrop
@@ -91,26 +91,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3397255426550109186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 491312160264015410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d930c013b09c8d04a83f7d0e41692f91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  changeHealthOnGround: 0
-  changePlayerSpeedOnGround: 0
-  changeFreezeStateOnGround: 0
-  changeOnGroundScore: 1
-  changeHealthOnPlayer: -1
-  changePlayerSpeedOnPlayer: 0
-  changeFreezeStateOnPlayer: 0
-  changeOnPlayerScore: 0
 --- !u!114 &3712665417993618527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,3 +178,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8068344840034945636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491312160264015410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f5b75605c1d4ae42b5d0f4de598d511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeHealthOnGround: 0
+  changePlayerSpeedOnGround: 0
+  changeFreezeStateOnGround: 0
+  changeOnGroundScore: 13
+  changeHealthOnPlayer: -1
+  changePlayerSpeedOnPlayer: 0
+  changeFreezeStateOnPlayer: 0
+  changeOnPlayerScore: 0
+  hail: {fileID: 2511321792655159082, guid: 7b3f28c1d320fa34aab45d65f80f0d11, type: 3}

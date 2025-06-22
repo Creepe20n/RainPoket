@@ -643,13 +643,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UISheet_13
+      name: fullHeart
       rect:
         serializedVersion: 2
-        x: 47
-        y: 335
-        width: 14
-        height: 13
+        x: 48
+        y: 336
+        width: 12
+        height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1853,13 +1853,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UISheet_68
+      name: emptyHeart
       rect:
         serializedVersion: 2
-        x: 31
-        y: 127
-        width: 14
-        height: 13
+        x: 32
+        y: 128
+        width: 12
+        height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2289,7 +2289,6 @@ TextureImporter:
       UISheet_10: 6362277212160839285
       UISheet_11: -4215314136768902380
       UISheet_12: 2879998365708759840
-      UISheet_13: 9147533179929568004
       UISheet_14: 9108723923615749502
       UISheet_15: -904770986938887607
       UISheet_16: -1729156314549364145
@@ -2339,7 +2338,6 @@ TextureImporter:
       UISheet_65: 6034043973641455831
       UISheet_66: -4730831028496261194
       UISheet_67: 3336188659539197923
-      UISheet_68: 4139442268472646271
       UISheet_69: 6016986828423789213
       UISheet_7: -6560312497393280637
       UISheet_70: 5983333891863017313
@@ -2349,6 +2347,8 @@ TextureImporter:
       UISheet_8: 8609931220251892044
       UISheet_9: -9119004044214425381
       UnPauseGame: -811304484
+      emptyHeart: 4139442268472646271
+      fullHeart: 9147533179929568004
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -16,6 +16,7 @@ public class EV_ChangePlayerData : MonoBehaviour, I_KajiaControlls
 
     private B_player player;
     private GameManager gameManager;
+    protected KajiaSystem kajiaSystem;
 
     public void KillObj()
     {
@@ -29,6 +30,7 @@ public class EV_ChangePlayerData : MonoBehaviour, I_KajiaControlls
 
     public void SetKajiaValues(KajiaSystem kajia)
     {
+        kajiaSystem = kajia;
         gameManager = kajia.gameManager;
         player = gameManager.player.GetComponent<B_player>();
     }
@@ -37,7 +39,7 @@ public class EV_ChangePlayerData : MonoBehaviour, I_KajiaControlls
     {
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    public virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {

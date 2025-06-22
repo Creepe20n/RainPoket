@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class B_player : B_Entities
 {
-    [SerializeField] private int startHealth = 3;
+    public int maxHealth = 3;
     [SerializeField] private E_FreezeState standartFreezeState = E_FreezeState.FreezeY;
     public Freezeble freezeble;
     private GameObject _graveStone;
@@ -53,7 +53,7 @@ public class B_player : B_Entities
         if (freezeble != null)
             freezeble.UnFreeze();
         
-        health = startHealth;
+        health = maxHealth;
         E_FreezeState = standartFreezeState;
         MovementSpeed = movementStartSpeed;
         gameObject.SetActive(true);

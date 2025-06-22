@@ -16,7 +16,7 @@ public class KajiaSystem : MonoBehaviour, I_Manager
     private float timeSinceLastSpawn = 0;
     private C_KajiaSettings activeCSettings;
     private Vector2[] spawnPoints;
-    private List<GameObject> objectPool = new();
+    [HideInInspector] public List<GameObject> objectPool = new();
 
     public void GameStart()
     {
@@ -66,7 +66,6 @@ public class KajiaSystem : MonoBehaviour, I_Manager
         if (CheckItemRarity(activeCSettings.itemRarity))
         {
             tempSCR = Spawner.Instance.ChooseByPercentage(allActiveItems, Random.Range(0, 101));
-            print(tempSCR.eventObject.name);
             Spawner.Instance.Spawn(tempSCR.eventObject, objectPool, GetSpawnPos()).GetComponent<I_KajiaControlls>().SetKajiaValues(this);
             return;
         }
@@ -76,7 +75,7 @@ public class KajiaSystem : MonoBehaviour, I_Manager
     }
 
     private Vector2 nextSpawnPoint = Vector2.zero;
-    private Vector2 GetSpawnPos()
+    public Vector2 GetSpawnPos()
     {
         Vector2 tempPos = spawnPoints[0];
 

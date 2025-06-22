@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour, I_Manager
     private bool gameStarted = false;
     public bool CanStartGame { set; get; } = true;
     private bool pause = false;
-    private B_player b_Player;
+    public B_player b_Player;
     private GameObject oldPlayer;
     private bool allowScore;
     private bool _playerDied = false;
@@ -104,6 +104,7 @@ public class GameManager : MonoBehaviour, I_Manager
         gameStarted = true;
         allowScore = true;
         _playerDied = false;
+        ControllPlayerStats();
         gameStartEvents.Invoke();
     }
 

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EY_Snowflacke : B_Item
 {
-    [SerializeField] float freezeTime = 4f;
+    [SerializeField] private float freezeTime = 4f;
     public override void HitPlayer(GameObject player = null)
     {
         try
@@ -11,5 +11,9 @@ public class EY_Snowflacke : B_Item
         }
         catch { }
         KillObj();
+    }
+    public override void OnTriggerEnter2D(Collider2D collision)
+    {
+        base.OnTriggerEnter2D(collision);
     }
 }
