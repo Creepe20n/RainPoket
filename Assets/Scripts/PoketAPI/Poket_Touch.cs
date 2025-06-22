@@ -32,14 +32,22 @@ namespace PoketAPI.Touch {
             return ConvertPosition.ToWorldPoint(touch.position);
         }
     }
-    public static class GetTab {
-        public static bool DoubleTab() {
-            if(Input.touchCount <= 0)
+    
+    public static class GetTab
+    {
+        /// <summary>
+        /// checks if the tab count is greater than 
+        /// </summary>
+        /// <param name="customTouchCount"></param>
+        /// <returns></returns>
+        public static bool DoubleTab(int customTouchCount = 1)
+        {
+            if (Input.touchCount <= 0)
                 return false;
 
             UnityEngine.Touch t = Input.GetTouch(0);
 
-            if(t.tapCount <= 1)
+            if (t.tapCount <= customTouchCount)
                 return false;
 
             return true;

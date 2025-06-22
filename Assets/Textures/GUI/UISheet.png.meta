@@ -1545,13 +1545,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UISheet_54
+      name: Simple_FullPinkBack
       rect:
         serializedVersion: 2
-        x: 143
-        y: 126
-        width: 50
-        height: 66
+        x: 144
+        y: 144
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1699,13 +1699,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UISheet_61
+      name: Simple_LargePinkBack
       rect:
         serializedVersion: 2
-        x: 544
-        y: 79
-        width: 66
-        height: 97
+        x: 545
+        y: 80
+        width: 64
+        height: 95
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2248,6 +2248,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: ThreeOptionBar
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 136
+        width: 42
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd36967af8bab1448a40f62106f3cf87
+      internalID: -2098048493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -2280,12 +2302,14 @@ TextureImporter:
       SettingsIcon: -7527278747769256953
       ShopIcon: 778701708435451446
       SideBar: 7264763027446037974
+      Simple_FullPinkBack: -6330723270928780767
+      Simple_LargePinkBack: 5304821594076256667
       Skull: -836522434
       TabHandClose: 3765853880425637702
       TabHandOpen: 8777824922998612401
       TaskBarTrans: 2130752070
       TempSpeedPerk: 287647127
-      UISheet_0: -2098048493
+      ThreeOptionBar: -2098048493
       UISheet_10: 6362277212160839285
       UISheet_11: -4215314136768902380
       UISheet_12: 2879998365708759840
@@ -2325,13 +2349,11 @@ TextureImporter:
       UISheet_50: -2985880806443862060
       UISheet_52: 5008233626059324091
       UISheet_53: -7026397179122422030
-      UISheet_54: -6330723270928780767
       UISheet_55: 4639505226174272110
       UISheet_56: -3242094285432177527
       UISheet_58: 6907208844558672507
       UISheet_59: 743265872535152035
       UISheet_6: -3044407221058930715
-      UISheet_61: 5304821594076256667
       UISheet_62: -653701281061651005
       UISheet_63: -7101083892529070799
       UISheet_64: -881550416677774681

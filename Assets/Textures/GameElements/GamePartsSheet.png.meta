@@ -917,15 +917,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emptySprite
+      name: IBOEimer
       rect:
         serializedVersion: 2
-        x: 436
-        y: 349
-        width: 13
-        height: 10
+        x: 112
+        y: 208
+        width: 16
+        height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -984,9 +984,3 @@ TextureImporter:
       GamePartsSheet_7: -5802759269916634095
       GamePartsSheet_8: 3881169168031875680
       GamePartsSheet_9: 3503566031539500980
-      emptySprite: -500475797
-  mipmapLimitGroupName: 
-  pSDRemoveMatte: 0
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 

@@ -35,7 +35,12 @@ public class Spawner : Singleton<Spawner>
 
         return tempEvent;
     }
-
+    /// <summary>
+    /// Returns objekts based on Tag
+    /// </summary>
+    /// <param name="spawnObj"></param>
+    /// <param name="objectPool"></param>
+    /// <returns></returns>
     public GameObject ObjectPool(GameObject spawnObj, List<GameObject> objectPool)
     {
         GameObject tempObj = null;

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class B_Entities : MonoBehaviour, I_HitObj
+public class B_Entities : EntitiyBody, I_HitObj
 {
     protected int health = 10;
 
