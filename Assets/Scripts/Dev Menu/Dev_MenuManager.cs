@@ -7,6 +7,7 @@ public class Dev_MenuManager : MonoBehaviour
 {
     [SerializeField] GameObject devMenu;
     [Header("GUI Builder varibels")]
+    [SerializeField] private GameObject baseIcon;
     [SerializeField] private Dev_GUIBuilder dev_GUIBuilder;
     [SerializeField] private RectTransform buildInTransform;
     [SerializeField] private GameObject spawnInParent;
@@ -45,14 +46,11 @@ public class Dev_MenuManager : MonoBehaviour
             2 => perkEvents,
             _ => itemEvents,
         };
-        
-        dev_GUIBuilder.BuildGUIWithEvnt(
-            temp,
-            buildInTransform,
-            spawnInParent,
-            objectPool,
-            4
-        );
+
+        for (int i = 0; i < temp.Length; i++)
+        {
+            Instantiate(baseIcon, buildInTransform);
+        }
     }
 
 
