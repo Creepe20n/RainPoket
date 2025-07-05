@@ -1,0 +1,144 @@
+using UnityEngine;
+using UnityEditor;
+using PoketAPI.Editor;
+using System.Collections.Generic;
+public class GameCreationTool : EditorWindow
+{
+    public static EditorWindow toolSelectorWindow = null;
+
+    [MenuItem("Window/Game Creation Tool")]
+    public static void OpenToolSelectorWindow()
+    {
+        if (toolSelectorWindow == null)
+            toolSelectorWindow = BaseEditor.CreateWindow<GameCreationTool>("Tool Selector", 600, 400);
+
+        toolSelectorWindow.Focus();
+    }
+
+    SCR_Events[] allEvents = null;
+    string viewType = "Item";
+    void OnEnable()
+    {
+        allEvents = GetAllEvents("Assets\\Settings\\SCR\\Items");
+    }
+
+    void OnGUI()
+    {
+        float width = toolSelectorWindow.position.width;
+        float height = toolSelectorWindow.position.height;
+
+        //Draw right side menu
+        //Draw background
+
+        Rect sidePanelRect = new(0, 0, width * 0.3f, height);
+
+        EditorGUI.DrawRect(sidePanelRect, new Color(0.15f, 0.15f, 0.15f));
+
+        Handles.BeginGUI();
+
+        Vector2 startSeperatorLine = new(sidePanelRect.width, 0);
+        Vector2 enedSeperatorLine = new(sidePanelRect.width, height);
+
+        Handles.color = Color.black;
+
+        Handles.DrawLine(startSeperatorLine, enedSeperatorLine);
+
+        Handles.EndGUI();
+        //draw content
+        GUI.color = new Color(0.65f, 0.65f, 0.65f);
+        if (GUI.Button(new Rect(sidePanelRect.x, sidePanelRect.y, sidePanelRect.width, 50), "Items"))
+        {
+            allEvents = GetAllEvents("Assets\\Settings\\SCR\\Items");
+            viewType = "Item";
+        }
+        if (GUI.Button(new Rect(sidePanelRect.x, sidePanelRect.y + 50, sidePanelRect.width, 50), "Enemys"))
+        {
+            allEvents = GetAllEvents("Assets\\Settings\\SCR\\Enemies");
+            viewType = "Enemy";
+
+        }
+        if (GUI.Button(new Rect(sidePanelRect.x, sidePanelRect.y + 100, sidePanelRect.width, 50), "Perks"))
+        {
+            allEvents = GetAllEvents("Assets\\Settings\\SCR\\Perks");
+            viewType = "Perk";
+        }
+
+        //Create menu Buttons
+        GUI.color = new Color(0.75f, 0.75f, 0.75f);
+
+        if (GUI.Button(new Rect(sidePanelRect.width + 20, sidePanelRect.y + 20, 50, 50), "+"))
+        {
+            switch (viewType)
+            {
+                case "Item":
+                    SCR_Events itemEvent = CreateInstance<SCR_Events>();
+                    itemEvent.eventName = "new Item";
+
+                    ItemEnemyCreator.CreateWindow(itemEvent);
+                    break;
+                case "Enemy":
+                    SCR_Events enemyEvent = CreateInstance<SCR_Events>();
+                    enemyEvent.eventName = "new Enemy";
+
+                    ItemEnemyCreator.CreateWindow(enemyEvent);
+                    break;
+            }
+        }
+        GUI.Label(new Rect(sidePanelRect.width + 20, sidePanelRect.y + 70, 70, 13), "Create " + viewType);
+
+        if (allEvents != null)
+            GenerateAccesButtons(sidePanelRect, width);
+
+    }
+
+    private void GenerateAccesButtons(Rect sidePanelRect, float windowWidth)
+    {
+        float startX = sidePanelRect.width + 20;
+        float activeX = startX;
+
+        float startY = sidePanelRect.y + 20;
+
+        const float plusX = 70;
+        const float plusY = 70;
+
+        float endX = ((sidePanelRect.x + sidePanelRect.width) + (windowWidth - sidePanelRect.width)) - 120;
+
+        for (int i = 0; i < allEvents.Length; i++)
+        {
+            if (activeX >= endX)
+            {
+                startY += plusY;
+                activeX = startX;
+            }
+            else
+            {
+                activeX += plusX;
+            }
+
+            GUI.Button(new Rect(activeX, startY, 50, 50), viewType);
+            GUI.Label(new Rect(activeX, startY + 50, 70, 13), allEvents[i].eventName);
+
+        }
+    }
+
+    private SCR_Events[] GetAllEvents(string folderPath)
+    {
+        string[] guids = AssetDatabase.FindAssets("t:" + typeof(SCR_Events).Name, new[] { folderPath });
+
+        List<SCR_Events> allEvents = new();
+
+        for (int i = 0; i < guids.Length; i++)
+        {
+            string assetPath = AssetDatabase.GUIDToAssetPath(guids[i]);
+
+            SCR_Events tempEvent = AssetDatabase.LoadAssetAtPath<SCR_Events>(assetPath);
+
+            if (tempEvent != null)
+                allEvents.Add(tempEvent);
+        }
+        return allEvents.ToArray();
+    }
+
+
+
+}

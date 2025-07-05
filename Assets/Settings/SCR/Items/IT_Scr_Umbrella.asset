@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: IT_Scr_Umbrella
   m_EditorClassIdentifier: 
   eventObject: {fileID: 2064879288733535779, guid: 9e83e295287577e42a9e97324dab0c0b, type: 3}
-  eventName: 
+  eventName: Umbrella
   chance: 1
   icon: {fileID: 0}

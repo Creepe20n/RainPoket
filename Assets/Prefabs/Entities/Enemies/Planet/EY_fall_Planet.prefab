@@ -121,6 +121,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d58e81817b0cf4745bc07ef90d255136, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: E003
+  changeHealthOnGround: 0
+  changePlayerSpeedOnGround: 0
+  changeFreezeStateOnGround: 0
+  changeOnGroundScore: 40
+  changeHealthOnPlayer: 0
+  changePlayerSpeedOnPlayer: 0
+  changeFreezeStateOnPlayer: 0
+  changeOnPlayerScore: 0
   gravityRadius: 2
   gravitySpeed: 3
   damage: -1

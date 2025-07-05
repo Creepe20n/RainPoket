@@ -190,5 +190,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c998138ca4bad80418f411a602bb43c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: I004
   slowDownValue: 0.2
   slowforSeconds: 6

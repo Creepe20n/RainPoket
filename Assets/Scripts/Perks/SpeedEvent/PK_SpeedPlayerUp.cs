@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PK_SpeedPlayerUp : MonoBehaviour, I_KajiaControlls
+public class PK_SpeedPlayerUp : B_ID, I_KajiaControlls
 {
     [SerializeField] float changePlayerSpeed;
     private B_player b_Player = null;

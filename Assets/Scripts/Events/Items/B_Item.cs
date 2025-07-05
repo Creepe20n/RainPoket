@@ -1,6 +1,6 @@
 using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
-public class B_Item : MonoBehaviour, I_KajiaControlls
+public class B_Item : B_ID, I_KajiaControlls
 {
     protected KajiaSystem kajiaSystem;
     protected B_player b_Player;

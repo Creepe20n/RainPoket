@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: IT_Scr_Ufo
   m_EditorClassIdentifier: 
   eventObject: {fileID: 3708136078485999429, guid: 0125535db5110b742aa955841e73345a, type: 3}
-  eventName: 
+  eventName: Ufo
   chance: 1
   icon: {fileID: 0}

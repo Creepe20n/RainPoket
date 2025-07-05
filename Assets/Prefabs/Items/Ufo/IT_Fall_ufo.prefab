@@ -103,6 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b00c653b4795b84397931c9908a85b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: I005
   ufoPrefab: {fileID: 1285922557228465208, guid: 9a9eacc8d1f36d749a12211f54027977, type: 3}
 --- !u!114 &8874832280923287536
 MonoBehaviour:

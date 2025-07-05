@@ -1,18 +1,14 @@
 using UnityEngine;
 
-public class IT_Umbrella : MonoBehaviour, I_KajiaControlls
+public class IT_Umbrella : B_Item
 {
-    private B_player b_Player;
+
     [SerializeField] private GameObject playerUmbrellaPrefab;
-    private GameObject spawnedUmbrella;
-    public void EndObjAction()
-    {
-        gameObject.SetActive(false);
-    }
+    private GameObject spawnedUmbrella = null;
 
-    public void FullfillAction(GameObject player)
+    public override void HitPlayer(GameObject player)
     {
-
+        print(player.name);
         if (spawnedUmbrella == null || spawnedUmbrella.activeSelf)
         {
             spawnedUmbrella = Instantiate(playerUmbrellaPrefab, player.transform);
@@ -36,12 +32,11 @@ public class IT_Umbrella : MonoBehaviour, I_KajiaControlls
         spawnedUmbrella.SetActive(true);
     }
 
-    public void FullfillAction()
+    public override void EndObjAction()
     {
-        throw new System.NotImplementedException();
+        gameObject.SetActive(false);
     }
-
-    public void KillObj()
+    public override void KillObj()
     {
         if (spawnedUmbrella != null)
         {
@@ -49,25 +44,6 @@ public class IT_Umbrella : MonoBehaviour, I_KajiaControlls
         }
 
         gameObject.SetActive(false);
-    }
-
-    public void SetKajiaValues(KajiaSystem kajia)
-    {
-        if (b_Player == null)
-            b_Player = kajia.gameManager.player.GetComponent<B_player>();
-    }
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            FullfillAction(collision.gameObject);
-            EndObjAction();
-        }
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            EndObjAction();
-        }
     }
 
 }

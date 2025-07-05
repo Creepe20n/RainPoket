@@ -190,4 +190,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f2e9bb95d072124a88fc4c4b6e504c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: I002
   prefabIBOEimer: {fileID: 5523857976697614910, guid: ef93a257b14019448bb9d8e54ded9860, type: 3}

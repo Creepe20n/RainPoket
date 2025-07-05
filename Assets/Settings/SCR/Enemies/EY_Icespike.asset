@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: EY_Icespike
   m_EditorClassIdentifier: 
   eventObject: {fileID: 5261158315050117887, guid: cd95439208fb1944dab085959fc1ed03, type: 3}
-  eventName: 
+  eventName: Icespike
   chance: 0
   icon: {fileID: 0}

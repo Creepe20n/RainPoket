@@ -103,6 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8524648d0c60c2140acf80af7a66d7b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: I003
   reverseTime: 10
   scoreMultiplier: 2
 --- !u!114 &1701550340330886141

@@ -1,7 +1,8 @@
 using UnityEngine;
 
-public class EY_Planet : B_Item
+public class EY_Planet : EV_ChangePlayerData
 {
+    [Header("Planet varibels")]
     [SerializeField] float gravityRadius = 1;
     [SerializeField] float gravitySpeed = 1;
     [SerializeField] int damage = -1;
@@ -12,13 +13,14 @@ public class EY_Planet : B_Item
 
     public override void OnTriggerEnter2D(Collider2D collision)
     {
-        base.OnTriggerEnter2D(collision);
-        
         if (collision.gameObject.CompareTag("EY_Snowflake"))
         {
             spriteRenderer.sprite = icePlanet;
             collision.gameObject.SetActive(false);
+            return;
         }
+
+        base.OnTriggerEnter2D(collision);
     }
     void Update()
     {

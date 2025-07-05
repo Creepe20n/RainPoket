@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: EY_Snowflake
   m_EditorClassIdentifier: 
   eventObject: {fileID: 5006810446109734680, guid: 7282f0d9174062b4d83f97c166c069da, type: 3}
-  eventName: 
+  eventName: Snowflake
   chance: 0
   icon: {fileID: 0}

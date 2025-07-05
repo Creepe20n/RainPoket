@@ -103,6 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d930c013b09c8d04a83f7d0e41692f91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: I001
   changeHealthOnGround: 0
   changePlayerSpeedOnGround: 0
   changeFreezeStateOnGround: 0

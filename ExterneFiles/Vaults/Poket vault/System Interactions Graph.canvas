@@ -13,7 +13,8 @@
 		{"id":"ae0dd2798524a046","type":"text","text":"GameTime","x":-1296,"y":-480,"width":250,"height":58},
 		{"id":"ea19761204ca7e65","type":"text","text":"Settings Manager","x":-1505,"y":-480,"width":190,"height":60},
 		{"id":"86d2a5ab47299d0f","type":"text","text":"Spawner","x":-1025,"y":-480,"width":250,"height":60},
-		{"id":"2ddae140dd15b8be","type":"text","text":"Static","x":-1296,"y":-630,"width":250,"height":60}
+		{"id":"2ddae140dd15b8be","type":"text","text":"Static","x":-1296,"y":-630,"width":250,"height":60},
+		{"id":"0d8bddffbacb087b","x":-710,"y":-305,"width":250,"height":60,"type":"text","text":"Dev Menu Manager"}
 	],
 	"edges":[
 		{"id":"c092fa99fda842e6","fromNode":"9a13f18bd71ae674","fromSide":"bottom","toNode":"0b83a4ffa872f489","toSide":"top"},
@@ -31,6 +32,8 @@
 		{"id":"4e64991a4698de05","fromNode":"2ddae140dd15b8be","fromSide":"bottom","toNode":"ea19761204ca7e65","toSide":"top"},
 		{"id":"1d24d0394390a946","fromNode":"b51f57f4807fbdbc","fromSide":"top","toNode":"f8c7026cf2d6ed47","toSide":"bottom"},
 		{"id":"dbd50245d2c000cb","fromNode":"2ddae140dd15b8be","fromSide":"bottom","toNode":"86d2a5ab47299d0f","toSide":"top"},
-		{"id":"5e3268285555b68c","fromNode":"9a13f18bd71ae674","fromSide":"bottom","toNode":"ff5df77b73afd769","toSide":"bottom"}
+		{"id":"5e3268285555b68c","fromNode":"9a13f18bd71ae674","fromSide":"bottom","toNode":"ff5df77b73afd769","toSide":"bottom"},
+		{"id":"7fd9aa1ca1394c18","fromNode":"0d8bddffbacb087b","fromSide":"right","toNode":"9a13f18bd71ae674","toSide":"left"},
+		{"id":"66878f0664a8aa3f","fromNode":"0d8bddffbacb087b","fromSide":"top","toNode":"cda035d6eec24e62","toSide":"bottom"}
 	]
 }

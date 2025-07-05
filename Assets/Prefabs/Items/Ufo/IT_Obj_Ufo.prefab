@@ -103,6 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fafca9a558b6ef499bce5a99a2be4dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: O001
   spriteRenderer: {fileID: 3393030294941052085}
   maxMovementSpeed: 5
   movementStartSpeed: 1

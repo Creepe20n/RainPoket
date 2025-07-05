@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class SelectionMenu : MonoBehaviour,I_Manager
+public class SelectionMenu : MonoBehaviour, I_Manager
 {
     [SerializeField] private SelectionUIManager selectionUIManager;
     [SerializeField] private KajiaSystem kajiaSystem;
@@ -26,7 +26,7 @@ public class SelectionMenu : MonoBehaviour,I_Manager
     public void ClearPerk(int onPlace)
     {
         activePerks[onPlace] = null;
-    }   
+    }
     public void ClearItem(int onPlace)
     {
         activeItems[onPlace] = null;
@@ -50,7 +50,6 @@ public class SelectionMenu : MonoBehaviour,I_Manager
         for (int i = 0; i < autoPerkCount; i++)
         {
             yield return new WaitForSeconds(0.1f);
-
             int searchValue = Random.Range(0, 100);
             searchValue -= 100;
 
@@ -60,18 +59,20 @@ public class SelectionMenu : MonoBehaviour,I_Manager
             }
 
             SCR_Events tempEvent = Spawner.Instance.ChooseByPercentage(perks.ToList(), searchValue);
-            GameObject tempObj = Spawner.Instance.Spawn(tempEvent.eventObject, objectPool);
-
-            tempObj.GetComponent<I_KajiaControlls>().SetKajiaValues(kajiaSystem);
-
-            selectionUIManager.SetPerkAnimation(i, tempEvent.icon);
-
+            SpawnPerk(tempEvent,i);
         }
 
         //allow Kajia to start time
         yield return new WaitForSeconds(4);
 
         kajiaSystem.allowSpawnStart = true;
+    }
+    public void SpawnPerk(SCR_Events perk = null, int field = 0)
+    {
+        GameObject tempObj = Spawner.Instance.Spawn(perk.eventObject, objectPool);
+        tempObj.GetComponent<I_KajiaControlls>().SetKajiaValues(kajiaSystem);
+        
+        selectionUIManager.SetPerkAnimation(field, perk.icon);
     }
 
     public void GameEnd()

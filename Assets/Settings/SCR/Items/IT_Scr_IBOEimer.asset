@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: IT_Scr_IBOEimer
   m_EditorClassIdentifier: 
   eventObject: {fileID: 5857351936777942875, guid: d9fef41557b8a1444bffdb2a36406635, type: 3}
-  eventName: 
+  eventName: IBO Eimer
   chance: 0
   icon: {fileID: 0}

@@ -2270,6 +2270,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: DownSlideButton
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 128
+        width: 22
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b74a1b63ee98904aba900539cd3dc6c
+      internalID: 926335432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -2288,6 +2310,7 @@ TextureImporter:
       DarkPerkIcon: -1292315266
       DebugGUIOff: 1531456761649573930
       DebugGUIOn: -3374845498920641771
+      DownSlideButton: 926335432
       EditIcon: 1670199171276766311
       GoldenShield: 5346461036080857579
       Header: 5122068372404526502

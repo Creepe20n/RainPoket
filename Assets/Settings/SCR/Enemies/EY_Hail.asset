@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: EY_Hail
   m_EditorClassIdentifier: 
   eventObject: {fileID: 2511321792655159082, guid: 7b3f28c1d320fa34aab45d65f80f0d11, type: 3}
-  eventName: 
+  eventName: Hail
   chance: 0
   icon: {fileID: 0}

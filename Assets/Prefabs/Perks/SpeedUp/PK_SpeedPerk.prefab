@@ -44,4 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc9f87c09515da428503958115f9edc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: P001
   changePlayerSpeed: 2

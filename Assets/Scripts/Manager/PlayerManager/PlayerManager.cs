@@ -30,6 +30,7 @@ public class PlayerManager : MonoBehaviour
         activePlayerObj.GetComponent<B_player>().GraveStone = graveStones[activeGravestoneNum];
 
         gameManager.player = activePlayerObj;
+        activePlayerNum = plyrNummber;
     }
 
 }

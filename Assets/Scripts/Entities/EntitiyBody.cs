@@ -3,7 +3,7 @@ using UnityEngine;
 /// To Get the position of some body parts based of the current sprite.
 /// Also lets you set objects on bodyparts 
 /// </summary>
-public class EntitiyBody : MonoBehaviour
+public class EntitiyBody : B_ID
 {
     [SerializeField] private SpriteRenderer spriteRenderer;
 

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: EY_Planets
   m_EditorClassIdentifier: 
   eventObject: {fileID: 4952471978379177554, guid: 26ac9ad797b2c0e4bacac8aa8dd2dca7, type: 3}
-  eventName: 
+  eventName: Planets
   chance: 0
   icon: {fileID: 0}

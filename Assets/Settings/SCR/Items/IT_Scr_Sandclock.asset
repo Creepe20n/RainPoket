@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: IT_Scr_Sandclock
   m_EditorClassIdentifier: 
   eventObject: {fileID: 2741521300734139422, guid: 75ecc98e394aead4e9c99f60da722f4c, type: 3}
-  eventName: 
+  eventName: Sandclock
   chance: 1
   icon: {fileID: 0}

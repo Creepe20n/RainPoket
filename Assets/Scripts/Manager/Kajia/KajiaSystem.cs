@@ -52,7 +52,8 @@ public class KajiaSystem : MonoBehaviour, I_Manager
 #if UNITY_EDITOR
         vector2s = spawnPoints;
 #endif
-        SCR_Events tempSCR;
+        SCR_Events tempSCR = null;
+
         // Check and activate event
         if (eventEvents.Count != 0 && CheckEventChance(activeCSettings.eventChance))
         {
@@ -66,14 +67,19 @@ public class KajiaSystem : MonoBehaviour, I_Manager
         if (CheckItemRarity(activeCSettings.itemRarity))
         {
             tempSCR = Spawner.Instance.ChooseByPercentage(allActiveItems, Random.Range(0, 101));
-            Spawner.Instance.Spawn(tempSCR.eventObject, objectPool, GetSpawnPos()).GetComponent<I_KajiaControlls>().SetKajiaValues(this);
-            return;
         }
-        //SpawnEnemy
-        tempSCR = Spawner.Instance.ChooseByPercentage(enemyEvents, Random.Range(0, 100));
-        Spawner.Instance.Spawn(tempSCR.eventObject, objectPool, GetSpawnPos()).GetComponent<I_KajiaControlls>().SetKajiaValues(this);
-    }
+        else
+        {
+            tempSCR = Spawner.Instance.ChooseByPercentage(enemyEvents, Random.Range(0, 100)); 
+        }
 
+        SpawnSomething(tempSCR);
+    }
+    public void SpawnSomething(SCR_Events scr_event)
+    {
+        Spawner.Instance.Spawn(scr_event.eventObject, objectPool, GetSpawnPos()).GetComponent<I_KajiaControlls>().SetKajiaValues(this);
+    }
+    
     private Vector2 nextSpawnPoint = Vector2.zero;
     public Vector2 GetSpawnPos()
     {
@@ -106,7 +112,7 @@ public class KajiaSystem : MonoBehaviour, I_Manager
     private void StartEvent(SCR_Events tempSCR, GameObject tempObj)
     {
         tempObj.GetComponent<I_KajiaControlls>().SetKajiaValues(this);
-        
+
     }
 
     private bool CheckEventChance(int chance)
@@ -131,7 +137,7 @@ public class KajiaSystem : MonoBehaviour, I_Manager
 
         List<Vector2> tempVec = new();
 
-        for (int i = 0;; i++)
+        for (int i = 0; ; i++)
         {
             tempVec.Add(new(lastXPos, yPos));
 
@@ -185,9 +191,8 @@ public class KajiaSystem : MonoBehaviour, I_Manager
         }
     }
 
-    public void UnPauseGame()
-    {
-    }
+    public void UnPauseGame(){}
+  
 #if UNITY_EDITOR
     private Vector2[] vector2s;
     void OnDrawGizmos()
@@ -201,5 +206,6 @@ public class KajiaSystem : MonoBehaviour, I_Manager
         for (int i = 0; i < vector2s.Length; i++)
             Gizmos.DrawSphere(vector2s[i], 0.1f);
     }
+
 #endif
 }

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Benennung' s Konventionen.md",
+                "file": "Spawnables/Items/All Items info.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Benennung' s Konventionen"
+              "title": "All Items info"
             }
           }
         ]
@@ -44,7 +44,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Dateiexplorer"
             }
           },
           {
@@ -157,19 +157,22 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "switcher:Schnellauswahl öffnen": false,
+      "graph:Graphen-Ansicht öffnen": false,
+      "canvas:Neuen Canvas erstellen": false,
+      "daily-notes:Heutige Notiz öffnen": false,
+      "templates:Vorlage einfügen": false,
+      "command-palette:Befehlspalette öffnen": false
     }
   },
   "active": "6842ce4057c38fe2",
   "lastOpenFiles": [
     "Klassengraph.canvas",
-    "System Interactions Graph.canvas",
+    "Spawnables/Items/All Items info.md",
+    "Spawnables/Items",
+    "Spawnables",
     "Benennung' s Konventionen.md",
+    "System Interactions Graph.canvas",
     "Kajia/Kajia Base.md",
     "Player/Movement.md",
     "Player",

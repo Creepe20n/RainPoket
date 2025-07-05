@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: IT_Scr_heart
   m_EditorClassIdentifier: 
   eventObject: {fileID: 3650711427546983162, guid: afb9eb0178c116f46a198e8315259a4b, type: 3}
-  eventName: 
+  eventName: Heart
   chance: 1
   icon: {fileID: 0}
