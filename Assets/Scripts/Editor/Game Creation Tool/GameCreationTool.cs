@@ -115,7 +115,11 @@ public class GameCreationTool : EditorWindow
                 activeX += plusX;
             }
 
-            GUI.Button(new Rect(activeX, startY, 50, 50), viewType);
+            if (GUI.Button(new Rect(activeX, startY, 50, 50), viewType))
+            {
+                ItemEnemyCreator.CreateWindow(allEvents[i]);
+                return;
+            }
             GUI.Label(new Rect(activeX, startY + 50, 70, 13), allEvents[i].eventName);
 
         }

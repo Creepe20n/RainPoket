@@ -1,32 +1,159 @@
 using UnityEngine;
 using UnityEditor;
 using PoketAPI.Editor;
+using PEC = PoketAPI.Editor.PoketEditorComponents;
+using System;
+using System.Reflection;
+using System.Linq;
+
 public class ItemEnemyCreator : EditorWindow
 {
+    private static SCR_Events loadedEvent = null;
     public static void CreateWindow(SCR_Events loadWithEvent)
     {
+        loadedEvent = loadWithEvent;
         EditorWindow ItemEnemyWindow = BaseEditor.CreateWindow<ItemEnemyCreator>(loadWithEvent.eventName, 300, 600);
-
         ItemEnemyWindow.Focus();
-            
     }
 
-    string newName = "new";
-    int spawnChance = 0;
-    Sprite icon = null;
-    GameObject test = null;
+    private SCR_Events loaded = null;
+
+    //SCR Values
+    private Sprite icon = null;
+    private int spawnChance = 0;
+    private string newName = "new";
+    //Object Values
+    private string objName = "";
+    private Sprite objSprite = null;
+    private MonoScript[] scriptsOnObj = new MonoScript[0];
+
+    void OnEnable()
+    {
+        loaded = loadedEvent;
+        loadedEvent = null;
+
+        if (loaded == null)
+            return;
+
+        newName = loaded.eventName;
+        spawnChance = loaded.chance;
+        icon = loaded.icon;
+
+        objName = loaded.eventObject.name;
+        objSprite = loaded.eventObject.GetComponent<SpriteRenderer>().sprite;
+
+        MonoBehaviour[] behaviour = loaded.eventObject.GetComponents<MonoBehaviour>();
+
+        scriptsOnObj = behaviour.Where(c => c != null).Select(c => MonoScript.FromMonoBehaviour(c)).ToArray();
+    }
 
     void OnGUI()
     {
+
         float width = this.position.width;
 
         PoketEditorStyle baseStyle = new(0, 20, fixedEndPixel: 290, fixedStartPixel: 100);
 
-        newName = PoketEditorComponents.TextField(newName, "Name:", 0, 20, baseStyle);
-        spawnChance = PoketEditorComponents.IntField(spawnChance, "Spawn Chance:", 0, 45, baseStyle);
+        // SCR Values
+        newName = PEC.TextField(newName, "Name:", 0, 20, baseStyle);
+        spawnChance = PEC.IntField(spawnChance, "Spawn Chance:", 0, 45, baseStyle);
+        icon = PEC.ObjectField(icon, "Icon:", 0, 70, new(290, 19, fixedStartPixel: 97, fixedEndPixel: 8, dynamicYOffset: 70));
+        //Event Obj
+        PEC.LabelField("Event Object", 150 - PEC.GetLabelWidth("Event Object") / 2, 105);
+        objSprite = PEC.ObjectField(objSprite, "Object Sprite:", 0, 120, new(290, 19, fixedStartPixel: 97, fixedEndPixel: 8, dynamicYOffset: -47));
+        objName = PEC.TextField(objName, "Object Name:", 0, 145, baseStyle);
+        //Show script array
+        PEC.LabelField("Scripts On Fall Object:", 0, 160);
+        EditorGUILayout.BeginVertical();
+        float lastY = 180;
+        for (int i = 0; i < scriptsOnObj.Length; i++)
+        {
+            scriptsOnObj[i] = PEC.ObjectField(scriptsOnObj[i], "Script" + i, 0, lastY, new(290, 19, fixedStartPixel: 97, fixedEndPixel: 8, dynamicYOffset: -40));
+            EditorGUILayout.Space(-36);
+            lastY += 20;
+        }
+        EditorGUILayout.EndVertical();
 
-        test = PoketEditorComponents.GameObjectField(test, "obj", 0, 70, new(290, 19, fixedStartPixel: 97, fixedEndPixel: 8,dynamicYOffset:70));
-        test = PoketEditorComponents.GameObjectField(test, "obj", 0, 95, new(290, 19, fixedStartPixel: 97, fixedEndPixel: 8,dynamicYOffset:-75));
+        lastY += 10;
 
+        //Add Script to element
+        if (GUI.Button(new(50, lastY, 100, 30), "+"))
+        {
+            RebuildArray(1);
+        }
+        //Remove script element
+        if (GUI.Button(new(150, lastY, 100, 30), "-"))
+        {
+            if (scriptsOnObj.Length == 0)
+                return;
+
+            RebuildArray(-1);
+        }
+
+        lastY += 60;
+        Handles.BeginGUI();
+        Handles.DrawLine(new(0, lastY), new(width, lastY));
+        Handles.EndGUI();
+        lastY += 10;
+
+        //Add Script to element
+        if (GUI.Button(new(50, lastY, 100, 30), "Finish"))
+        {
+            Finish();
+        }
+        //Remove script element
+        if (GUI.Button(new(150, lastY, 100, 30), "Save State"))
+        {
+
+        }
+
+
+
+    }
+
+    private void Finish()
+    {
+        throw new NotImplementedException();
+    }
+
+    private void ShowMonoPropertys(float lastY,PoketEditorStyle baseStyle)
+    {
+         //Show script propertys
+        for (int i = 0; i < scriptsOnObj.Length; i++)
+        {
+            if (scriptsOnObj[i] == null)
+            {
+                continue;
+            }
+
+            Type scriptClass = scriptsOnObj[i].GetClass();
+
+            if (scriptClass == null)
+                continue;
+
+            var fields = scriptClass.GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance)
+            .Where(f => f.IsPublic || f.GetCustomAttribute<SerializeField>() != null);
+
+            foreach (var x in fields)
+            {
+                PEC.LabelField(x.FieldType.Name, 0, lastY, baseStyle);
+                lastY += 20;
+            }
+            lastY += 20;
+
+        }
+    }
+
+    private void RebuildArray(int changeDirection)
+    {
+        MonoScript[] tempArray = scriptsOnObj;
+        scriptsOnObj = new MonoScript[scriptsOnObj.Length + changeDirection];
+
+        int leangth = changeDirection > 0 ? tempArray.Length : scriptsOnObj.Length;
+
+        for (int i = 0; i < leangth; i++)
+        {
+            scriptsOnObj[i] = tempArray[i];
+        }
     }
 }

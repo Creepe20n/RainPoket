@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEditor;
-using Unity.Burst.Intrinsics;
 namespace PoketAPI.Editor
 {
     public static class BaseEditor
@@ -82,53 +81,27 @@ namespace PoketAPI.Editor
             }
         }
 
+
         /// <summary>
-        /// A Field to selct a sprite
-        /// IT DOSE NOT USE FIXED POSITIONING
+        /// Takes in a Unity.Object and creates a field based on it
         /// </summary>
+        /// <typeparam name="T"></typeparam>
         /// <param name="input"></param>
         /// <param name="fieldName"></param>
         /// <param name="x"></param>
         /// <param name="y"></param>
         /// <param name="style"></param>
-        /// <returns>Sprite</returns>
-        public static Sprite SpriteField(Sprite input, string fieldName = "Spritefield", float x = 0, float y = 0, PoketEditorStyle style = null)
+        /// <returns>The Object you have given</returns>
+        public static T ObjectField<T>(T input, string fieldName = "Object field", float x = 0, float y = 0, PoketEditorStyle style = null, bool referenceSceneObj = false) where T : Object
         {
             LabelField(fieldName, x, y);
-
-            EditorGUILayout.Space(style.DynamicYOffset);
+            if(style.DynamicYOffset != 0)
+                EditorGUILayout.Space(style.DynamicYOffset);
 
             EditorGUILayout.BeginHorizontal();
             EditorGUILayout.Space(style.FixedStartPixel);
 
-            Sprite sprite = (Sprite)EditorGUILayout.ObjectField(input, typeof(Sprite), false, GUILayout.MaxWidth(style.Width));
-
-            EditorGUILayout.Space(style.FixedEndPixel);
-            EditorGUILayout.EndHorizontal();
-
-            return sprite;
-        }
-        /// <summary>
-        /// A field to get a game obj. 
-        /// IT DOSE NOT USE FIXED POSITIONING
-        /// </summary>
-        /// <param name="input"></param>
-        /// <param name="fieldName"></param>
-        /// <param name="x"></param>
-        /// <param name="y"></param>
-        /// <param name="style"></param>
-        /// <returns>GameObject</returns>
-        public static GameObject GameObjectField(GameObject input, string fieldName = "Spritefield", float x = 0, float y = 0, PoketEditorStyle style = null)
-        {
-            LabelField(fieldName, x, y);
-
-            EditorGUILayout.Space(style.DynamicYOffset);
-
-            EditorGUILayout.BeginHorizontal();
-            EditorGUILayout.Space(style.FixedStartPixel);
-
-            GameObject tempGameObject = (GameObject)EditorGUILayout.ObjectField(input, typeof(GameObject), false, GUILayout.MaxWidth(style.Width));
-
+            T tempGameObject = (T)EditorGUILayout.ObjectField(input, typeof(T), referenceSceneObj, GUILayout.MaxWidth(style.Width));
             EditorGUILayout.Space(style.FixedEndPixel);
             EditorGUILayout.EndHorizontal();
 
