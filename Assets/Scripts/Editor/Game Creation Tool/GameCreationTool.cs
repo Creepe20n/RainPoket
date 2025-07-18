@@ -16,7 +16,7 @@ public class GameCreationTool : EditorWindow
     }
 
     SCR_Events[] allEvents = null;
-    string viewType = "Item";
+    E_Types viewType = E_Types.Item;
     void OnEnable()
     {
         allEvents = GetAllEvents("Assets\\Settings\\SCR\\Items");
@@ -49,18 +49,18 @@ public class GameCreationTool : EditorWindow
         if (GUI.Button(new Rect(sidePanelRect.x, sidePanelRect.y, sidePanelRect.width, 50), "Items"))
         {
             allEvents = GetAllEvents("Assets\\Settings\\SCR\\Items");
-            viewType = "Item";
+            viewType = E_Types.Item;
         }
         if (GUI.Button(new Rect(sidePanelRect.x, sidePanelRect.y + 50, sidePanelRect.width, 50), "Enemys"))
         {
             allEvents = GetAllEvents("Assets\\Settings\\SCR\\Enemies");
-            viewType = "Enemy";
+            viewType = E_Types.Enemy;
 
         }
         if (GUI.Button(new Rect(sidePanelRect.x, sidePanelRect.y + 100, sidePanelRect.width, 50), "Perks"))
         {
             allEvents = GetAllEvents("Assets\\Settings\\SCR\\Perks");
-            viewType = "Perk";
+            viewType = E_Types.Perk;
         }
 
         //Create menu Buttons
@@ -70,17 +70,17 @@ public class GameCreationTool : EditorWindow
         {
             switch (viewType)
             {
-                case "Item":
+                case E_Types.Item:
                     SCR_Events itemEvent = CreateInstance<SCR_Events>();
                     itemEvent.eventName = "new Item";
 
-                    ItemEnemyCreator.CreateWindow(itemEvent);
+                    ItemEnemyCreator.CreateWindow(itemEvent,E_Types.Item);
                     break;
-                case "Enemy":
+                case E_Types.Enemy:
                     SCR_Events enemyEvent = CreateInstance<SCR_Events>();
                     enemyEvent.eventName = "new Enemy";
 
-                    ItemEnemyCreator.CreateWindow(enemyEvent);
+                    ItemEnemyCreator.CreateWindow(enemyEvent,E_Types.None);
                     break;
             }
         }
@@ -115,9 +115,9 @@ public class GameCreationTool : EditorWindow
                 activeX += plusX;
             }
 
-            if (GUI.Button(new Rect(activeX, startY, 50, 50), viewType))
+            if (GUI.Button(new Rect(activeX, startY, 50, 50), viewType.ToString()))
             {
-                ItemEnemyCreator.CreateWindow(allEvents[i]);
+                ItemEnemyCreator.CreateWindow(allEvents[i],viewType);
                 return;
             }
             GUI.Label(new Rect(activeX, startY + 50, 70, 13), allEvents[i].eventName);

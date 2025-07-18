@@ -9,14 +9,17 @@ using System.Linq;
 public class ItemEnemyCreator : EditorWindow
 {
     private static SCR_Events loadedEvent = null;
-    public static void CreateWindow(SCR_Events loadWithEvent)
+    private static E_Types e_Types;
+    public static void CreateWindow(SCR_Events loadWithEvent, E_Types _e_Types)
     {
         loadedEvent = loadWithEvent;
+        e_Types = _e_Types;
         EditorWindow ItemEnemyWindow = BaseEditor.CreateWindow<ItemEnemyCreator>(loadWithEvent.eventName, 300, 600);
         ItemEnemyWindow.Focus();
     }
 
     private SCR_Events loaded = null;
+    private E_Types localEType = E_Types.None;
 
     //SCR Values
     private Sprite icon = null;
@@ -29,16 +32,23 @@ public class ItemEnemyCreator : EditorWindow
 
     void OnEnable()
     {
+        //Window Values
         loaded = loadedEvent;
         loadedEvent = null;
 
+        localEType = e_Types;
+        e_Types = E_Types.None;
+
         if (loaded == null)
             return;
-
+        //SCR Values
         newName = loaded.eventName;
         spawnChance = loaded.chance;
         icon = loaded.icon;
 
+        if (loaded.eventObject == null)
+            return;
+        //Spawn obj Values
         objName = loaded.eventObject.name;
         objSprite = loaded.eventObject.GetComponent<SpriteRenderer>().sprite;
 
@@ -49,7 +59,14 @@ public class ItemEnemyCreator : EditorWindow
 
     void OnGUI()
     {
+        //Show error box that no type was found
+        if (localEType == E_Types.None || localEType == E_Types.Perk || localEType == E_Types.Event)
+        {
+            EditorGUI.HelpBox(new(0, 0, 300, 150), "Wrong type was given: " + localEType.ToString(), MessageType.Warning);
+            return;
+        }
 
+        //Defoult values
         float width = this.position.width;
 
         PoketEditorStyle baseStyle = new(0, 20, fixedEndPixel: 290, fixedStartPixel: 100);
@@ -58,10 +75,12 @@ public class ItemEnemyCreator : EditorWindow
         newName = PEC.TextField(newName, "Name:", 0, 20, baseStyle);
         spawnChance = PEC.IntField(spawnChance, "Spawn Chance:", 0, 45, baseStyle);
         icon = PEC.ObjectField(icon, "Icon:", 0, 70, new(290, 19, fixedStartPixel: 97, fixedEndPixel: 8, dynamicYOffset: 70));
+
         //Event Obj
         PEC.LabelField("Event Object", 150 - PEC.GetLabelWidth("Event Object") / 2, 105);
         objSprite = PEC.ObjectField(objSprite, "Object Sprite:", 0, 120, new(290, 19, fixedStartPixel: 97, fixedEndPixel: 8, dynamicYOffset: -47));
         objName = PEC.TextField(objName, "Object Name:", 0, 145, baseStyle);
+
         //Show script array
         PEC.LabelField("Scripts On Fall Object:", 0, 160);
         EditorGUILayout.BeginVertical();
@@ -81,6 +100,7 @@ public class ItemEnemyCreator : EditorWindow
         {
             RebuildArray(1);
         }
+
         //Remove script element
         if (GUI.Button(new(150, lastY, 100, 30), "-"))
         {
@@ -106,14 +126,23 @@ public class ItemEnemyCreator : EditorWindow
         {
 
         }
-
-
-
     }
 
     private void Finish()
     {
-        throw new NotImplementedException();
+        string scrPath = "";
+        string objPath = "";
+
+        if (localEType == E_Types.Item)
+        {
+            scrPath = "D:\\Unity\\Projects\\RainPoket\\Assets\\Settings\\SCR\\Items";
+            objPath = "D:\\Unity\\Projects\\RainPoket\\Assets\\Prefabs\\Items\\" + newName;
+        }
+        else
+        {
+            scrPath = "D:\\Unity\\Projects\\RainPoket\\Assets\\Settings\\SCR\\Enemies";
+            objPath = "D:\\Unity\\Projects\\RainPoket\\Assets\\Prefabs\\Items\\Enemies\\" + newName;
+        }
     }
 
     private void ShowMonoPropertys(float lastY,PoketEditorStyle baseStyle)

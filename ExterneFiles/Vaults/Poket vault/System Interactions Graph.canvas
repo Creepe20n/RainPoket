@@ -4,8 +4,6 @@
 		{"id":"ef372b626056bc1b","type":"text","text":"IKajiaControlls","x":-300,"y":-480,"width":250,"height":60},
 		{"id":"813e51acce263655","type":"text","text":"Selection Menu","x":-300,"y":-630,"width":250,"height":60},
 		{"id":"8c8b1d371aa6dea9","type":"text","text":"Selection Menu GUI","x":-300,"y":-800,"width":250,"height":60},
-		{"id":"f8c7026cf2d6ed47","type":"text","text":"Player","x":-715,"y":-110,"width":130,"height":50},
-		{"id":"b51f57f4807fbdbc","type":"text","text":"PlayerManager","x":-775,"y":60,"width":250,"height":50},
 		{"id":"9a13f18bd71ae674","type":"text","text":"Kajia System","x":-300,"y":-300,"width":250,"height":50},
 		{"id":"ff5df77b73afd769","type":"text","text":"I Manager","x":120,"y":-480,"width":250,"height":67},
 		{"id":"ae4668542186a606","type":"text","text":"GUI Manager\n","x":560,"y":-480,"width":250,"height":60},
@@ -14,7 +12,10 @@
 		{"id":"ea19761204ca7e65","type":"text","text":"Settings Manager","x":-1505,"y":-480,"width":190,"height":60},
 		{"id":"86d2a5ab47299d0f","type":"text","text":"Spawner","x":-1025,"y":-480,"width":250,"height":60},
 		{"id":"2ddae140dd15b8be","type":"text","text":"Static","x":-1296,"y":-630,"width":250,"height":60},
-		{"id":"0d8bddffbacb087b","x":-710,"y":-305,"width":250,"height":60,"type":"text","text":"Dev Menu Manager"}
+		{"id":"0d8bddffbacb087b","type":"text","text":"Dev Menu Manager","x":-710,"y":-305,"width":250,"height":60},
+		{"id":"47adb29c9e50ef35","x":-715,"y":-200,"width":250,"height":50,"type":"text","text":"Level Manager"},
+		{"id":"b51f57f4807fbdbc","type":"text","text":"PlayerManager","x":-715,"y":65,"width":250,"height":50},
+		{"id":"f8c7026cf2d6ed47","type":"text","text":"Player","x":-655,"y":-105,"width":130,"height":50}
 	],
 	"edges":[
 		{"id":"c092fa99fda842e6","fromNode":"9a13f18bd71ae674","fromSide":"bottom","toNode":"0b83a4ffa872f489","toSide":"top"},
@@ -34,6 +35,7 @@
 		{"id":"dbd50245d2c000cb","fromNode":"2ddae140dd15b8be","fromSide":"bottom","toNode":"86d2a5ab47299d0f","toSide":"top"},
 		{"id":"5e3268285555b68c","fromNode":"9a13f18bd71ae674","fromSide":"bottom","toNode":"ff5df77b73afd769","toSide":"bottom"},
 		{"id":"7fd9aa1ca1394c18","fromNode":"0d8bddffbacb087b","fromSide":"right","toNode":"9a13f18bd71ae674","toSide":"left"},
-		{"id":"66878f0664a8aa3f","fromNode":"0d8bddffbacb087b","fromSide":"top","toNode":"cda035d6eec24e62","toSide":"bottom"}
+		{"id":"66878f0664a8aa3f","fromNode":"0d8bddffbacb087b","fromSide":"top","toNode":"cda035d6eec24e62","toSide":"bottom"},
+		{"id":"4094806bad1ae691","fromNode":"47adb29c9e50ef35","fromSide":"right","toNode":"9a13f18bd71ae674","toSide":"bottom"}
 	]
 }
