@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEditor;
 using PoketAPI.Editor;
-using System.Collections.Generic;
 public class GameCreationTool : EditorWindow
 {
     public static EditorWindow toolSelectorWindow = null;
@@ -19,7 +18,7 @@ public class GameCreationTool : EditorWindow
     E_Types viewType = E_Types.Item;
     void OnEnable()
     {
-        allEvents = GetAllEvents("Assets\\Settings\\SCR\\Items");
+        allEvents = EditorFunctions.GetAllEvents("Assets\\Settings\\SCR\\Items");
     }
 
     void OnGUI()
@@ -48,18 +47,21 @@ public class GameCreationTool : EditorWindow
         GUI.color = new Color(0.65f, 0.65f, 0.65f);
         if (GUI.Button(new Rect(sidePanelRect.x, sidePanelRect.y, sidePanelRect.width, 50), "Items"))
         {
-            allEvents = GetAllEvents("Assets\\Settings\\SCR\\Items");
+
+            allEvents = EditorFunctions.GetAllEvents("Assets\\Settings\\SCR\\Items");
             viewType = E_Types.Item;
         }
         if (GUI.Button(new Rect(sidePanelRect.x, sidePanelRect.y + 50, sidePanelRect.width, 50), "Enemys"))
         {
-            allEvents = GetAllEvents("Assets\\Settings\\SCR\\Enemies");
+
+            allEvents = EditorFunctions.GetAllEvents("Assets\\Settings\\SCR\\Enemies");
             viewType = E_Types.Enemy;
 
         }
         if (GUI.Button(new Rect(sidePanelRect.x, sidePanelRect.y + 100, sidePanelRect.width, 50), "Perks"))
         {
-            allEvents = GetAllEvents("Assets\\Settings\\SCR\\Perks");
+
+            allEvents = EditorFunctions.GetAllEvents("Assets\\Settings\\SCR\\Perks");
             viewType = E_Types.Perk;
         }
 
@@ -74,13 +76,13 @@ public class GameCreationTool : EditorWindow
                     SCR_Events itemEvent = CreateInstance<SCR_Events>();
                     itemEvent.eventName = "new Item";
 
-                    ItemEnemyCreator.CreateWindow(itemEvent,E_Types.Item);
+                    ItemEnemyCreator.CreateWindow(itemEvent, E_Types.Item);
                     break;
                 case E_Types.Enemy:
                     SCR_Events enemyEvent = CreateInstance<SCR_Events>();
                     enemyEvent.eventName = "new Enemy";
 
-                    ItemEnemyCreator.CreateWindow(enemyEvent,E_Types.None);
+                    ItemEnemyCreator.CreateWindow(enemyEvent, E_Types.None);
                     break;
             }
         }
@@ -117,32 +119,11 @@ public class GameCreationTool : EditorWindow
 
             if (GUI.Button(new Rect(activeX, startY, 50, 50), viewType.ToString()))
             {
-                ItemEnemyCreator.CreateWindow(allEvents[i],viewType);
+                ItemEnemyCreator.CreateWindow(allEvents[i], viewType);
                 return;
             }
             GUI.Label(new Rect(activeX, startY + 50, 70, 13), allEvents[i].eventName);
 
         }
     }
-
-    private SCR_Events[] GetAllEvents(string folderPath)
-    {
-        string[] guids = AssetDatabase.FindAssets("t:" + typeof(SCR_Events).Name, new[] { folderPath });
-
-        List<SCR_Events> allEvents = new();
-
-        for (int i = 0; i < guids.Length; i++)
-        {
-            string assetPath = AssetDatabase.GUIDToAssetPath(guids[i]);
-
-            SCR_Events tempEvent = AssetDatabase.LoadAssetAtPath<SCR_Events>(assetPath);
-
-            if (tempEvent != null)
-                allEvents.Add(tempEvent);
-        }
-        return allEvents.ToArray();
-    }
-
-
-
 }

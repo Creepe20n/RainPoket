@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEditor;
+using System.Collections.Generic;
 namespace PoketAPI.Editor
 {
     public static class BaseEditor
@@ -37,6 +38,29 @@ namespace PoketAPI.Editor
 
     public static class PoketEditorComponents
     {
+        #region Toggle
+        /// <summary>
+        /// A simple Toggle
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="fieldName"></param>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <param name="style"></param>
+        /// <returns>Returns the displayed bool value</returns>
+        public static bool Toggle(bool input, string fieldName = "boolfield", float x = 0, float y = 0, PoketEditorStyle style = null)
+        {
+            style ??= new(100, 20);
+
+            style = SetFixedEndPixelWidth(style, x);
+
+            float labelWidth = LabelField(fieldName, x, y);
+            float fieldX = style.FixedStartPixel < 0 ? (x + labelWidth + 10) : style.FixedStartPixel;
+
+            return GUI.Toggle(new(fieldX, y, style.Width, style.Height), input, "");
+        }
+        #endregion
+        #region TextField
         /// <summary>
         /// A standart Text field with Label
         /// </summary>
@@ -55,6 +79,8 @@ namespace PoketAPI.Editor
 
             return Field(input, fieldX, y, style);
         }
+        #endregion
+        #region IntField
         /// <summary>
         /// A field to enter Hohle numbers with label
         /// </summary>
@@ -80,8 +106,8 @@ namespace PoketAPI.Editor
                 return input;
             }
         }
-
-
+        #endregion
+        #region ObjectField
         /// <summary>
         /// Takes in a Unity.Object and creates a field based on it
         /// </summary>
@@ -95,7 +121,7 @@ namespace PoketAPI.Editor
         public static T ObjectField<T>(T input, string fieldName = "Object field", float x = 0, float y = 0, PoketEditorStyle style = null, bool referenceSceneObj = false) where T : Object
         {
             LabelField(fieldName, x, y);
-            if(style.DynamicYOffset != 0)
+            if (style.DynamicYOffset != 0)
                 EditorGUILayout.Space(style.DynamicYOffset);
 
             EditorGUILayout.BeginHorizontal();
@@ -107,7 +133,8 @@ namespace PoketAPI.Editor
 
             return tempGameObject;
         }
-
+        #endregion
+        #region Field
         /// <summary>
         /// A simple field to enter text without label
         /// </summary>
@@ -127,7 +154,8 @@ namespace PoketAPI.Editor
 
             return GUI.TextField(new(x, y, style.Width, style.Height), input);
         }
-
+        #endregion
+        #region LabelField
         /// <summary>
         /// A Label that returns its Width
         /// </summary>
@@ -144,8 +172,41 @@ namespace PoketAPI.Editor
 
             return style.Width;
         }
+        #endregion
+        #region FolderField
         /// <summary>
-        /// Multiplies the number of chars by 8
+        /// A Field that lets you select a folder
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="fieldName"></param>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <param name="style"></param>
+        /// <returns>input or a selected Path</returns>
+        public static string FolderField(string input, string fieldName = "Explorerfield", float x = 0, float y = 0, PoketEditorStyle style = null)
+        {
+            style ??= new(500, 20);
+
+            float fixedEndPixel = style.FixedEndPixel - style.Height;
+
+
+            TextField(input, fieldName, x, y, new(style.Width, style.Height, style.MaxWidth, fixedEndPixel, style.FixedStartPixel, style.DynamicYOffset));
+
+            if (GUI.Button(new(fixedEndPixel, y, style.Height, style.Height), "o"))
+            {
+                string output = EditorUtility.OpenFolderPanel("Select Folder", "", "");
+
+                if (System.IO.Directory.Exists(output))
+                    return output;
+
+            }
+
+            return input;
+        }
+
+        #endregion
+        /// <summary>
+        /// Multiplies the number of chars by the CalcSize of the label
         /// </summary>
         /// <param name="text"></param>
         /// <returns></returns>
@@ -214,7 +275,53 @@ namespace PoketAPI.Editor
             Width = width;
             Height = height;
         }
+    }
+    public static class EditorFunctions
+    {
+        /// <summary>
+        /// Returns all SCR_Events from a path
+        /// </summary>
+        /// <param name="folderPath"></param>
+        /// <returns>returns null or array from with found SCR_Events</returns>
+        public static SCR_Events[] GetAllEvents(string folderPath)
+        {
+            string[] guids = AssetDatabase.FindAssets("t:" + typeof(SCR_Events).Name, new[] { folderPath });
 
+            List<SCR_Events> allEvents = new();
 
+            for (int i = 0; i < guids.Length; i++)
+            {
+                string assetPath = AssetDatabase.GUIDToAssetPath(guids[i]);
+
+                SCR_Events tempEvent = AssetDatabase.LoadAssetAtPath<SCR_Events>(assetPath);
+
+                if (tempEvent != null)
+                    allEvents.Add(tempEvent);
+            }
+            return allEvents.ToArray();
+        }
+        /// <summary>
+        /// Get an SCR_Event by the event name
+        /// </summary>
+        /// <param name="folderPath"></param>
+        /// <param name="eventName"></param>
+        /// <returns>returns the event with the same event name or null</returns>
+        public static SCR_Events GetEvent(string folderPath, string eventName)
+        {
+            string[] guids = AssetDatabase.FindAssets("t:" + typeof(SCR_Events), new[] { folderPath });
+
+            for (int i = 0; i < guids.Length; i++)
+            {
+                string assetPath = AssetDatabase.GUIDToAssetPath(guids[i]);
+
+                SCR_Events tempEvent = AssetDatabase.LoadAssetAtPath<SCR_Events>(assetPath);
+
+                if (tempEvent.eventName == eventName)
+                    return tempEvent;
+
+            }
+
+            return null;
+        }
     }
 }

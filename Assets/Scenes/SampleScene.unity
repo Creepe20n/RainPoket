@@ -947,7 +947,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.75, y: 0, z: 10}
-  m_LocalScale: {x: 1, y: 8.383141, z: 1}
+  m_LocalScale: {x: 1, y: 8.058713, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 519420032}
@@ -5439,6 +5439,7 @@ GameObject:
   - component: {fileID: 1917754095}
   - component: {fileID: 1917754100}
   - component: {fileID: 1917754101}
+  - component: {fileID: 1917754102}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5782,6 +5783,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51d6ef470b607d44da3799461225d1aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1917754102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917754091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 783adfb4ac66ee44aa58888b89e745cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 1917754092}
+  kajiaSystem: {fileID: 1917754097}
+  levelData: []
 --- !u!1 &1945713916
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
+using System;
 using UnityEngine;
-
+[Serializable]
 public class C_Level
 {
     [Range(1, 100)]

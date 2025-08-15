@@ -28,36 +28,7 @@ public class GameManager : MonoBehaviour, I_Manager
             _scoreMultiplier = Mathf.Clamp(value, 1, 10);
         }
     }
-    //Level system varibles
-    private int _level = 0;
-    public int Level
-    {
-        get => _level;
-        set
-        {
-            _level = value;
-        }
-    }
-    private int _levelPoints = 0;
-    /// <summary>
-    /// Add level points, 100 = +1 level
-    /// </summary>
-    public int LevelPoints
-    {
-        get => _levelPoints;
-        set
-        {
-            if (value >= 100)
-            {
-                _levelPoints = 0;
-                Level++;
-            }
-            else
-            {
-                _levelPoints = value;
-            }
-        }
-    }
+   
     //Events
     [SerializeField] private UnityEvent gameStartEvents;
     [SerializeField] private UnityEvent gamePauseEvents;

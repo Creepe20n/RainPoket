@@ -5,6 +5,7 @@ using PEC = PoketAPI.Editor.PoketEditorComponents;
 using System;
 using System.Reflection;
 using System.Linq;
+using UnityEditor.EditorTools;
 
 public class ItemEnemyCreator : EditorWindow
 {
@@ -30,8 +31,12 @@ public class ItemEnemyCreator : EditorWindow
     private Sprite objSprite = null;
     private MonoScript[] scriptsOnObj = new MonoScript[0];
 
+    private bool finished = false;
+
     void OnEnable()
     {
+
+
         //Window Values
         loaded = loadedEvent;
         loadedEvent = null;
@@ -56,9 +61,16 @@ public class ItemEnemyCreator : EditorWindow
 
         scriptsOnObj = behaviour.Where(c => c != null).Select(c => MonoScript.FromMonoBehaviour(c)).ToArray();
     }
+    //On GUI
+    private PoketEditorStyle baseStyle = new(0, 20, fixedEndPixel: 290, fixedStartPixel: 100);
 
     void OnGUI()
     {
+        if (finished)
+        {
+            FinishView();
+            return;
+        }
         //Show error box that no type was found
         if (localEType == E_Types.None || localEType == E_Types.Perk || localEType == E_Types.Event)
         {
@@ -69,7 +81,6 @@ public class ItemEnemyCreator : EditorWindow
         //Defoult values
         float width = this.position.width;
 
-        PoketEditorStyle baseStyle = new(0, 20, fixedEndPixel: 290, fixedStartPixel: 100);
 
         // SCR Values
         newName = PEC.TextField(newName, "Name:", 0, 20, baseStyle);
@@ -128,26 +139,82 @@ public class ItemEnemyCreator : EditorWindow
         }
     }
 
+    //Finish Values
+    private string scrPath = "";
+    private string objPath = "";
+    private string scrName = "";
+    private SCR_Events folderEvent = null;
+    private bool backupFiles = true;
     private void Finish()
     {
-        string scrPath = "";
-        string objPath = "";
+        switch (localEType)
+        {
+            case E_Types.Item:
+                scrPath = scrPath == "" ? "Assets\\Settings\\SCR\\Items" : scrPath;
+                objPath = objPath == "" ? "Assets\\Prefabs\\Items\\" + objName : objPath;
+                scrName = scrName == "" ? "IT_" + newName : scrName;
+                break;
 
-        if (localEType == E_Types.Item)
-        {
-            scrPath = "D:\\Unity\\Projects\\RainPoket\\Assets\\Settings\\SCR\\Items";
-            objPath = "D:\\Unity\\Projects\\RainPoket\\Assets\\Prefabs\\Items\\" + newName;
+            case E_Types.Enemy:
+                scrPath = scrPath == "" ? "Assets\\Settings\\SCR\\Enemies" : scrPath;
+                objPath = objPath == "" ? "Assets\\Prefabs\\Items\\Enemies\\" + objName : objPath;
+                scrName = "EY_" + newName;
+                break;
         }
-        else
+
+        folderEvent = EditorFunctions.GetEvent(scrPath, loaded.eventName);
+        finished = true;
+    }
+    //Finish View 
+    private void FinishView()
+    {
+        int yPx = 20;
+
+        PEC.LabelField("Settings for Build", x: 20);
+
+        if (folderEvent != null)
         {
-            scrPath = "D:\\Unity\\Projects\\RainPoket\\Assets\\Settings\\SCR\\Enemies";
-            objPath = "D:\\Unity\\Projects\\RainPoket\\Assets\\Prefabs\\Items\\Enemies\\" + newName;
+            backupFiles = PEC.Toggle(backupFiles, "Backup files", 0, yPx, baseStyle);
+            yPx += 25;
         }
+
+        PEC.LabelField("File Settings:", 20, yPx, baseStyle);
+        yPx += 25;
+
+        scrName = PEC.TextField(scrName, "SCR Name", x: 0, y: yPx, baseStyle);
+        yPx += 20;
+
+        PEC.LabelField("Save to path:", y: yPx, x: 20);
+        yPx += 25;
+
+        scrPath = PEC.FolderField(scrPath, "SCR Path", 0, yPx, baseStyle);
+        yPx += 20;
+
+        objPath = PEC.FolderField(objPath, "Obj Path", 0, yPx, baseStyle);
+        yPx += 25;
+
+        Handles.BeginGUI();
+        Handles.DrawLine(new(0, yPx), new(position.width, yPx));
+        Handles.EndGUI();
+        yPx += 5;
+
+
+        //Add Script to element
+        if (GUI.Button(new(50, yPx, 100, 30), "Build"))
+        {
+            Finish();
+        }
+        //Remove script element
+        if (GUI.Button(new(150, yPx, 100, 30), "Back"))
+        {
+            finished = false;
+        }
+
     }
 
-    private void ShowMonoPropertys(float lastY,PoketEditorStyle baseStyle)
+    private void ShowMonoPropertys(float lastY, PoketEditorStyle baseStyle)
     {
-         //Show script propertys
+        //Show script propertys
         for (int i = 0; i < scriptsOnObj.Length; i++)
         {
             if (scriptsOnObj[i] == null)
