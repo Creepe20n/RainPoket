@@ -5,12 +5,11 @@ using PEC = PoketAPI.Editor.PoketEditorComponents;
 using System;
 using System.Reflection;
 using System.Linq;
-using UnityEditor.EditorTools;
+using System.IO;
 
 public class ItemEnemyCreator : EditorWindow
 {
-    
-        private static SCR_Events loadedEvent = null;
+    private static SCR_Events loadedEvent = null;
     private static E_Types e_Types;
     public static void CreateWindow(SCR_Events loadWithEvent, E_Types _e_Types)
     {
@@ -36,8 +35,6 @@ public class ItemEnemyCreator : EditorWindow
 
     void OnEnable()
     {
-
-
         //Window Values
         loaded = loadedEvent;
         loadedEvent = null;
@@ -143,6 +140,8 @@ public class ItemEnemyCreator : EditorWindow
     //Finish Values
     private string scrPath = "";
     private string objPath = "";
+    private string BackupPath => Path.Join(Application.dataPath,"Scripts\\Editor\\Backup");
+
     private string scrName = "";
     private SCR_Events folderEvent = null;
     private bool backupFiles = true;
@@ -203,7 +202,7 @@ public class ItemEnemyCreator : EditorWindow
         //Add Script to element
         if (GUI.Button(new(50, yPx, 100, 30), "Build"))
         {
-            Finish();
+            Build();
         }
         //Remove script element
         if (GUI.Button(new(150, yPx, 100, 30), "Back"))
@@ -212,7 +211,45 @@ public class ItemEnemyCreator : EditorWindow
         }
 
     }
+    public void Build()
+    {
+        if (backupFiles)
+            Backup();
 
+        
+    }
+
+    public void Backup()
+    {
+        Debug.Log(BackupPath);
+
+        if (!Directory.Exists(BackupPath))
+        {
+            Directory.CreateDirectory(BackupPath);
+        }
+
+        if (!Directory.Exists(BackupPath))
+        {
+            Debug.LogWarning("WUWUWUWUUWU SOMETHING NOT WORKING");
+            return;
+        }
+
+        string backupDirectoryForSCR = Path.Join(BackupPath, scrName);
+
+        string folderNumber = "";
+
+        for (int i = 0; i < 100; i++)
+        {
+            if (!Directory.Exists(backupDirectoryForSCR + folderNumber))
+                break;
+
+            folderNumber = $" ({i})";
+        }
+
+        Directory.CreateDirectory(backupDirectoryForSCR);
+
+        
+    }
     private void ShowMonoPropertys(float lastY, PoketEditorStyle baseStyle)
     {
         //Show script propertys
