@@ -9,7 +9,8 @@ using UnityEditor.EditorTools;
 
 public class ItemEnemyCreator : EditorWindow
 {
-    private static SCR_Events loadedEvent = null;
+    
+        private static SCR_Events loadedEvent = null;
     private static E_Types e_Types;
     public static void CreateWindow(SCR_Events loadWithEvent, E_Types _e_Types)
     {
