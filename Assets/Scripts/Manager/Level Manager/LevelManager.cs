@@ -6,7 +6,6 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour, I_Manager
 {
     [SerializeField] private GameManager gameManager;
-    [SerializeField] private KajiaSystem kajiaSystem;
     [SerializeField] private C_Level[] levelData;
 
     //Level system varibles
@@ -81,7 +80,7 @@ public class LevelManager : MonoBehaviour, I_Manager
 
                 case E_Level.Enemy:
                     tempItems.AddRange(levelData[i].addEnemiesToPool);
-                    break; 
+                    break;
             }
         }
 

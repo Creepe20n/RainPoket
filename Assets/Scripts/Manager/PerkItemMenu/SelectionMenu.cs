@@ -7,6 +7,7 @@ public class SelectionMenu : MonoBehaviour, I_Manager
 {
     [SerializeField] private SelectionUIManager selectionUIManager;
     [SerializeField] private KajiaSystem kajiaSystem;
+    [SerializeField] private LevelManager levelManager;
     [SerializeField] private int autoPerkCount = 3;
     [SerializeField] private SCR_Events[] items;
     [SerializeField] private SCR_Events[] perks;
@@ -34,13 +35,15 @@ public class SelectionMenu : MonoBehaviour, I_Manager
 
     public void GameStart()
     {
-        kajiaSystem.choosenItems = activeItems;
+        //Set Kajia Values 
+        kajiaSystem.addedEnemies = levelManager.GetAllTillLevel(levelManager.Level, E_Level.Enemy);
+        kajiaSystem.choosenItems = levelManager.GetAllTillLevel(levelManager.Level, E_Level.Item).Concat(activeItems).ToArray();
 
+        //Activate Perks
         for (int i = 0; i < activePerks.Length; i++)
         {
             GameObject tempObj = Spawner.Instance.Spawn(activePerks[i].eventObject, objectPool);
             tempObj.GetComponent<I_KajiaControlls>().SetKajiaValues(kajiaSystem);
-
         }
 
         StartCoroutine(CreatePerks());
@@ -61,6 +64,7 @@ public class SelectionMenu : MonoBehaviour, I_Manager
             SCR_Events tempEvent = Spawner.Instance.ChooseByPercentage(perks.ToList(), searchValue);
             SpawnPerk(tempEvent,i);
         }
+
 
         //allow Kajia to start time
         yield return new WaitForSeconds(4);

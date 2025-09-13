@@ -10,7 +10,9 @@ public class KajiaSystem : MonoBehaviour, I_Manager
     [SerializeField] private List<SCR_Events> itemEvents = new();
     [SerializeField] private List<SCR_Events> eventEvents = new();
     [HideInInspector] public SCR_Events[] choosenItems;
+    [HideInInspector] public SCR_Events[] addedEnemies;
     private List<SCR_Events> allActiveItems = new();
+    private List<SCR_Events> allActiveEnemies = new();
     [HideInInspector] public bool allowSpawnStart = false;
     private float nextSpawnTime = 0;
     private float timeSinceLastSpawn = 0;
@@ -22,6 +24,9 @@ public class KajiaSystem : MonoBehaviour, I_Manager
     {
         allActiveItems.AddRange(choosenItems);
         allActiveItems.AddRange(itemEvents);
+
+        allActiveEnemies.AddRange(enemyEvents);
+        allActiveEnemies.AddRange(addedEnemies);
     }
 
     void Update()
@@ -180,7 +185,9 @@ public class KajiaSystem : MonoBehaviour, I_Manager
     public void GameEnd()
     {
         allowSpawnStart = false;
+
         allActiveItems.Clear();
+        allActiveEnemies.Clear();
 
         for (int i = 0; i < objectPool.Count; i++)
         {

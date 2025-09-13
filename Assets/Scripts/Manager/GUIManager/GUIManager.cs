@@ -10,12 +10,14 @@ public class GUIManager : MonoBehaviour, I_Manager
     [SerializeField] private Animator[] fadeAni;
     [SerializeField] private Animator DeathAni;
     [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI levelText;
     [SerializeField] private RectTransform gameCanvasRect;
     // Sprites
     [SerializeField] private Sprite pauseGameIcon;
     [SerializeField] private Sprite unPauseGameIcon;
     // Managers
     [SerializeField] private GameManager gameManager;
+    [SerializeField] private LevelManager levelManager;
     // State
     private bool blockPlayerDead = true;
     //HeartGUI
@@ -27,6 +29,11 @@ public class GUIManager : MonoBehaviour, I_Manager
     private Image[] spawnedGUIHeartSR;
     //player data
     int lastHealth;
+
+    void Start()
+    {
+        SetLevelNumber();
+    }
 
     public void OpenMenu()
     {
@@ -92,6 +99,14 @@ public class GUIManager : MonoBehaviour, I_Manager
             PlayerIsDead();
     }
 
+    //Level GUI
+    private void SetLevelNumber()
+    {
+        levelText.text = levelManager.Level.ToString();
+    }
+
+    //Heart GUI
+    #region Heart
     private void UpdateHeartGUI()
     {
         if (gameManager.b_Player == null)
@@ -161,7 +176,7 @@ public class GUIManager : MonoBehaviour, I_Manager
 
         //Set Pattern in heart formatation
         #region Set pattern
-        
+
         float lastY = spawnedHeartIMGS[^1].transform.localPosition.y;
         int onSameYLevel = 0;
 
@@ -206,7 +221,9 @@ public class GUIManager : MonoBehaviour, I_Manager
                 );
                 break;
         }
-        #endregion
+
 
     }
+     #endregion
+        #endregion
 }
