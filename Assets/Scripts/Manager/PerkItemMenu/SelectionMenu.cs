@@ -35,6 +35,7 @@ public class SelectionMenu : MonoBehaviour, I_Manager
 
     public void GameStart()
     {
+        print(levelManager.Level);
         //Set Kajia Values 
         kajiaSystem.addedEnemies = levelManager.GetAllTillLevel(levelManager.Level, E_Level.Enemy);
         kajiaSystem.choosenItems = levelManager.GetAllTillLevel(levelManager.Level, E_Level.Item).Concat(activeItems).ToArray();

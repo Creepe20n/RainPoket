@@ -104,6 +104,11 @@ public class GUIManager : MonoBehaviour, I_Manager
     {
         levelText.text = levelManager.Level.ToString();
     }
+    //Create the fill animation and new level animation for exp bar
+    private void SetLevelExpBar()
+    {
+
+    }
 
     //Heart GUI
     #region Heart
@@ -221,9 +226,9 @@ public class GUIManager : MonoBehaviour, I_Manager
                 );
                 break;
         }
-
+        #endregion
 
     }
-     #endregion
-        #endregion
+
+    #endregion
 }

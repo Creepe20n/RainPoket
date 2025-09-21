@@ -75,7 +75,7 @@ public class KajiaSystem : MonoBehaviour, I_Manager
         }
         else
         {
-            tempSCR = Spawner.Instance.ChooseByPercentage(enemyEvents, Random.Range(0, 100)); 
+            tempSCR = Spawner.Instance.ChooseByPercentage(allActiveEnemies, Random.Range(0, 100)); 
         }
 
         SpawnSomething(tempSCR);
