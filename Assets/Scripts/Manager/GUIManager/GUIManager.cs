@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -12,6 +14,7 @@ public class GUIManager : MonoBehaviour, I_Manager
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI levelText;
     [SerializeField] private RectTransform gameCanvasRect;
+    [SerializeField] private Slider expbarSlider;
     // Sprites
     [SerializeField] private Sprite pauseGameIcon;
     [SerializeField] private Sprite unPauseGameIcon;
@@ -29,9 +32,15 @@ public class GUIManager : MonoBehaviour, I_Manager
     private Image[] spawnedGUIHeartSR;
     //player data
     int lastHealth;
+    //Exp data
+    private int activeShownExp = 0;
+    private int activeShownLvl = 0;
 
     void Start()
     {
+        activeShownExp = levelManager.LevelPoints;
+        activeShownLvl = levelManager.Level;
+
         SetLevelNumber();
     }
 
@@ -65,6 +74,9 @@ public class GUIManager : MonoBehaviour, I_Manager
     public void GameEnd()
     {
         DeathAni.gameObject.SetActive(false);
+
+        levelManager.LevelPoints += 250;
+        StartCoroutine(ExpbarAnimation(250));
 
         for (int i = 0; i < spawnedGUIHeartSR.Length; i++)
         {
@@ -102,12 +114,25 @@ public class GUIManager : MonoBehaviour, I_Manager
     //Level GUI
     private void SetLevelNumber()
     {
-        levelText.text = levelManager.Level.ToString();
+        levelText.text = activeShownLvl.ToString("000");
     }
-    //Create the fill animation and new level animation for exp bar
-    private void SetLevelExpBar()
-    {
 
+    private IEnumerator ExpbarAnimation(int addExpierence)
+    {
+        for (int i = 0; i < addExpierence; i++)
+        {
+            expbarSlider.value++;
+
+
+            if (expbarSlider.value >= 100)
+            {
+                expbarSlider.value = 0;
+                activeShownLvl++;
+                SetLevelNumber();
+            }
+
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 
     //Heart GUI
