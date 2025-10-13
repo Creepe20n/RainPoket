@@ -2314,6 +2314,94 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Xpbar scroll
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 208
+        width: 40
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d703f07f9e8028e429db985071cbd9b9
+      internalID: -882117523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XpBarScroll2
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 192
+        width: 40
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef570c7166538674288c374f668b3b65
+      internalID: 1989552252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPbarV3
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 224
+        width: 41
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19312e75e00240c45b7dff887d55dd67
+      internalID: 2085085005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPbarV3Inner
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 232
+        width: 41
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0bf6307846840247b5eb525432fea9a
+      internalID: -1351754299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -2415,6 +2503,10 @@ TextureImporter:
       UISheet_8: 8609931220251892044
       UISheet_9: -9119004044214425381
       UnPauseGame: -811304484
+      XPbarV3: 2085085005
+      XPbarV3Inner: -1351754299
+      XpBarScroll2: 1989552252
+      Xpbar scroll: -882117523
       emptyHeart: 4139442268472646271
       fullHeart: 9147533179929568004
   mipmapLimitGroupName: 

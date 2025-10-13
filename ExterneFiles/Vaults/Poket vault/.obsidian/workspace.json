@@ -13,15 +13,15 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "System Interactions Graph.canvas",
+                "file": "Drafts/Untitled.canvas",
                 "viewState": {
-                  "x": -284.48381979695444,
-                  "y": -269.0574238578679,
-                  "zoom": -0.6922481824411575
+                  "x": -60.568541507085,
+                  "y": 86.25800745067949,
+                  "zoom": 0.3333333333333333
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "System Interactions Graph"
+              "title": "Untitled"
             }
           }
         ]
@@ -160,6 +160,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -170,9 +171,12 @@
   },
   "active": "6842ce4057c38fe2",
   "lastOpenFiles": [
-    "Poket Editor/Poket Editor.md",
-    "System Interactions Graph.canvas",
+    "Drafts/Pasted image 20250928092031.png",
+    "Drafts/Untitled.canvas",
     "Klassengraph.canvas",
+    "System Interactions Graph.canvas",
+    "Drafts",
+    "Poket Editor/Poket Editor.md",
     "Spawnables/Items/All Items info.md",
     "Poket Editor",
     "Spawnables/Items",

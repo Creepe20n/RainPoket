@@ -76,7 +76,6 @@ public class GUIManager : MonoBehaviour, I_Manager
         DeathAni.gameObject.SetActive(false);
 
         levelManager.LevelPoints += 250;
-        StartCoroutine(ExpbarAnimation(250));
 
         for (int i = 0; i < spawnedGUIHeartSR.Length; i++)
         {
@@ -121,18 +120,16 @@ public class GUIManager : MonoBehaviour, I_Manager
     {
         for (int i = 0; i < addExpierence; i++)
         {
-            expbarSlider.value++;
-
-
-            if (expbarSlider.value >= 100)
+            if (expbarSlider.value == 100)
             {
-                expbarSlider.value = 0;
                 activeShownLvl++;
-                SetLevelNumber();
+                expbarSlider.value = 0;
             }
 
+            expbarSlider.value += 1;
             yield return new WaitForSeconds(0.1f);
         }
+        
     }
 
     //Heart GUI

@@ -82,6 +82,7 @@ public class SelectionMenu : MonoBehaviour, I_Manager
 
     public void GameEnd()
     {
+        return;
         selectionUIManager.ResetGameGUI();
         for (int i = 0; i < objectPool.Count; i++)
         {

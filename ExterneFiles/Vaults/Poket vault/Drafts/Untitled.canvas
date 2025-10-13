@@ -1,0 +1,12 @@
+{
+	"nodes":[
+		{"id":"ec96d9d9ea93c3ee","type":"file","file":"Drafts/Pasted image 20250928092031.png","x":-300,"y":-160,"width":400,"height":277},
+		{"id":"6b97d1223f277d5d","type":"text","text":"Death Menu Redisign","x":-225,"y":-280,"width":250,"height":60},
+		{"id":"3efb7d7eb5e8719b","type":"text","text":"Menu where the xp bar shows first with stats underneth","x":200,"y":-74,"width":240,"height":105},
+		{"id":"de2241acbb2f9fa9","type":"text","text":"Menu where you see the score and then the bar going up","x":-660,"y":-67,"width":250,"height":91}
+	],
+	"edges":[
+		{"id":"1c583f616abe58dc","fromNode":"3efb7d7eb5e8719b","fromSide":"left","toNode":"ec96d9d9ea93c3ee","toSide":"right"},
+		{"id":"a8d03e15769bbdf4","fromNode":"de2241acbb2f9fa9","fromSide":"right","toNode":"ec96d9d9ea93c3ee","toSide":"left"}
+	]
+}

@@ -29,8 +29,8 @@ public class LevelManager : MonoBehaviour, I_Manager
         {
             if (value >= 100)
             {
-                _levelPoints -= 100;
-                Level++;
+                Level += value / 100;
+                _levelPoints = value % 100;
             }
             else
             {
