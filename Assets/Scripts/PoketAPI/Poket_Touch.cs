@@ -1,12 +1,34 @@
 using UnityEngine;
 using PoketAPI.Convert;
-namespace PoketAPI.Touch {
-    public static class GetTouch {
+namespace PoketAPI.Touch
+{
+
+    public class SwipeListiner 
+    {
+        private Vector2 touchStart;
+        private UnityEngine.Touch activeTouch;
+        public void Update()
+        {
+            if(Input.touchCount <= 0)
+                return;
+            activeTouch = Input.GetTouch(0);
+        }
+        public static SwipeDirection GetSwipeDiection()
+        {
+            
+            return SwipeDirection.none;
+        }
+    }
+
+    public static class GetTouch
+    {
         //The Start touch position
         public static Vector2 touchStart = Vector2.zero;
 
-        public static bool IsTouching() {
-            if(Input.touchCount <= 0) {
+        public static bool IsTouching()
+        {
+            if (Input.touchCount <= 0)
+            {
                 touchStart = Vector2.zero;
                 return false;
             }
@@ -14,25 +36,29 @@ namespace PoketAPI.Touch {
                 return true;
         }
 
-        public static Vector2 Position(bool raw = false) {
-            if(Input.touchCount == 0) {
+        public static Vector2 Position(bool raw = false)
+        {
+            if (Input.touchCount == 0)
+            {
                 touchStart = Vector2.zero;
 
                 return Vector2.zero;
             }
             UnityEngine.Touch touch = Input.GetTouch(0);
 
-            if(touch.phase == TouchPhase.Began) {
+            if (touch.phase == TouchPhase.Began)
+            {
                 touchStart = raw ? touch.position : ConvertPosition.ToWorldPoint(touch.position);
             }
 
-            if(raw) 
+            if (raw)
                 return touch.position;
-            
+
             return ConvertPosition.ToWorldPoint(touch.position);
         }
     }
-    
+
+
     public static class GetTab
     {
         /// <summary>

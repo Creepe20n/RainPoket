@@ -11,17 +11,14 @@
             "id": "6842ce4057c38fe2",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Drafts/Untitled.canvas",
-                "viewState": {
-                  "x": -60.568541507085,
-                  "y": 86.25800745067949,
-                  "zoom": 0.3333333333333333
-                }
+                "file": "Drafts/Swipe.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Untitled"
+              "icon": "lucide-file",
+              "title": "Swipe"
             }
           }
         ]
@@ -74,7 +71,7 @@
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
-              "title": "Lesezeichen"
+              "title": "Bookmarks"
             }
           }
         ]
@@ -171,19 +168,29 @@
   },
   "active": "6842ce4057c38fe2",
   "lastOpenFiles": [
-    "Drafts/Pasted image 20250928092031.png",
+    "Ink/Drawing/2025.11.25 - 18.13pm.drawing",
     "Drafts/Untitled.canvas",
-    "Klassengraph.canvas",
-    "System Interactions Graph.canvas",
-    "Drafts",
-    "Poket Editor/Poket Editor.md",
+    "Drafts/Swipe.md",
+    "Pasted image 20251125164752.png",
+    "Drafts/Pasted image 20250928092031.png",
     "Spawnables/Items/All Items info.md",
+    "Ink/Drawing/2025.11.25 - 16.41pm.drawing",
+    "Ink/Drawing",
+    "Ink",
+    "Untitled.base",
+    "Pasted image 20251125163152.png",
+    "Untitled.canvas",
+    "2025-11-16.md",
+    "Kajia/Kajia Base.md",
+    "Player/Movement.md",
+    "Poket Editor/Poket Editor.md",
+    "System Interactions Graph.canvas",
+    "Klassengraph.canvas",
+    "Benennung' s Konventionen.md",
+    "Drafts",
     "Poket Editor",
     "Spawnables/Items",
     "Spawnables",
-    "Benennung' s Konventionen.md",
-    "Kajia/Kajia Base.md",
-    "Player/Movement.md",
     "Player",
     "Kajia/Unbenannt.canvas",
     "Willkommen.md",

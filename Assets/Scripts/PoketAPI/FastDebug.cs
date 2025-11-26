@@ -49,7 +49,7 @@ namespace FastDebug
             //x
             float columnLength = C_width / allowedColums;
             float firstColumn = -C_width / 2 + D_textField.GetComponent<RectTransform>().sizeDelta.x / 1.8f;//Dont know why 1.8f but it works
-                                                                                                            //y
+            //y
             float rowLength = C_height / allowedRows;
             float firstRow = C_height / 2 - D_textField.GetComponent<RectTransform>().sizeDelta.y / 1.8f;
             //Calculate Final Position

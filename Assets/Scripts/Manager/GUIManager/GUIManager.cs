@@ -14,11 +14,11 @@ public class GUIManager : MonoBehaviour, I_Manager
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI levelText;
     [SerializeField] private RectTransform gameCanvasRect;
-    [SerializeField] private Slider expbarSlider;
     // Sprites
     [SerializeField] private Sprite pauseGameIcon;
     [SerializeField] private Sprite unPauseGameIcon;
     // Managers
+
     [SerializeField] private GameManager gameManager;
     [SerializeField] private LevelManager levelManager;
     // State
@@ -35,11 +35,16 @@ public class GUIManager : MonoBehaviour, I_Manager
     //Exp data
     private int activeShownExp = 0;
     private int activeShownLvl = 0;
+    //Slider
+    [SerializeField] private SliderController expSlider;
+    [SerializeField] private SliderController deathExpSlider;
 
     void Start()
     {
         activeShownExp = levelManager.LevelPoints;
         activeShownLvl = levelManager.Level;
+        
+        
 
         SetLevelNumber();
     }
@@ -94,6 +99,7 @@ public class GUIManager : MonoBehaviour, I_Manager
 
         DeathAni.gameObject.SetActive(true);
         DeathAni.Play("DeathStart");
+        deathExpSlider.FillSlider(0,1,1,1.5f);
 
     }
 
@@ -113,23 +119,8 @@ public class GUIManager : MonoBehaviour, I_Manager
     //Level GUI
     private void SetLevelNumber()
     {
+        expSlider.Value = levelManager.LevelPoints/100;
         levelText.text = activeShownLvl.ToString("000");
-    }
-
-    private IEnumerator ExpbarAnimation(int addExpierence)
-    {
-        for (int i = 0; i < addExpierence; i++)
-        {
-            if (expbarSlider.value == 100)
-            {
-                activeShownLvl++;
-                expbarSlider.value = 0;
-            }
-
-            expbarSlider.value += 1;
-            yield return new WaitForSeconds(0.1f);
-        }
-        
     }
 
     //Heart GUI
