@@ -1831,28 +1831,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UISheet_67
-      rect:
-        serializedVersion: 2
-        x: 367
-        y: 95
-        width: 66
-        height: 50
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3ef3583f8e58c4e20800000000000000
-      internalID: 3336188659539197923
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: emptyHeart
       rect:
         serializedVersion: 2
@@ -1936,28 +1914,6 @@ TextureImporter:
       bones: []
       spriteID: 924e70926c44464e0800000000000000
       internalID: -1989389517508320215
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UISheet_72
-      rect:
-        serializedVersion: 2
-        x: 367
-        y: 47
-        width: 66
-        height: 50
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e111242d1dd5e18c0800000000000000
-      internalID: -4026677861065551586
       vertices: []
       indices: 
       edges: []
@@ -2230,8 +2186,8 @@ TextureImporter:
       name: Skull
       rect:
         serializedVersion: 2
-        x: 446
-        y: 69
+        x: 470
+        y: 144
         width: 44
         height: 32
       alignment: 0
@@ -2402,6 +2358,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: LevelBackground
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 2
+        width: 84
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54f8bd89bb68c214aa80999e7e6e5eef
+      internalID: -325220321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -2424,6 +2402,7 @@ TextureImporter:
       EditIcon: 1670199171276766311
       GoldenShield: 5346461036080857579
       Header: 5122068372404526502
+      LevelBackground: -325220321
       Old_PerkItemsIcon: -8433112639597798235
       Old_PlayIcon: 2286855326212898726
       Old_PlayerSelecIcon: -3671742638147237762
