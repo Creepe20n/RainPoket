@@ -38,6 +38,8 @@ public class GUIManager : MonoBehaviour, I_Manager
     //Slider
     [SerializeField] private SliderController expSlider;
     [SerializeField] private SliderController deathExpSlider;
+    //Windows
+    
 
     void Start()
     {
@@ -105,6 +107,8 @@ public class GUIManager : MonoBehaviour, I_Manager
 
     void Update()
     {
+        CheckStartMenuSwipe();
+
         if (blockPlayerDead)
             return;
 
@@ -114,6 +118,11 @@ public class GUIManager : MonoBehaviour, I_Manager
 
         if (gameManager.PlayerDied)
             PlayerIsDead();
+    }
+    //allow swiping thrugh menus from the startmenu
+    private void CheckStartMenuSwipe()
+    {
+        
     }
 
     //Level GUI

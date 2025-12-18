@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour, I_Manager
     void Awake()
     {
         Application.targetFrameRate = 60;
+        GlyphsController t = new();
     }
     void Update()
     {

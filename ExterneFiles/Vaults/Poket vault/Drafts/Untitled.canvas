@@ -5,7 +5,8 @@
 		{"id":"3efb7d7eb5e8719b","type":"text","text":"Menu where the xp bar shows first with stats underneth","x":200,"y":-74,"width":240,"height":105},
 		{"id":"de2241acbb2f9fa9","type":"text","text":"Menu where you see the score and then the bar going up","x":-660,"y":-67,"width":250,"height":91},
 		{"id":"d172548389c3dfb4","type":"text","text":"Hoch swipen für Level übersicht","x":240,"y":472,"width":250,"height":60},
-		{"id":"a8b8112b83e15323","type":"file","file":"Pasted image 20251125164752.png","x":-280,"y":181,"width":360,"height":703}
+		{"id":"a8b8112b83e15323","type":"file","file":"Pasted image 20251125164752.png","x":-280,"y":181,"width":360,"height":703},
+		{"id":"b3a287f1e4578633","x":365,"y":664,"width":865,"height":440,"type":"file","file":"Pasted image 20251128171013.png"}
 	],
 	"edges":[
 		{"id":"1c583f616abe58dc","fromNode":"3efb7d7eb5e8719b","fromSide":"left","toNode":"ec96d9d9ea93c3ee","toSide":"right"},
