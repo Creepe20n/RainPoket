@@ -4,15 +4,33 @@ public class EY_Planet : EV_ChangePlayerData
 {
     [Header("Planet varibels")]
     [SerializeField] float gravityRadius = 1;
+    private float activeGravityRadius;
     [SerializeField] float gravitySpeed = 1;
+    private float activeGravitySpeed;
     [SerializeField] int damage = -1;
     [SerializeField] Sprite icePlanet;
     [SerializeField] SpriteRenderer spriteRenderer;
     private bool freeze => spriteRenderer.sprite == icePlanet;
     [SerializeField] private float freezeTime = 1;
+    [SerializeField] private float growBySize = 0.4f;
+    void OnEnable()
+    {
+        transform.localScale = Vector3.one;
+        activeGravityRadius = gravityRadius;
+        activeGravitySpeed = gravitySpeed;
+    }
 
     public override void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag(gameObject.tag) && collision.gameObject.transform.position.y < transform.position.y){
+            collision.gameObject.SetActive(false);
+
+            transform.localScale = new Vector3(transform.localScale.x+growBySize,transform.localScale.x+growBySize,transform.localScale.x+growBySize);
+
+            activeGravityRadius += growBySize;
+            gravitySpeed += growBySize;
+            return;
+        }
         if (collision.gameObject.CompareTag("EY_Snowflake"))
         {
             spriteRenderer.sprite = icePlanet;
@@ -24,7 +42,7 @@ public class EY_Planet : EV_ChangePlayerData
     }
     void Update()
     {
-        Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, gravityRadius);
+        Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, activeGravityRadius);
 
         for (int i = 0; i < objects.Length; i++)
         {
@@ -38,7 +56,7 @@ public class EY_Planet : EV_ChangePlayerData
             Vector2 direction = transform.position - objects[i].transform.position;
             direction.Normalize();
 
-            objects[i].transform.Translate(0.1f * GameTime.Instance.EventTime * gravitySpeed * Time.deltaTime * direction);
+            objects[i].transform.Translate(0.1f * GameTime.Instance.EventTime * activeGravitySpeed * Time.deltaTime * direction);
         }
     }
 

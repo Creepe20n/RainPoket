@@ -6,6 +6,7 @@ public class B_Entities : EntitiyBody, I_HitObj
 
     [SerializeField] protected float maxMovementSpeed = 5;
     [SerializeField] protected float movementStartSpeed = 1;
+
     protected float _movementSpeed = 1;
     public float MovementSpeed
     {
