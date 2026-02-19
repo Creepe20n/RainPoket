@@ -4966,7 +4966,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1487214102
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6811,6 +6811,7 @@ MonoBehaviour:
   activeSettings: {fileID: 11400000, guid: e37d5ba1174daea4485159e17f3e4843, type: 2}
   enemyEvents:
   - {fileID: 11400000, guid: c738f0e20f9baf34ca26b193edbe8688, type: 2}
+  - {fileID: 11400000, guid: 17fc71e297edd3c488f974a6a8e7caa8, type: 2}
   itemEvents:
   - {fileID: 11400000, guid: 0b571746e0792e24881780db333bfee0, type: 2}
   eventEvents: []
