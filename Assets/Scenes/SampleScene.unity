@@ -219,8 +219,8 @@ Transform:
   m_GameObject: {fileID: 83607852}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.061355, z: 0}
-  m_LocalScale: {x: 1.8772894, y: 1.8772894, z: 0}
+  m_LocalPosition: {x: 0, y: -4.189189, z: 0}
+  m_LocalScale: {x: 1.6216216, y: 1.6216216, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1027,7 +1027,7 @@ Transform:
   m_GameObject: {fileID: 375451899}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.3159342, y: 0, z: 10}
+  m_LocalPosition: {x: 2.9324324, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 8.058713, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4246,6 +4246,7 @@ MonoBehaviour:
   visibleIcon: {fileID: -3374845498920641771, guid: 09d42c850af693840bb477de957bd2e4, type: 3}
   unVisibleIcon: {fileID: 1531456761649573930, guid: 09d42c850af693840bb477de957bd2e4, type: 3}
   gameManager: {fileID: 1917754092}
+  statisticManager: {fileID: 1917754103}
 --- !u!4 &1216915364
 Transform:
   m_ObjectHideFlags: 0
@@ -6557,6 +6558,7 @@ GameObject:
   - component: {fileID: 1917754100}
   - component: {fileID: 1917754101}
   - component: {fileID: 1917754102}
+  - component: {fileID: 1917754103}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -6734,6 +6736,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   b_Player: {fileID: 0}
+  forceStartGame: 0
 --- !u!4 &1917754093
 Transform:
   m_ObjectHideFlags: 0
@@ -6919,6 +6922,18 @@ MonoBehaviour:
     addEnemiesToPool:
     - {fileID: 11400000, guid: 2ddb1e0002f503047bcb7964f137c8fd, type: 2}
     addEventsToPool: {fileID: 0}
+--- !u!114 &1917754103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917754091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6d5359758256491c905d59a7cc38777, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StatisticManager
 --- !u!1 &1943495242
 GameObject:
   m_ObjectHideFlags: 0
@@ -7084,7 +7099,7 @@ Transform:
   m_GameObject: {fileID: 1945713916}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.535634, y: 0, z: 10}
+  m_LocalPosition: {x: -3.1521325, y: 0, z: 10}
   m_LocalScale: {x: 1.4394, y: 8.123389, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
