@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour, I_Manager
             _scoreMultiplier = Mathf.Clamp(value, 1, 10);
         }
     }
-   
+
     //Events
     [SerializeField] private UnityEvent gameStartEvents;
     [SerializeField] private UnityEvent gamePauseEvents;
@@ -41,11 +41,12 @@ public class GameManager : MonoBehaviour, I_Manager
     private GameObject oldPlayer;
     private bool allowScore;
     private bool _playerDied = false;
+    public bool forceStartGame = false;
 
     public bool PlayerDied
     {
         get => _playerDied;
-        private set{}
+        private set { }
     }
 
     void Awake()
@@ -55,6 +56,11 @@ public class GameManager : MonoBehaviour, I_Manager
     }
     void Update()
     {
+        if (forceStartGame)
+        {
+            forceStartGame = false;
+            GameStart();
+        }
         if (!gameStarted)
             GameStartCondition();
         else
@@ -80,7 +86,7 @@ public class GameManager : MonoBehaviour, I_Manager
         _playerDied = true;
         GameTime.Instance.GameDeltaTime = 0.3f;
 
-        if(GetTab.DoubleTab())
+        if (GetTab.DoubleTab())
         {
             GameEnd();
         }

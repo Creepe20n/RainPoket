@@ -77,7 +77,7 @@ public class B_Item : B_ID, I_KajiaControlls
     /// </summary>
     public virtual void CallEventOnDeath()
     {
-        StatisticEvent?.Invoke(E_StatisticEventType.Died, E_IETypes.None, E_StatisticData.Death);
+        StatisticEvent?.Invoke(E_StatisticEventType.Died, objType, E_StatisticData.Death);
 
     }
     /// <summary>
@@ -86,7 +86,7 @@ public class B_Item : B_ID, I_KajiaControlls
     /// </summary>
     public virtual void CallEventOnHit()
     {
-        StatisticEvent?.Invoke(E_StatisticEventType.Hitted, E_IETypes.None, E_StatisticData.Hit);
+        StatisticEvent?.Invoke(E_StatisticEventType.Hitted, objType, E_StatisticData.Hit);
 
     }
     /// <summary>
@@ -95,6 +95,6 @@ public class B_Item : B_ID, I_KajiaControlls
     /// </summary>
     public virtual void CallOnSpawn()
     {
-        StatisticEvent?.Invoke(E_StatisticEventType.Spawned, E_IETypes.None, E_StatisticData.Spawn);
+        StatisticEvent?.Invoke(E_StatisticEventType.Spawned, objType, E_StatisticData.Spawn);
     }
 }

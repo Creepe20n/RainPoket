@@ -14,4 +14,5 @@ public class EY_RainDrop : EV_ChangePlayerData
 
         base.OnTriggerEnter2D(collision);
     }
+   
 }
