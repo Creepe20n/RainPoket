@@ -9,15 +9,14 @@ public class StatisticManager : MonoBehaviour, I_Manager
     {
         B_Item.StatisticEvent += HandleItemEvent;
     }
-    private void HandleItemEvent(E_IETypes iETypes, C_StatisticEData c_StatisticEData)
+    private void HandleItemEvent(E_StatisticEventType e_StatisticEventType,E_IETypes e_IETypes,E_StatisticData e_StatisticData)
     {
-        if (!statData.ContainsKey(iETypes))
+        if (!statData.ContainsKey(e_IETypes))
         {
-            statData.Add(iETypes,c_StatisticEData);
-            return;
+            statData.Add(e_IETypes,new());
         }
-        statData[iETypes] = c_StatisticEData;
-        
+
+        statData[e_IETypes].counts[(int)e_StatisticEventType][(int)e_StatisticData]++;
     }
     public void GameEnd()
     {

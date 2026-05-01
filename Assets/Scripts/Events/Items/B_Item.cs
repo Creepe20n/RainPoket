@@ -5,7 +5,7 @@ public class B_Item : B_ID, I_KajiaControlls
 {
     protected KajiaSystem kajiaSystem;
     protected B_player b_Player;
-    public static event Action<E_IETypes, C_StatisticEData> StatisticEvent;
+    public static event Action<E_StatisticEventType, E_IETypes, E_StatisticData> StatisticEvent;
     private C_StatisticEData eventDataContainer;
 
     void OnEnable()
@@ -77,8 +77,8 @@ public class B_Item : B_ID, I_KajiaControlls
     /// </summary>
     public virtual void CallEventOnDeath()
     {
-        eventDataContainer.deathCount++;
-        StatisticEvent?.Invoke(objType,eventDataContainer);
+        StatisticEvent?.Invoke(E_StatisticEventType.Died, E_IETypes.None, E_StatisticData.Death);
+
     }
     /// <summary>
     /// Call when Obj hits an Entity
@@ -86,8 +86,7 @@ public class B_Item : B_ID, I_KajiaControlls
     /// </summary>
     public virtual void CallEventOnHit()
     {
-        eventDataContainer.hitCount++;
-        StatisticEvent?.Invoke(objType,eventDataContainer);
+        StatisticEvent?.Invoke(E_StatisticEventType.Hitted, E_IETypes.None, E_StatisticData.Hit);
 
     }
     /// <summary>
@@ -96,8 +95,6 @@ public class B_Item : B_ID, I_KajiaControlls
     /// </summary>
     public virtual void CallOnSpawn()
     {
-        eventDataContainer.spawnCount++;
-        StatisticEvent?.Invoke(objType,eventDataContainer);
-
+        StatisticEvent?.Invoke(E_StatisticEventType.Spawned, E_IETypes.None, E_StatisticData.Spawn);
     }
 }

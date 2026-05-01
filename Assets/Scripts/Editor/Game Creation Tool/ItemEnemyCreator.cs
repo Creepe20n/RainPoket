@@ -198,7 +198,6 @@ public class ItemEnemyCreator : EditorWindow
         Handles.EndGUI();
         yPx += 5;
 
-
         //Add Script to element
         if (GUI.Button(new(50, yPx, 100, 30), "Build"))
         {
@@ -215,8 +214,6 @@ public class ItemEnemyCreator : EditorWindow
     {
         if (backupFiles)
             Backup();
-
-        
     }
 
     public void Backup()
@@ -247,8 +244,6 @@ public class ItemEnemyCreator : EditorWindow
         }
 
         Directory.CreateDirectory(backupDirectoryForSCR);
-
-        
     }
     private void ShowMonoPropertys(float lastY, PoketEditorStyle baseStyle)
     {
