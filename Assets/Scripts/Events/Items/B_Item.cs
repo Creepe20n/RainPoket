@@ -1,9 +1,17 @@
+using System;
 using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class B_Item : B_ID, I_KajiaControlls
 {
     protected KajiaSystem kajiaSystem;
     protected B_player b_Player;
+    public static event Action<E_IETypes, C_StatisticEData> StatisticEvent;
+    private C_StatisticEData eventDataContainer;
+
+    void OnEnable()
+    {
+        CallOnSpawn();
+    }
     /// <summary>
     /// This method is called when the action is finished.
     /// </summary>
@@ -25,6 +33,7 @@ public class B_Item : B_ID, I_KajiaControlls
     /// </summary>
     public virtual void KillObj()
     {
+        CallEventOnDeath();
         gameObject.SetActive(false);
     }
     /// <summary>
@@ -34,26 +43,26 @@ public class B_Item : B_ID, I_KajiaControlls
     public virtual void SetKajiaValues(KajiaSystem kajia)
     {
         if (kajiaSystem == null) kajiaSystem = kajia;
-        if(b_Player == null) b_Player = kajia.gameManager.player.GetComponent<B_player>();
+        if (b_Player == null) b_Player = kajia.gameManager.player.GetComponent<B_player>();
     }
     public virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             HitPlayer(collision.gameObject);
-            EndObjAction();
         }
         if (collision.gameObject.CompareTag("Ground"))
         {
             HitGround();
-            EndObjAction();
         }
+        EndObjAction();
     }
     /// <summary>
     /// This method is called when the item collides with the player.
     /// </summary>
     public virtual void HitPlayer(GameObject player = null)
     {
+        CallEventOnHit();
         FullfillAction();
     }
     /// <summary>
@@ -61,6 +70,34 @@ public class B_Item : B_ID, I_KajiaControlls
     /// </summary>
     public virtual void HitGround()
     {
-        KillObj();
+    }
+    /// <summary>
+    /// Called when Obj dies without hitting an entitiy
+    /// Sets None for IE Type on Deffault
+    /// </summary>
+    public virtual void CallEventOnDeath()
+    {
+        eventDataContainer.deathCount++;
+        StatisticEvent?.Invoke(objType,eventDataContainer);
+    }
+    /// <summary>
+    /// Call when Obj hits an Entity
+    /// Sets None for IE Type on Deffault
+    /// </summary>
+    public virtual void CallEventOnHit()
+    {
+        eventDataContainer.hitCount++;
+        StatisticEvent?.Invoke(objType,eventDataContainer);
+
+    }
+    /// <summary>
+    /// Call when obj gets set Active thrug spawn
+    /// Sets None for IE Type on Deffault
+    /// </summary>
+    public virtual void CallOnSpawn()
+    {
+        eventDataContainer.spawnCount++;
+        StatisticEvent?.Invoke(objType,eventDataContainer);
+
     }
 }

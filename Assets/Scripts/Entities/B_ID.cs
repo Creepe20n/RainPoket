@@ -3,6 +3,7 @@ using UnityEngine;
 public class B_ID : MonoBehaviour
 {
     [SerializeField] private string objID;
+    [SerializeField] protected E_IETypes objType;
 
     public string ObjID
     {
