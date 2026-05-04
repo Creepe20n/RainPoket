@@ -353,6 +353,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -621,13 +634,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UISheet_12
+      name: ProgressbarLinier
       rect:
         serializedVersion: 2
-        x: 575
-        y: 351
-        width: 66
-        height: 7
+        x: 576
+        y: 352
+        width: 64
+        height: 5
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1589,13 +1602,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UISheet_56
+      name: BackgroundCard
       rect:
         serializedVersion: 2
-        x: 367
-        y: 159
-        width: 24
-        height: 34
+        x: 368
+        y: 160
+        width: 22
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2380,6 +2393,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: BackgroundSmall
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 80
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7359756d1d2984fcd8410560e6af1f7d
+      internalID: 1721228093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -2394,6 +2429,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      BackgroundCard: -3242094285432177527
+      BackgroundSmall: 1721228093
       BlueSettingsButton: -2061385227
       DarkPerkIcon: -1292315266
       DebugGUIOff: 1531456761649573930
@@ -2411,6 +2448,7 @@ TextureImporter:
       PinkShield: -2605160
       Poket64: 7888202119972057348
       ProfilesIcon: 6744513296223012266
+      ProgressbarLinier: 2879998365708759840
       SettingsIcon: -7527278747769256953
       ShopIcon: 778701708435451446
       SideBar: 7264763027446037974
@@ -2425,7 +2463,6 @@ TextureImporter:
       ThreeOptionBar: -2098048493
       UISheet_10: 6362277212160839285
       UISheet_11: -4215314136768902380
-      UISheet_12: 2879998365708759840
       UISheet_14: 9108723923615749502
       UISheet_15: -904770986938887607
       UISheet_16: -1729156314549364145
@@ -2463,7 +2500,6 @@ TextureImporter:
       UISheet_52: 5008233626059324091
       UISheet_53: -7026397179122422030
       UISheet_55: 4639505226174272110
-      UISheet_56: -3242094285432177527
       UISheet_58: 6907208844558672507
       UISheet_59: 743265872535152035
       UISheet_6: -3044407221058930715

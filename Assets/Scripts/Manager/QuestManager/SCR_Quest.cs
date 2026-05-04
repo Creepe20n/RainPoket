@@ -3,8 +3,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "new Quest",menuName ="Game/Quest")]
 public class SCR_Quest : ScriptableObject
 {
-    [SerializeField] private string questName;
-    [TextArea,SerializeField] private string questDiscription;
+    public string questName;
+    [TextArea,SerializeField] public string questDiscription;
     [SerializeField] private List<SCR_Events> items = new();
     public List<SCR_Events> Items {get => items; private set{}}
 
@@ -19,5 +19,13 @@ public class SCR_Quest : ScriptableObject
         }
 
         return true;
+    }
+    public float GetQuestProgressValue()
+    {
+        return 0;
+    }
+    public Vector2 GetQuestProgressByDone()
+    {
+        return new Vector2(0,10);
     }
 }

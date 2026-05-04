@@ -11,4 +11,8 @@ public class B_QuestModul : MonoBehaviour
     {
         
     }
+    public virtual int GetQuestValues()
+    {
+        return 0;
+    }
 }
