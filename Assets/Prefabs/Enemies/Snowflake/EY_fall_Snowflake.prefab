@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -8988394601895546455}
   - component: {fileID: 7323710822194550365}
   - component: {fileID: 8343670563991453288}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EY_fall_Snowflake
   m_TagString: EY_Snowflake
   m_Icon: {fileID: 0}
@@ -56,6 +56,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -77,6 +79,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -104,6 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objID: E002
+  objType: 0
   freezeTime: 4
 --- !u!114 &-8988394601895546455
 MonoBehaviour:

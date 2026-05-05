@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3657179260189148672}
   - component: {fileID: 813058207063307877}
   - component: {fileID: -7966081541292689727}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: IT_Fall_IBOEimer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,6 +56,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -77,6 +79,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -191,4 +194,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objID: I002
+  objType: 0
   prefabIBOEimer: {fileID: 5523857976697614910, guid: ef93a257b14019448bb9d8e54ded9860, type: 3}

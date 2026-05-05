@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8434380899511374746}
   - component: {fileID: 2665837219970174447}
   - component: {fileID: 8068344840034945636}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RainDrop
   m_TagString: RainDrop
   m_Icon: {fileID: 0}

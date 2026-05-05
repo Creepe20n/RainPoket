@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8874832280923287536}
   - component: {fileID: 6606255554862243451}
   - component: {fileID: 1011622528734734276}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: IT_Fall_ufo
   m_TagString: IT_Ufo
   m_Icon: {fileID: 0}
@@ -56,6 +56,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -77,6 +79,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -104,6 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objID: I005
+  objType: 0
   ufoPrefab: {fileID: 1285922557228465208, guid: 9a9eacc8d1f36d749a12211f54027977, type: 3}
 --- !u!114 &8874832280923287536
 MonoBehaviour:

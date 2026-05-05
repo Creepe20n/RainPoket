@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8843694467260109374}
   - component: {fileID: 5649769408042464850}
   - component: {fileID: 7443951778639001030}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EY_fall_Icespike
   m_TagString: EY_Icespike
   m_Icon: {fileID: 0}
@@ -57,6 +57,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -78,6 +80,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -132,6 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objID: E004
+  objType: 0
   changeHealthOnGround: 0
   changePlayerSpeedOnGround: 0
   changeFreezeStateOnGround: 0

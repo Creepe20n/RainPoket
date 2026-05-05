@@ -12,6 +12,7 @@ public class QuestManager : MonoBehaviour,I_Manager
     private SCR_Quest[] dailyQuests;
     void Start()
     {
+        dailyQuests = new SCR_Quest[maxDailys];
         questCards = new QuestCard[maxDailys];
         CheckNewDailyQuest();
     }
@@ -40,7 +41,6 @@ public class QuestManager : MonoBehaviour,I_Manager
     }
     private void SetNewDailyQuests()
     {
-        dailyQuests = new SCR_Quest[maxDailys];
         List<SCR_Quest> tempAllQuests = allQuests.ToList();
 
         for(int i = 0; i < dailyQuests.Length;i++)

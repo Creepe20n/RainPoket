@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8925643273056638495}
   - component: {fileID: 305615306740290055}
   - component: {fileID: 2157494323368009128}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UmbrellaFall
   m_TagString: Umbrella
   m_Icon: {fileID: 0}
@@ -56,6 +56,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -77,6 +79,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -118,6 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objID: I006
+  objType: 2
   playerUmbrellaPrefab: {fileID: 5132289330457990791, guid: 5b5ac4a86872ed14592b7da717156bac, type: 3}
 --- !u!61 &305615306740290055
 BoxCollider2D:

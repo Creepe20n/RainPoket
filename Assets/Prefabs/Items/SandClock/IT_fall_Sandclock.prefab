@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6631611846957443654}
   - component: {fileID: 2071617672111148925}
   - component: {fileID: 8700963690582027177}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: IT_fall_Sandclock
   m_TagString: IT_Sandclock
   m_Icon: {fileID: 0}
@@ -56,6 +56,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -77,6 +79,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -191,5 +194,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objID: I004
+  objType: 0
   slowDownValue: 0.2
   slowforSeconds: 6
