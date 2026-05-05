@@ -31,7 +31,7 @@ public class GUIManager : MonoBehaviour, I_Manager
     private GameObject[] spawnedGUIHearts = new GameObject[0];
     private Image[] spawnedGUIHeartSR;
     //player data
-    int lastHealth;
+    private int lastHealth;
     //Exp data
     private int activeShownExp = 0;
     private int activeShownLvl = 0;
@@ -39,14 +39,12 @@ public class GUIManager : MonoBehaviour, I_Manager
     [SerializeField] private SliderController expSlider;
     [SerializeField] private SliderController deathExpSlider;
     //Windows
-    
+    private GameObject lastOpenMenu;
 
     void Start()
     {
         activeShownExp = levelManager.LevelPoints;
         activeShownLvl = levelManager.Level;
-        
-        
 
         SetLevelNumber();
     }
@@ -58,6 +56,9 @@ public class GUIManager : MonoBehaviour, I_Manager
     public void CloseMenu()
     {
         gameManager.CanStartGame = true;
+        
+        if(lastOpenMenu != null)
+            lastOpenMenu.SetActive(false);
     }
 
     public void GameStart()
@@ -123,6 +124,16 @@ public class GUIManager : MonoBehaviour, I_Manager
     private void CheckStartMenuSwipe()
     {
         
+    }
+    public void SwitchMenu(GameObject menuObj)
+    {
+        OpenMenu();
+        menuObj.SetActive(true);
+
+        if(lastOpenMenu != null && lastOpenMenu != menuObj)
+            lastOpenMenu.SetActive(false);
+
+        lastOpenMenu = menuObj;
     }
 
     //Level GUI

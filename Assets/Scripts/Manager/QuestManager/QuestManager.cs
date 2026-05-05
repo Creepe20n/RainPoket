@@ -2,18 +2,17 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class QuestManager : MonoBehaviour,I_Manager
+public class QuestManager : MonoBehaviour, I_Manager
 {
     [SerializeField] private SCR_Quest[] allQuests;
     [SerializeField] private int maxDailys = 3;
     [SerializeField] private GameObject preQuestCard;
     [SerializeField] private GameObject cardHolder;
-    private QuestCard[] questCards;
+    [SerializeField] private QuestCard[] questCards;
     private SCR_Quest[] dailyQuests;
     void Start()
     {
-        dailyQuests = new SCR_Quest[maxDailys];
-        questCards = new QuestCard[maxDailys];
+        dailyQuests = new SCR_Quest[questCards.Length];
         CheckNewDailyQuest();
     }
     public void GameEnd()
@@ -43,16 +42,12 @@ public class QuestManager : MonoBehaviour,I_Manager
     {
         List<SCR_Quest> tempAllQuests = allQuests.ToList();
 
-        for(int i = 0; i < dailyQuests.Length;i++)
+        for (int i = 0; i < dailyQuests.Length; i++)
         {
-            int chosen = Random.Range(0,tempAllQuests.Count);
+            int chosen = Random.Range(0, tempAllQuests.Count);
             dailyQuests[i] = tempAllQuests[chosen];
             tempAllQuests.RemoveAt(chosen);
-
-            if(questCards[i] == null)
-            {
-                questCards[i] = Instantiate(preQuestCard,cardHolder.transform).GetComponent<QuestCard>();
-            }
+            print(tempAllQuests.Count);
 
             questCards[i].SetupQuestCard(dailyQuests[i]);
         }
