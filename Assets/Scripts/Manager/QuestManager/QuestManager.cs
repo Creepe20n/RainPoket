@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class QuestManager : MonoBehaviour, I_Manager
 {
+    [SerializeField] private StatisticManager statisticManager;
     [SerializeField] private SCR_Quest[] allQuests;
     [SerializeField] private int maxDailys = 3;
     [SerializeField] private GameObject preQuestCard;

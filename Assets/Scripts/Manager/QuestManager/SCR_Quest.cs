@@ -10,11 +10,11 @@ public class SCR_Quest : ScriptableObject
 
     [SerializeField] private B_QuestModul[] b_QuestModuls;
 
-    public bool CheckQuestFinished()
+    public bool CheckQuestFinished(StatisticManager statisticManager)
     {
         for(int i = 0; i < b_QuestModuls.Length; i++)
         {
-            if(!b_QuestModuls[i].CheckQuestFinished())
+            if(!b_QuestModuls[i].CheckQuestFinished(statisticManager))
                 return false;
         }
 
