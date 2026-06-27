@@ -5,6 +5,7 @@ using System;
 using System.Collections;
 public class GameManager : MonoBehaviour, I_Manager
 {
+    public static C_ActiveRunData activeRunData;
     [HideInInspector] public GameObject player;
     //Score Behaviour
     private int _score = 0;
@@ -52,7 +53,6 @@ public class GameManager : MonoBehaviour, I_Manager
     void Awake()
     {
         Application.targetFrameRate = 60;
-        GlyphsController t = new();
     }
     void Update()
     {
@@ -108,7 +108,6 @@ public class GameManager : MonoBehaviour, I_Manager
         GameStart();
     }
 
-
     public void GameStart()
     {
         gameStarted = true;
@@ -116,6 +115,7 @@ public class GameManager : MonoBehaviour, I_Manager
         _playerDied = false;
         ControllPlayerStats();
         gameStartEvents.Invoke();
+       
     }
 
     public void GameEnd()

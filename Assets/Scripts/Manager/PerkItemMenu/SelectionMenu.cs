@@ -39,20 +39,16 @@ public class SelectionMenu : MonoBehaviour, I_Manager
         kajiaSystem.addedEnemies = levelManager.GetAllTillLevel(levelManager.Level, E_Level.Enemy);
         kajiaSystem.choosenItems = levelManager.GetAllTillLevel(levelManager.Level, E_Level.Item).Concat(activeItems).ToArray();
 
-        //Activate Perks
-        for (int i = 0; i < activePerks.Length; i++)
-        {
-            GameObject tempObj = Spawner.Instance.Spawn(activePerks[i].eventObject, objectPool);
-            tempObj.GetComponent<I_KajiaControlls>().SetKajiaValues(kajiaSystem);
-        }
-
-        StartCoroutine(CreatePerks());
+        ChoosePerks();
     }
-    private IEnumerator CreatePerks()
+
+    //Chooses Perks for the round
+    private void ChoosePerks()
     {
-        for (int i = 0; i < autoPerkCount; i++)
+        activePerks = new SCR_Events[autoPerkCount];
+
+        for(int i = 0; i < autoPerkCount; i++)
         {
-            yield return new WaitForSeconds(0.1f);
             int searchValue = Random.Range(0, 100);
             searchValue -= 100;
 
@@ -62,15 +58,28 @@ public class SelectionMenu : MonoBehaviour, I_Manager
             }
 
             SCR_Events tempEvent = Spawner.Instance.ChooseByPercentage(perks.ToList(), searchValue);
-            SpawnPerk(tempEvent,i);
+            activePerks[i] = tempEvent;
         }
 
+
+        StartCoroutine(CreatePerks());
+    }
+
+    //Trigger Perk GUI SPawn with time dif
+    private IEnumerator CreatePerks()
+    {
+        for (int i = 0; i < activePerks.Length; i++)
+        {
+            yield return new WaitForSeconds(0.1f);
+            SpawnPerk(activePerks[i],i);
+        }
 
         //allow Kajia to start time
         yield return new WaitForSeconds(4);
 
         kajiaSystem.allowSpawnStart = true;
     }
+    
     public void SpawnPerk(SCR_Events perk = null, int field = 0)
     {
         GameObject tempObj = Spawner.Instance.Spawn(perk.eventObject, objectPool);

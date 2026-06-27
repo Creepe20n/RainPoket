@@ -308,11 +308,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 57966431868047371, guid: ddf7c59867038478599065ea70a4892b, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 57966431868047371, guid: ddf7c59867038478599065ea70a4892b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1504495454441364082, guid: ddf7c59867038478599065ea70a4892b, type: 3}
       propertyPath: m_Name
@@ -3052,11 +3052,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 57966431868047371, guid: ddf7c59867038478599065ea70a4892b, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 57966431868047371, guid: ddf7c59867038478599065ea70a4892b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1504495454441364082, guid: ddf7c59867038478599065ea70a4892b, type: 3}
       propertyPath: m_Name
@@ -5222,11 +5222,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 57966431868047371, guid: ddf7c59867038478599065ea70a4892b, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 57966431868047371, guid: ddf7c59867038478599065ea70a4892b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1504495454441364082, guid: ddf7c59867038478599065ea70a4892b, type: 3}
       propertyPath: m_Name
@@ -6225,7 +6225,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1652130529
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8015,6 +8015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 608993f4081bb4e0792a78b482c4bd52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestManager
+  statisticManager: {fileID: 1917754103}
   allQuests:
   - {fileID: 11400000, guid: f3dc868fc1ac04997b95e383e3620939, type: 2}
   - {fileID: 11400000, guid: 582630e63cd6444239625b8e4a4e681f, type: 2}
