@@ -10,6 +10,8 @@ public class SCR_Quest : ScriptableObject
 
     [SerializeField] private B_QuestModul[] b_QuestModuls;
 
+    private bool questListining = false;
+
     public bool CheckQuestFinished(StatisticManager statisticManager)
     {
         for(int i = 0; i < b_QuestModuls.Length; i++)
@@ -20,12 +22,36 @@ public class SCR_Quest : ScriptableObject
 
         return true;
     }
-    public float GetQuestProgressValue()
+    /// <summary>
+    /// Returna float between 0-1
+    /// </summary>
+    /// <returns></returns>
+    public float GetQuestProgressPercentage()
     {
-        return 0;
+        float tempPerc = 0;
+
+        for(int i = 0; i < b_QuestModuls.Length; i++)
+        {
+            tempPerc += b_QuestModuls[i].GetQuestValues()
+        }
     }
-    public Vector2 GetQuestProgressByDone()
+    public Vector2 GetQuestProgressByValue()
     {
         return new Vector2(0,10);
+    }
+    public bool CheckQuestValidationForRun(C_ActiveRunData c_ActiveRunData)
+    {
+        for(int i = 0; i < b_QuestModuls.Length; i++)
+        {
+            if(!b_QuestModuls[i].CheckQuestValidForRun(c_ActiveRunData))
+                return false;
+        }
+
+        questListining = true;
+        return true;
+    }
+    public void EndQuestListining()
+    {
+        
     }
 }

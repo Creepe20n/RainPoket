@@ -12,8 +12,8 @@ public class QuestCard : MonoBehaviour
     {
         questNameTxT.text = quest.questName;
         questDiscriptionTxT.text = quest.questDiscription;
-        questProgressBar.value = quest.GetQuestProgressValue();
-        questProgressTxT.text = quest.GetQuestProgressByDone().ToString();
+        questProgressBar.value = quest.GetQuestProgressPercentage();
+        questProgressTxT.text = quest.GetQuestProgressByValue().ToString();
         activeQuest = quest;
     }
 }

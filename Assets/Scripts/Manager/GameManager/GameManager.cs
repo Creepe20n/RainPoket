@@ -5,7 +5,7 @@ using System;
 using System.Collections;
 public class GameManager : MonoBehaviour, I_Manager
 {
-    public static C_ActiveRunData activeRunData;
+    public readonly C_ActiveRunData activeRunData = new();
     [HideInInspector] public GameObject player;
     //Score Behaviour
     private int _score = 0;
@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour, I_Manager
 
     //Events
     [SerializeField] private UnityEvent gameStartEvents;
+    [SerializeField] private UnityEvent lateGameStartEvents;
     [SerializeField] private UnityEvent gamePauseEvents;
     [SerializeField] private UnityEvent gameUnPauseEvents;
     [SerializeField] private UnityEvent gameEndEvents;
@@ -65,7 +66,6 @@ public class GameManager : MonoBehaviour, I_Manager
             GameStartCondition();
         else
             ControllPlayerStats();
-
     }
 
     private void ControllPlayerStats()
@@ -115,7 +115,7 @@ public class GameManager : MonoBehaviour, I_Manager
         _playerDied = false;
         ControllPlayerStats();
         gameStartEvents.Invoke();
-       
+        lateGameStartEvents.Invoke();
     }
 
     public void GameEnd()
@@ -130,6 +130,10 @@ public class GameManager : MonoBehaviour, I_Manager
 
         gameEndEvents.Invoke();
         b_Player.ResetPlayer();
+
+        activeRunData.runEnemies = null;
+        activeRunData.runItems = null;
+        activeRunData.runPerks = null;
     }
     IEnumerator WaitForAllowGameRestart()
     {

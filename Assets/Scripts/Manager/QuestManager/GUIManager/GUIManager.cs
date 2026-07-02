@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 public class GUIManager : MonoBehaviour, I_Manager
@@ -40,6 +41,7 @@ public class GUIManager : MonoBehaviour, I_Manager
     [SerializeField] private SliderController deathExpSlider;
     //Windows
     private GameObject lastOpenMenu;
+    [SerializeField] private GameObject questMenu;
 
     void Start()
     {
@@ -49,9 +51,16 @@ public class GUIManager : MonoBehaviour, I_Manager
         SetLevelNumber();
     }
 
-    public void OpenMenu()
+    public void OpenMenu(GameObject menuObj = null)
     {
         gameManager.CanStartGame = false;
+
+        if(menuObj == null)
+            return;
+
+        lastOpenMenu = menuObj;
+        menuObj.SetActive(true);
+
     }
     public void CloseMenu()
     {
@@ -60,7 +69,7 @@ public class GUIManager : MonoBehaviour, I_Manager
         if(lastOpenMenu != null)
             lastOpenMenu.SetActive(false);
     }
-
+    
     public void GameStart()
     {
         blockPlayerDead = false;

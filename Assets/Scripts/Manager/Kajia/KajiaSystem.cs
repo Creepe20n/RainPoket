@@ -27,6 +27,9 @@ public class KajiaSystem : MonoBehaviour, I_Manager
 
         allActiveEnemies.AddRange(enemyEvents);
         allActiveEnemies.AddRange(addedEnemies);
+
+        gameManager.activeRunData.runEnemies = allActiveEnemies.ToArray();
+        gameManager.activeRunData.runItems = allActiveItems.ToArray();
     }
 
     void Update()

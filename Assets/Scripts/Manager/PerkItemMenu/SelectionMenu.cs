@@ -61,6 +61,8 @@ public class SelectionMenu : MonoBehaviour, I_Manager
             activePerks[i] = tempEvent;
         }
 
+        //Setze Run data
+        kajiaSystem.gameManager.activeRunData.runPerks = activePerks;
 
         StartCoroutine(CreatePerks());
     }
