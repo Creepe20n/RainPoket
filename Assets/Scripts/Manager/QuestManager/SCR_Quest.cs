@@ -22,18 +22,20 @@ public class SCR_Quest : ScriptableObject
 
         return true;
     }
+   
     /// <summary>
-    /// Returna float between 0-1
+    /// Returns float between 0-1
     /// </summary>
     /// <returns></returns>
-    public float GetQuestProgressPercentage()
+    public float GetQuestProgressPercentage(StatisticManager statisticManager)
     {
         float tempPerc = 0;
 
         for(int i = 0; i < b_QuestModuls.Length; i++)
         {
-            tempPerc += b_QuestModuls[i].GetQuestValues()
+            tempPerc += b_QuestModuls[i].GetQuestValues(statisticManager).x;
         }
+        return tempPerc;
     }
     public Vector2 GetQuestProgressByValue()
     {
