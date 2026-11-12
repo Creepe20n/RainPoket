@@ -2437,6 +2437,50 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: WhiteBar
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 28
+        width: 96
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14622625b8edd8687ab8d42f1e75d5c3
+      internalID: -1676824204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkPurpleBar
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 32
+        width: 96
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d7a2924ea40153b5ac61378a691a328
+      internalID: -1356696847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -2455,6 +2499,7 @@ TextureImporter:
       BackgroundSmall: 1721228093
       BlueSettingsButton: -2061385227
       DarkPerkIcon: -1292315266
+      DarkPurpleBar: -1356696847
       DebugGUIOff: 1531456761649573930
       DebugGUIOn: -3374845498920641771
       DownSlideButton: 926335432
@@ -2541,6 +2586,7 @@ TextureImporter:
       UISheet_8: 8609931220251892044
       UISheet_9: -9119004044214425381
       UnPauseGame: -811304484
+      WhiteBar: -1676824204
       XPbarV3: 2085085005
       XPbarV3Inner: -1351754299
       XpBarScroll2: 1989552252
